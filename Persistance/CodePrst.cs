@@ -13,12 +13,12 @@ namespace Persistence.DbCxt
     {
         protected override IQueryable<MAS_AddressType> EntitySet(DbContext context)
         {
-            return (context as HomeFoodEntities).MAS_AddressType;
+                   return (context as HomeFoodEntities).MAS_AddressType;
         }
 
         protected override MAS_AddressType FindMatchedOne(MAS_AddressType toBeMatched, DbContext context)
         {
-            return EntitySet(context).DefaultIfEmpty(null).First(o => o.AddressTypeId == toBeMatched.AddressTypeId);
+                   return EntitySet(context).DefaultIfEmpty(null).First(o => o.AddressTypeId == toBeMatched.AddressTypeId);
         }
     }
 
