@@ -8,6 +8,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using DotnetCore.Business;
 using DotnetCore.Web.Controllers;
 using DotnetCore.Web.Models;
+using Neeyamo.Web.Helpers;
 
 namespace Chinook.API
 {
@@ -26,11 +27,17 @@ namespace Chinook.API
             services.AddMvc();
 
             services.ConfigureRepositories()
-               // .ConfigureSupervisor()
                 .AddMiddleware()
                 .AddCorsConfiguration()
                 .AddConnectionProvider(Configuration)
                 .AddAppSettings(Configuration);
+            services.AddSession();
+            //Add distributed cache service backed by Redis cache
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration.GetConnectionString("RedisConnection");
+                option.InstanceName = "master";
+            });
 
             services.AddSwaggerGen(s =>
             {
@@ -47,6 +54,7 @@ namespace Chinook.API
             }
             BusinessSupervisor.DotnetCoreSvr = new DotnetCoreSvr();
             BaseController.businessSupervisor =new BusinessSupervisor();
+            RedisDbWrapper.DotnetCoreSvr = new DotnetCoreSvr();
             app.UseCors("AllowAll");
 
             app.UseStaticFiles();

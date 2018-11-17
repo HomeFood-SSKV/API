@@ -7,6 +7,17 @@ namespace DotnetCore.Business.Interfaces
 {
     public interface IBusiness
     {
+        //CRUD Declaration for Observe   
+        //More than crud operation it supports WCF Service implementation
+
+        List<ObserveDto> GetObserve( );
+
+        Task<int> InsertObserve(ObserveDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        bool UpdateObserve(ObserveDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+
+
         //CRUD Declaration for MAS_AddressType   
         //More than crud operation it supports WCF Service implementation
 
@@ -17,16 +28,7 @@ namespace DotnetCore.Business.Interfaces
         Task<bool> UpdateMASAddressType(MAS_AddressTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
 
-        //CRUD Declaration for Customer   
-        //More than crud operation it supports WCF Service implementation
-
-
-        Task<List<CustomerDto>> GetCustomer(CancellationToken ct = default(CancellationToken));
-
-        Task<int> InsertCustomer(CustomerDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
-
-        Task<bool> UpdateCustomer(CustomerDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
-
+       
         //CRUD Declaration for MAS_Area   
         //More than crud operation it supports WCF Service implementation
 

@@ -12,3 +12,17 @@ F:\Projects\Arch\V2\dotnetcore20arch\Persistance\obj\Debug\netcoreapp2.1\Persist
 F:\Projects\Arch\V2\dotnetcore20arch\Persistance\obj\Debug\netcoreapp2.1\Persistance.csproj.CopyComplete
 F:\Projects\Arch\V2\dotnetcore20arch\Persistance\obj\Debug\netcoreapp2.1\Persistance.dll
 F:\Projects\Arch\V2\dotnetcore20arch\Persistance\obj\Debug\netcoreapp2.1\Persistance.pdb
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Persistance.deps.json
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Persistance.dll
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Persistance.pdb
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Entites.dll
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Utilities.dll
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Entites.pdb
+F:\Projects\Homefood\Source\API\Persistance\bin\Debug\netcoreapp2.1\Utilities.pdb
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.csprojAssemblyReference.cache
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.AssemblyInfoInputs.cache
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.AssemblyInfo.cs
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.csproj.CopyComplete
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.dll
+F:\Projects\Homefood\Source\API\Persistance\obj\Debug\netcoreapp2.1\Persistance.pdb

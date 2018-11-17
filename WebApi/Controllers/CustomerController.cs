@@ -96,7 +96,7 @@ namespace Chinook.API.Controllers
                     return NotFound();
                 }
 
-                if (await businessSupervisor.DeleteAMSScenerio(id,true, ct))
+                if (await businessSupervisor.DeleteMASArea(id,true, ct))
                 {
                     return Ok();
                 }

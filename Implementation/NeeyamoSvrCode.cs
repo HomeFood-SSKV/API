@@ -60,7 +60,7 @@ namespace DotnetCore.Business
             if (typeof(HomeFoodEntities).IsSubclassOf(typeof(DbContext)))
             {
                 ServiceLocator<IPersistence<MAS_AddressType>>.RegisterService<Persistence.DbCxt.MAS_AddressTypePrst>();
-                ServiceLocator<IPersistence<Customer>>.RegisterService<Persistence.DbCxt.CustomerPrst>();
+                ServiceLocator<IPersistence<Observe>>.RegisterService<Persistence.DbCxt.ObservePrst>();
                 ServiceLocator<IPersistence<MAS_AddressType>>.RegisterService<Persistence.DbCxt.MAS_AddressTypePrst>();
                 ServiceLocator<IPersistence<MAS_Area>>.RegisterService<Persistence.DbCxt.MAS_AreaPrst>();
                 ServiceLocator<IPersistence<MAS_Category>>.RegisterService<Persistence.DbCxt.MAS_CategoryPrst>();
@@ -93,7 +93,7 @@ namespace DotnetCore.Business
                 ServiceLocator<IPersistence<TRN_UserDetail>>.RegisterService<Persistence.DbCxt.TRN_UserDetailPrst>();
                 var config = new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<CustomerDto, Customer>();
+                    cfg.CreateMap<ObserveDto, Observe>();
                     cfg.CreateMap<MAS_AddressTypeDto, MAS_AddressType>();
                     cfg.CreateMap<MAS_AreaDto, MAS_Area>();
                     cfg.CreateMap<MAS_CategoryDto, MAS_Category>();
@@ -220,85 +220,90 @@ namespace DotnetCore.Business
         }
 
 
-        public async Task<List<CustomerDto>> GetCustomer(object objContext, CancellationToken ct = default(CancellationToken))
+        public List<ObserveDto> GetObserve()
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.Customers
-
-                              select new CustomerDto
-                              {
-                                  FirstName = r.LastName,
-                                  LastName = r.LastName,
-                                  Age = r.Age
-                              }).ToListAsync<CustomerDto>();
+                return (from r in iHomeFoodEntities.Observes
+                        select new ObserveDto
+                        {
+                            ObserveId = r.ObserveId,
+                            TableName = r.TableName,
+                            Changed = r.Changed,
+                        }).ToList<ObserveDto>();
             }
         }
 
-        public async Task<int> InsertCustomer(CustomerDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertObserve(ObserveDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                Customer Customeritem = Mapper.Map<CustomerDto, Customer>(customObject);
-                if (await PersistSvr<Customer>.Insert(Customeritem, commit, context))
-                    return Customeritem.Id;
+                Observe Observeitem = Mapper.Map<ObserveDto, Observe>(customObject);
+                if (await PersistSvr<Observe>.Insert(Observeitem, commit, context))
+                    return Observeitem.ObserveId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateCustomer(CustomerDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public bool UpdateObserve(ObserveDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                Customer Customeritem = Mapper.Map<CustomerDto, Customer>(customObject);
-                return await PersistSvr<Customer>.Update(Customeritem, commit, (DbContext)context);
+                var result = context.Observes.SingleOrDefault(b => b.ObserveId == customObject.ObserveId);
+                if (result != null)
+                {
+                    result.Changed = false;
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
             }
         }
 
-        public async Task<List<MAS_AddressTypeDto>> GetMASAddressType(object objContext, CancellationToken ct = default(CancellationToken))
-        {
-            using (var dbContextScope = _dbContextScopeFactory.Create())
-            {
-                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_AddressType
-                              where r.IsDeleted == false
-                              select new MAS_AddressTypeDto
-                              {
-                                  UniqueId = r.UniqueId,
-                                  AddressTypeId = r.AddressTypeId,
-                                  AddressType = r.AddressType
-                              }).ToListAsync();
-            }
-        }
+        //public async Task<List<MAS_AddressTypeDto>> GetMASAddressType( CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        return await (from r in iHomeFoodEntities.MAS_AddressType
+        //                      where r.IsDeleted == false
+        //                      select new MAS_AddressTypeDto
+        //                      {
+        //                          UniqueId = r.UniqueId,
+        //                          AddressTypeId = r.AddressTypeId,
+        //                          AddressType = r.AddressType
+        //                      }).ToListAsync();
+        //    }
+        //}
 
-        public async Task<int> InsertMASAddressType(MAS_AddressTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
-        {
-            using (var dbContextScope = _dbContextScopeFactory.Create())
-            {
-                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                MAS_AddressType MAS_AddressTypeitem = Mapper.Map<MAS_AddressTypeDto, MAS_AddressType>(customObject);
-                if (await PersistSvr<MAS_AddressType>.Insert(MAS_AddressTypeitem, commit, context))
-                    return MAS_AddressTypeitem.AddressTypeId;
-                else
-                    return 0;
-            }
-        }
+        //public async Task<int> InsertMASAddressType(MAS_AddressTypeDto customObject, bool commit,  CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        MAS_AddressType MAS_AddressTypeitem = Mapper.Map<MAS_AddressTypeDto, MAS_AddressType>(customObject);
+        //        if (await PersistSvr<MAS_AddressType>.Insert(MAS_AddressTypeitem, commit, context))
+        //            return MAS_AddressTypeitem.AddressTypeId;
+        //        else
+        //            return 0;
+        //    }
+        //}
 
-        public async Task<bool> UpdateMASAddressType(MAS_AddressTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
-        {
-            using (var dbContextScope = _dbContextScopeFactory.Create())
-            {
-                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                MAS_AddressType MAS_AddressTypeitem = Mapper.Map<MAS_AddressTypeDto, MAS_AddressType>(customObject);
-                return await PersistSvr<MAS_AddressType>.Update(MAS_AddressTypeitem, commit, (DbContext)context);
-            }
-        }
+        //public async Task<bool> UpdateMASAddressType(MAS_AddressTypeDto customObject, bool commit,  CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        MAS_AddressType MAS_AddressTypeitem = Mapper.Map<MAS_AddressTypeDto, MAS_AddressType>(customObject);
+        //        return await PersistSvr<MAS_AddressType>.Update(MAS_AddressTypeitem, commit, (DbContext)context);
+        //    }
+        //}
 
-        public async Task<List<MAS_AreaDto>> GetMASArea(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_AreaDto>> GetMASArea(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -316,7 +321,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASArea(MAS_AreaDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASArea(MAS_AreaDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -329,7 +334,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASArea(MAS_AreaDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASArea(MAS_AreaDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -339,7 +344,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_CategoryDto>> GetMASCategory(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_CategoryDto>> GetMASCategory(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -356,7 +361,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASCategory(MAS_CategoryDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASCategory(MAS_CategoryDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -369,7 +374,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASCategory(MAS_CategoryDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASCategory(MAS_CategoryDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -379,7 +384,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_ChefTypeDto>> GetMASChefType(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_ChefTypeDto>> GetMASChefType(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -395,7 +400,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASChefType(MAS_ChefTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASChefType(MAS_ChefTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -408,7 +413,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASChefType(MAS_ChefTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASChefType(MAS_ChefTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -418,7 +423,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_CityDto>> GetMASCity(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_CityDto>> GetMASCity(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -434,7 +439,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASCity(MAS_CityDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASCity(MAS_CityDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -447,7 +452,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASCity(MAS_CityDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASCity(MAS_CityDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -457,7 +462,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_DeliveryLocationDto>> GetMASDeliveryLocation(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_DeliveryLocationDto>> GetMASDeliveryLocation(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -475,7 +480,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASDeliveryLocation(MAS_DeliveryLocationDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASDeliveryLocation(MAS_DeliveryLocationDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -488,7 +493,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASDeliveryLocation(MAS_DeliveryLocationDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASDeliveryLocation(MAS_DeliveryLocationDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -498,7 +503,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_DiscountDto>> GetMASDiscount(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_DiscountDto>> GetMASDiscount(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -520,7 +525,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASDiscount(MAS_DiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASDiscount(MAS_DiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -533,7 +538,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASDiscount(MAS_DiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASDiscount(MAS_DiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -543,7 +548,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_DiscountTypeDto>> GetMASDiscountType(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_DiscountTypeDto>> GetMASDiscountType(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -560,7 +565,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASDiscountType(MAS_DiscountTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASDiscountType(MAS_DiscountTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -573,7 +578,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASDiscountType(MAS_DiscountTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASDiscountType(MAS_DiscountTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -583,7 +588,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_FoodDto>> GetMASFood(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_FoodDto>> GetMASFood(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -602,7 +607,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASFood(MAS_FoodDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASFood(MAS_FoodDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -615,7 +620,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASFood(MAS_FoodDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASFood(MAS_FoodDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -625,7 +630,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_FoodTypeDto>> GetMASFoodType(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_FoodTypeDto>> GetMASFoodType(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -643,7 +648,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASFoodType(MAS_FoodTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASFoodType(MAS_FoodTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -656,7 +661,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASFoodType(MAS_FoodTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASFoodType(MAS_FoodTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -667,7 +672,7 @@ namespace DotnetCore.Business
         }
 
 
-        public async Task<List<MAS_MealPackDto>> GetMASMealPack(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_MealPackDto>> GetMASMealPack(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -691,7 +696,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASMealPack(MAS_MealPackDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASMealPack(MAS_MealPackDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -704,7 +709,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASMealPack(MAS_MealPackDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASMealPack(MAS_MealPackDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -714,7 +719,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_OrderStatusDto>> GetMASOrderStatus(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_OrderStatusDto>> GetMASOrderStatus(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -730,7 +735,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASOrderStatus(MAS_OrderStatusDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASOrderStatus(MAS_OrderStatusDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -743,7 +748,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASOrderStatus(MAS_OrderStatusDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASOrderStatus(MAS_OrderStatusDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -753,7 +758,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_OrderTypeDto>> GetMASOrderType(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_OrderTypeDto>> GetMASOrderType(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -770,7 +775,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASOrderType(MAS_OrderTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASOrderType(MAS_OrderTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -783,7 +788,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASOrderType(MAS_OrderTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASOrderType(MAS_OrderTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -793,7 +798,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_PaymentTypeDto>> GetMASPaymentType(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_PaymentTypeDto>> GetMASPaymentType(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -809,7 +814,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASPaymentType(MAS_PaymentTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASPaymentType(MAS_PaymentTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -822,7 +827,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASPaymentType(MAS_PaymentTypeDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASPaymentType(MAS_PaymentTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -832,7 +837,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_PriceDto>> GetMASPrice(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_PriceDto>> GetMASPrice(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -851,7 +856,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASPrice(MAS_PriceDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASPrice(MAS_PriceDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -864,7 +869,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASPrice(MAS_PriceDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASPrice(MAS_PriceDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -874,7 +879,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<MAS_RoleDto>> GetMASRole(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<MAS_RoleDto>> GetMASRole(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -890,7 +895,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertMASRole(MAS_RoleDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertMASRole(MAS_RoleDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -903,79 +908,87 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateMASRole(MAS_RoleDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateMASRole(MAS_RoleDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
 
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 MAS_Role TMAS_Roleitem = Mapper.Map<MAS_RoleDto, MAS_Role>(customObject);
-                return await PersistSvr<MAS_Role>.Update(TMAS_Roleitem, commit, (DbContext)context)
- 
-
+                return await PersistSvr<MAS_Role>.Update(TMAS_Roleitem, commit, (DbContext)context);
             }
         }
 
-        public async Task<List<TRN_ChefDetailsDto>> GetTRNChefDetails(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_ChefDetailsDto>> GetTRNChefDetails(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_ChefDetails
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_ChefDetailsDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
+                                  ChefId = r.ChefId,
+                                  ChefFullName = r.ChefFullName,
+                                  ChefTypeId = r.ChefTypeId,
+                                  MobileNumber = r.MobileNumber,
+                                  AlternateMobileNumber = r.AlternateMobileNumber,
+                                  PhoneNumber = r.PhoneNumber,
+                                  EmailId = r.EmailId,
                                   CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  AreaName = r.AreaName,
+                                  AddressLine1 = r.AddressLine1,
+                                  AddressLine2 = r.AddressLine2,
+                                  UserId = r.UserId,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNChefDetails(TRN_ChefDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNChefDetails(TRN_ChefDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_ChefDetails TRN_ChefDetailsitem = Mapper.Map<TRN_ChefDetailsDto, TRN_ChefDetails>(customObject);
                 if (await PersistSvr<TRN_ChefDetails>.Insert(TRN_ChefDetailsitem, commit, context))
-                    return TRN_ChefDetails.TRNChefDetailsId;
+                    return TRN_ChefDetailsitem.ChefId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNChefDetails(TRN_ChefDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNChefDetails(TRN_ChefDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                TRN_ChefDetails TRN_ChefOrderitem = Mapper.Map<TRN_ChefDetailsDto, TRN_ChefDetails>(customObject);
+                return await PersistSvr<TRN_ChefDetails>.Update(TRN_ChefOrderitem, commit, (DbContext)context);
+            }
+        }
+
+        public async Task<List<TRN_ChefOrderDto>> GetTRNChefOrder(CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                return await (from r in iHomeFoodEntities.TRN_ChefOrder
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_ChefOrderDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  ChefOrderId = r.ChefOrderId,
+                                  OrderGivenDatetime = r.OrderGivenDatetime,
+                                  ChefDeliveredDateTime = r.ChefDeliveredDateTime,
+                                  AssignedPickUpDate = r.AssignedPickUpDate,
+                                  AssignedPickUpTime = r.AssignedPickUpTime,
+                                  TaskStatusID = r.TaskStatusID,
                               }).ToListAsync();
             }
         }
 
-        public async Task<List<TRN_ChefOrderDto>> GetTRNChefOrder(object objContext, CancellationToken ct = default(CancellationToken))
-        {
-            using (var dbContextScope = _dbContextScopeFactory.Create())
-            {
-                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                var TRN_ChefOrderRecord = PersistSvr<TRN_ChefOrder>.GetAll(context).Where(i => i.Status == true).ToList();
-                return Mapper.Map<List<TRN_ChefOrder>, List<TRN_ChefOrderDto>>(TRN_ChefOrderRecord);
-            }
-        }
-
-        public async Task<int> InsertTRNChefOrder(TRN_ChefOrderDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNChefOrder(TRN_ChefOrderDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -988,7 +1001,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateTRNChefOrder(TRN_ChefOrderDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNChefOrder(TRN_ChefOrderDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -998,7 +1011,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_ChefOtherDetailsDto>> GetTRNChefOtherDetails(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_ChefOtherDetailsDto>> GetTRNChefOtherDetails(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1021,7 +1034,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertTRNChefOtherDetails(TRN_ChefOtherDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNChefOtherDetails(TRN_ChefOtherDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1034,7 +1047,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateTRNChefOtherDetails(TRN_ChefOtherDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNChefOtherDetails(TRN_ChefOtherDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1044,7 +1057,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_DeliveryDetailsDto>> GetTRNDeliveryDetails(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_DeliveryDetailsDto>> GetTRNDeliveryDetails(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1065,7 +1078,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertTRNDeliveryDetails(TRN_DeliveryDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNDeliveryDetails(TRN_DeliveryDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1078,7 +1091,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateTRNDeliveryDetails(TRN_DeliveryDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNDeliveryDetails(TRN_DeliveryDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1088,7 +1101,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1108,7 +1121,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1121,7 +1134,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1131,7 +1144,7 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_MapOrderToChefDto>> GetTRNMapOrderToChef(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_MapOrderToChefDto>> GetTRNMapOrderToChef(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1148,20 +1161,20 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<int> InsertTRNMapOrderToChef(TRN_MapOrderToChefDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNMapOrderToChef(TRN_MapOrderToChefDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_MapOrderToChef TRN_MapOrderToChefitem = Mapper.Map<TRN_MapOrderToChefDto, TRN_MapOrderToChef>(customObject);
                 if (await PersistSvr<TRN_MapOrderToChef>.Insert(TRN_MapOrderToChefitem, commit, context))
-                    return TRN_MapOrderToChef.TRNMapOrderToChefId;
+                    return TRN_MapOrderToChefitem.MapOrderID;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNMapOrderToChef(TRN_MapOrderToChefDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNMapOrderToChef(TRN_MapOrderToChefDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1171,38 +1184,37 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_MealPackMappingDto>> GetTRNMealPackMapping(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_MealPackMappingDto>> GetTRNMealPackMapping(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_MealPackMapping
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_MealPackMappingDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  MealPackMappingId = r.MealPackMappingId,
+                                  MealPackId = r.MealPackId,
+                                  FoodId = r.FoodId,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNMealPackMapping(TRN_MealPackMappingDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNMealPackMapping(TRN_MealPackMappingDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_MealPackMapping TRN_MealPackMappingitem = Mapper.Map<TRN_MealPackMappingDto, TRN_MealPackMapping>(customObject);
                 if (await PersistSvr<TRN_MealPackMapping>.Insert(TRN_MealPackMappingitem, commit, context))
-                    return TRN_MealPackMapping.TRNMealPackMappingId;
+                    return TRN_MealPackMappingitem.MealPackMappingId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNMealPackMapping(TRN_MealPackMappingDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNMealPackMapping(TRN_MealPackMappingDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1212,38 +1224,42 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_MealPackProcessingDto>> GetTRNMealPackProcessing(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_MealPackProcessingDto>> GetTRNMealPackProcessing(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_MealPackProcessing
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_MealPackProcessingDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  MealPackProcessingId = r.MealPackProcessingId,
+                                  MealPackId = r.MealPackId,
+                                  TotalMealCount = r.TotalMealCount,
+                                  UsedMealCount = r.UsedMealCount,
+                                  RemainingMealCount = r.RemainingMealCount,
+                                  ScheduleDates = r.ScheduleDates,
+                                  UserId = r.UserId,
+                                  OrderId = r.OrderId,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNMealPackProcessing(TRN_MealPackProcessingDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNMealPackProcessing(TRN_MealPackProcessingDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_MealPackProcessing TRN_MealPackProcessingitem = Mapper.Map<TRN_MealPackProcessingDto, TRN_MealPackProcessing>(customObject);
                 if (await PersistSvr<TRN_MealPackProcessing>.Insert(TRN_MealPackProcessingitem, commit, context))
-                    return TRN_MealPackProcessing.TRNMealPackProcessingId;
+                    return TRN_MealPackProcessingitem.MealPackProcessingId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNMealPackProcessing(TRN_MealPackProcessingDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNMealPackProcessing(TRN_MealPackProcessingDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1253,38 +1269,44 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_OrderDto>> GetTRNOrder(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_OrderDto>> GetTRNOrder(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_Order
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_OrderDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  OrderId = r.OrderId,
+                                  UserId = r.UserId,
+                                  OrderTypeId = r.OrderTypeId,
+                                  OrderStatusId = r.OrderStatusId,
+                                  OrderCreatedDatetime = r.OrderCreatedDatetime,
+                                  PaymentTypeId = r.PaymentTypeId,
+                                  TotalQuantity = r.TotalQuantity,
+                                  ActualPrice = r.ActualPrice,
+                                  TotalPrice = r.TotalPrice,
+                                  TotalDiscount = r.TotalDiscount
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNOrder(TRN_OrderDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNOrder(TRN_OrderDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_Order TRN_Orderitem = Mapper.Map<TRN_OrderDto, TRN_Order>(customObject);
                 if (await PersistSvr<TRN_Order>.Insert(TRN_Orderitem, commit, context))
-                    return TRN_Order.TRNOrderId;
+                    return TRN_Orderitem.OrderId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNOrder(TRN_OrderDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNOrder(TRN_OrderDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1294,38 +1316,38 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_OrderAppliedDiscountDto>> GetTRNOrderAppliedDiscount(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_OrderAppliedDiscountDto>> GetTRNOrderAppliedDiscount(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_OrderAppliedDiscount
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_OrderAppliedDiscountDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  AppliedDiscountId = r.AppliedDiscountId,
+                                  DiscountId = r.DiscountId,
+                                  SpecialDiscountId = r.SpecialDiscountId,
+                                  OrderId = r.OrderId,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNOrderAppliedDiscount(TRN_OrderAppliedDiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNOrderAppliedDiscount(TRN_OrderAppliedDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_OrderAppliedDiscount TRN_OrderAppliedDiscountitem = Mapper.Map<TRN_OrderAppliedDiscountDto, TRN_OrderAppliedDiscount>(customObject);
                 if (await PersistSvr<TRN_OrderAppliedDiscount>.Insert(TRN_OrderAppliedDiscountitem, commit, context))
-                    return TRN_OrderAppliedDiscount.TRNOrderAppliedDiscountId;
+                    return TRN_OrderAppliedDiscountitem.AppliedDiscountId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNOrderAppliedDiscount(TRN_OrderAppliedDiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNOrderAppliedDiscount(TRN_OrderAppliedDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1335,38 +1357,38 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_OrderDetailsDto>> GetTRNOrderDetails(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_OrderDetailsDto>> GetTRNOrderDetails(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_OrderDetails
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_OrderDetailsDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  OrderDetailId = r.OrderDetailId,
+                                  OrderId = r.OrderId,
+                                  FoodId = r.FoodId,
+                                  Quantity = r.Quantity
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNOrderDetails(TRN_OrderDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNOrderDetails(TRN_OrderDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_OrderDetails TRN_OrderDetailsitem = Mapper.Map<TRN_OrderDetailsDto, TRN_OrderDetails>(customObject);
                 if (await PersistSvr<TRN_OrderDetails>.Insert(TRN_OrderDetailsitem, commit, context))
-                    return TRN_OrderDetails.TRNOrderDetailsId;
+                    return TRN_OrderDetailsitem.OrderDetailId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNOrderDetails(TRN_OrderDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNOrderDetails(TRN_OrderDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1376,38 +1398,44 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_SpecialDiscountDto>> GetTRNSpecialDiscount(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_SpecialDiscountDto>> GetTRNSpecialDiscount(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_SpecialDiscount
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_SpecialDiscountDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  SpecialDiscountId = r.SpecialDiscountId,
+                                  DiscountName = r.DiscountName,
+                                  DiscountTypeID = r.DiscountTypeID,
+                                  Descriptions = r.Descriptions,
+                                  UserId = r.UserId,
+                                  IsDiscountUsed = r.IsDiscountUsed,
+                                  DiscountPrice = r.DiscountPrice,
+                                  DiscountPercentage = r.DiscountPercentage,
+                                  ValidityFrom = r.ValidityFrom,
+                                  ValidityTo = r.ValidityTo,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_SpecialDiscount TRN_SpecialDiscountitem = Mapper.Map<TRN_SpecialDiscountDto, TRN_SpecialDiscount>(customObject);
                 if (await PersistSvr<TRN_SpecialDiscount>.Insert(TRN_SpecialDiscountitem, commit, context))
-                    return TRN_SpecialDiscount.TRNSpecialDiscountId;
+                    return TRN_SpecialDiscountitem.SpecialDiscountId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1417,38 +1445,42 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_UserAddressDetailsDto>> GetTRNUserAddressDetails(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_UserAddressDetailsDto>> GetTRNUserAddressDetails(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_UserAddressDetails
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_UserAddressDetailsDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
+                                  AddressDetailId = r.AddressDetailId,
+                                  UserId = r.UserId,
+                                  AddressTypeID = r.AddressTypeID,
+                                  DeliveryPointId = r.DeliveryPointId,
                                   AreaName = r.AreaName,
+                                  AddressLine1 = r.AddressLine1,
+                                  AddressLine2 = r.AddressLine2,
                                   CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNUserAddressDetails(TRN_UserAddressDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNUserAddressDetails(TRN_UserAddressDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_UserAddressDetails TRN_UserAddressDetailsitem = Mapper.Map<TRN_UserAddressDetailsDto, TRN_UserAddressDetails>(customObject);
                 if (await PersistSvr<TRN_UserAddressDetails>.Insert(TRN_UserAddressDetailsitem, commit, context))
-                    return TRN_UserAddressDetails.TRNUserAddressDetailsId;
+                    return TRN_UserAddressDetailsitem.AddressDetailId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNUserAddressDetails(TRN_UserAddressDetailsDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNUserAddressDetails(TRN_UserAddressDetailsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
@@ -1458,38 +1490,39 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_UserDetailDto>> GetTRNUserDetail(object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<List<TRN_UserDetailDto>> GetTRNUserDetail(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.MAS_Area
+                return await (from r in iHomeFoodEntities.TRN_UserDetail
                               where r.IsDeleted == false
-                              select new MAS_AreaDto
+                              select new TRN_UserDetailDto
                               {
                                   UniqueId = r.UniqueId,
-                                  AreaId = r.AreaId,
-                                  AreaName = r.AreaName,
-                                  CityId = r.CityId,
-                                  CityName = r.MAS_City.CityName
+                                  UserId = r.UserId,
+                                  Name = r.Name,
+                                  EmailId = r.EmailId,
+                                  PhoneNo = r.PhoneNo,
+                                  RoleId = r.RoleId
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNUserDetail(TRN_UserDetailDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNUserDetail(TRN_UserDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 TRN_UserDetail TRN_UserDetailitem = Mapper.Map<TRN_UserDetailDto, TRN_UserDetail>(customObject);
                 if (await PersistSvr<TRN_UserDetail>.Insert(TRN_UserDetailitem, commit, context))
-                    return TRN_UserDetail.TRNUserDetailId;
+                    return TRN_UserDetailitem.UserId;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNUserDetail(TRN_UserDetailDto customObject, bool commit, object objContext, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNUserDetail(TRN_UserDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {

@@ -22,16 +22,16 @@ namespace Persistence.DbCxt
         }
     }
 
-    public class CustomerPrst : PersistenceBase<Customer>
+    public class ObservePrst : PersistenceBase<Observe>
     {
-        protected override IQueryable<Customer> EntitySet(DbContext context)
+        protected override IQueryable<Observe> EntitySet(DbContext context)
         {
-            return (context as HomeFoodEntities).Customers;
+            return (context as HomeFoodEntities).Observes;
         }
 
-        protected override Customer FindMatchedOne(Customer toBeMatched, DbContext context)
+        protected override Observe FindMatchedOne(Observe toBeMatched, DbContext context)
         {
-            return EntitySet(context).DefaultIfEmpty(null).First(o => o.Id == toBeMatched.Id);
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.ObserveId == toBeMatched.ObserveId);
         }
 
     }

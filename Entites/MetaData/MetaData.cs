@@ -8,24 +8,29 @@ using Common;
 
 namespace DotnetCore.Business.Entities
 {
-    [ModelMetadataType(typeof(CustomerMetadata))]
-    public partial class CustomerDto : BusinessEntityBase
+
+    [ModelMetadataType(typeof(ObserveMetadata))]
+    public partial class ObserveDto : BusinessEntityBase
     { }
-    public class CustomerMetadata
+    public class ObserveMetadata
     {
 
-        [Required(ErrorMessage = "Id is required")]
-        public Int32 Id { get; set; }
+        [Required(ErrorMessage = "Observe is required")]
+        public Int32 ObserveId { get; set; }
 
+        [Required(ErrorMessage = "Table Name is required")]
         [StringLength(100)]
-        public String FirstName { get; set; }
+        public String TableName { get; set; }
 
-        [StringLength(100)]
-        public String LastName { get; set; }
+        [Required(ErrorMessage = "Changed is required")]
+        public Boolean Changed { get; set; }
 
-        public Int32 Age { get; set; }
+        [Required(ErrorMessage = "Is Deleted is required")]
+        public Boolean IsDeleted { get; set; }
 
     }
+
+ 
 
 
     [ModelMetadataType(typeof(MAS_AddressTypeMetadata))]

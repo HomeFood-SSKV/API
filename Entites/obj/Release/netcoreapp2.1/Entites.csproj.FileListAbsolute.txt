@@ -1,0 +1,14 @@
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Entites.deps.json
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Entites.runtimeconfig.json
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Entites.runtimeconfig.dev.json
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Entites.dll
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Entites.pdb
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Utilities.dll
+F:\Projects\Homefood\Source\API\Entites\bin\Release\netcoreapp2.1\Utilities.pdb
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.csprojAssemblyReference.cache
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.AssemblyInfoInputs.cache
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.AssemblyInfo.cs
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.csproj.CopyComplete
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.dll
+F:\Projects\Homefood\Source\API\Entites\obj\Release\netcoreapp2.1\Entites.pdb

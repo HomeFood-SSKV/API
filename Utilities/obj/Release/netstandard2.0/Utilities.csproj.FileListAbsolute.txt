@@ -1,0 +1,9 @@
+F:\Projects\Homefood\Source\API\Utilities\bin\Release\netstandard2.0\Utilities.deps.json
+F:\Projects\Homefood\Source\API\Utilities\bin\Release\netstandard2.0\Utilities.dll
+F:\Projects\Homefood\Source\API\Utilities\bin\Release\netstandard2.0\Utilities.pdb
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.csprojAssemblyReference.cache
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.AssemblyInfoInputs.cache
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.AssemblyInfo.cs
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.dll
+F:\Projects\Homefood\Source\API\Utilities\obj\Release\netstandard2.0\Utilities.pdb

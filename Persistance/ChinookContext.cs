@@ -10,7 +10,6 @@ namespace Chinook.Data
         {
             
         }
-        public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<MAS_AddressType> MAS_AddressType { get; set; }
         public virtual DbSet<MAS_Area> MAS_Area { get; set; }
         public virtual DbSet<MAS_Category> MAS_Category { get; set; }
@@ -27,6 +26,7 @@ namespace Chinook.Data
         public virtual DbSet<MAS_PaymentType> MAS_PaymentType { get; set; }
         public virtual DbSet<MAS_Price> MAS_Price { get; set; }
         public virtual DbSet<MAS_Role> MAS_Role { get; set; }
+        public virtual DbSet<Observe> Observes { get; set; }
         public virtual DbSet<TRN_ChefDetails> TRN_ChefDetails { get; set; }
         public virtual DbSet<TRN_ChefOrder> TRN_ChefOrder { get; set; }
         public virtual DbSet<TRN_ChefOtherDetails> TRN_ChefOtherDetails { get; set; }
@@ -42,7 +42,9 @@ namespace Chinook.Data
         public virtual DbSet<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
         public virtual DbSet<TRN_UserDetail> TRN_UserDetail { get; set; }
 
-        private readonly string _dbName= "Server=DESKTOP-2F4H19O\\SQLEXPRESS;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sqlLogin;Password=neeyamo@123";
+        // private readonly string _dbName= "Server=DESKTOP-2F4H19O\\SQLEXPRESS;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sqlLogin;Password=neeyamo@123";
+
+       private readonly string _dbName= "Server=DOTNETCORE-FOOD\\SQLEXPRESS2017;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
 
         public HomeFoodEntities(DbContextOptions<HomeFoodEntities> options) : base(options)
         {
@@ -68,7 +70,7 @@ namespace Chinook.Data
         {
             //new AlbumConfiguration(modelBuilder.Entity<Album>());
             //new ArtistConfiguration(modelBuilder.Entity<Artist>());
-            new CustomerConfiguration(modelBuilder.Entity<Customer>());
+            //new CustomerConfiguration(modelBuilder.Entity<Customer>());
             //new EmployeeConfiguration(modelBuilder.Entity<Employee>());
             //new GenreConfiguration(modelBuilder.Entity<Genre>());
             //new InvoiceConfiguration(modelBuilder.Entity<Invoice>());

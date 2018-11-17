@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HomeFoodModelStoreContainer" CdmEntityContainer="HomeFoodEntities">
+    <EntitySetMapping Name="MAS_AddressType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_AddressType">
+        <MappingFragment StoreEntitySet="MAS_AddressType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+          <ScalarProperty Name="AddressTypeId" ColumnName="AddressTypeId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Area">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Area">
+        <MappingFragment StoreEntitySet="MAS_Area">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Category">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Category">
+        <MappingFragment StoreEntitySet="MAS_Category">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_ChefType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_ChefType">
+        <MappingFragment StoreEntitySet="MAS_ChefType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ChefType" ColumnName="ChefType" />
+          <ScalarProperty Name="ChefTypeId" ColumnName="ChefTypeId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_City">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_City">
+        <MappingFragment StoreEntitySet="MAS_City">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_DeliveryLocation">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_DeliveryLocation">
+        <MappingFragment StoreEntitySet="MAS_DeliveryLocation">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="DeliveryPointName" ColumnName="DeliveryPointName" />
+          <ScalarProperty Name="DeliveyPointId" ColumnName="DeliveyPointId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Discount">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Discount">
+        <MappingFragment StoreEntitySet="MAS_Discount">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ValidityTo" ColumnName="ValidityTo" />
+          <ScalarProperty Name="ValidityFrom" ColumnName="ValidityFrom" />
+          <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+          <ScalarProperty Name="DiscountPrice" ColumnName="DiscountPrice" />
+          <ScalarProperty Name="DiscountTypeID" ColumnName="DiscountTypeID" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="DiscountName" ColumnName="DiscountName" />
+          <ScalarProperty Name="DiscountId" ColumnName="DiscountId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_DiscountType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_DiscountType">
+        <MappingFragment StoreEntitySet="MAS_DiscountType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="DiscountTypeID" ColumnName="DiscountTypeID" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Food">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Food">
+        <MappingFragment StoreEntitySet="MAS_Food">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="FoodTypeID" ColumnName="FoodTypeID" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_FoodType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_FoodType">
+        <MappingFragment StoreEntitySet="MAS_FoodType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="FoodTypeCode" ColumnName="FoodTypeCode" />
+          <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+          <ScalarProperty Name="FoodTypeID" ColumnName="FoodTypeID" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_MealPack">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_MealPack">
+        <MappingFragment StoreEntitySet="MAS_MealPack">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OrderTypeCode" ColumnName="OrderTypeCode" />
+          <ScalarProperty Name="OrderTypeId" ColumnName="OrderTypeId" />
+          <ScalarProperty Name="GSTPercentage" ColumnName="GSTPercentage" />
+          <ScalarProperty Name="GSTPrice" ColumnName="GSTPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="CurrentPrice" ColumnName="CurrentPrice" />
+          <ScalarProperty Name="CurrentMealCount" ColumnName="CurrentMealCount" />
+          <ScalarProperty Name="TotalMealCount" ColumnName="TotalMealCount" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="MealPackName" ColumnName="MealPackName" />
+          <ScalarProperty Name="MealPackId" ColumnName="MealPackId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_OrderStatus">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_OrderStatus">
+        <MappingFragment StoreEntitySet="MAS_OrderStatus">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_OrderType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_OrderType">
+        <MappingFragment StoreEntitySet="MAS_OrderType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="OrderTypeCode" ColumnName="OrderTypeCode" />
+          <ScalarProperty Name="OrderTypeId" ColumnName="OrderTypeId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_PaymentType">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_PaymentType">
+        <MappingFragment StoreEntitySet="MAS_PaymentType">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Price">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Price">
+        <MappingFragment StoreEntitySet="MAS_Price">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="GSTPercentage" ColumnName="GSTPercentage" />
+          <ScalarProperty Name="GSTPrice" ColumnName="GSTPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="PriceId" ColumnName="PriceId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Role">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Role">
+        <MappingFragment StoreEntitySet="MAS_Role">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Observes">
+      <EntityTypeMapping TypeName="HomeFoodModel.Observe">
+        <MappingFragment StoreEntitySet="Observe">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Changed" ColumnName="Changed" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ObserveId" ColumnName="ObserveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_ChefDetails">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_ChefDetails">
+        <MappingFragment StoreEntitySet="TRN_ChefDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="AlternateMobileNumber" ColumnName="AlternateMobileNumber" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="ChefTypeId" ColumnName="ChefTypeId" />
+          <ScalarProperty Name="ChefFullName" ColumnName="ChefFullName" />
+          <ScalarProperty Name="ChefId" ColumnName="ChefId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_ChefOrder">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_ChefOrder">
+        <MappingFragment StoreEntitySet="TRN_ChefOrder">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TaskStatusID" ColumnName="TaskStatusID" />
+          <ScalarProperty Name="AssignedPickUpTime" ColumnName="AssignedPickUpTime" />
+          <ScalarProperty Name="AssignedPickUpDate" ColumnName="AssignedPickUpDate" />
+          <ScalarProperty Name="ChefDeliveredDateTime" ColumnName="ChefDeliveredDateTime" />
+          <ScalarProperty Name="OrderGivenDatetime" ColumnName="OrderGivenDatetime" />
+          <ScalarProperty Name="ChefOrderId" ColumnName="ChefOrderId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_ChefOtherDetails">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_ChefOtherDetails">
+        <MappingFragment StoreEntitySet="TRN_ChefOtherDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AvailableForDinner" ColumnName="AvailableForDinner" />
+          <ScalarProperty Name="AvaiableForLunch" ColumnName="AvaiableForLunch" />
+          <ScalarProperty Name="AvailableTime" ColumnName="AvailableTime" />
+          <ScalarProperty Name="AvaiableDays" ColumnName="AvaiableDays" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="SpecialistAt" ColumnName="SpecialistAt" />
+          <ScalarProperty Name="FoodTypeId" ColumnName="FoodTypeId" />
+          <ScalarProperty Name="ChefId" ColumnName="ChefId" />
+          <ScalarProperty Name="ChefOtherDetailID" ColumnName="ChefOtherDetailID" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_DeliveryDetails">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_DeliveryDetails">
+        <MappingFragment StoreEntitySet="TRN_DeliveryDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="AddressDetailId" ColumnName="AddressDetailId" />
+          <ScalarProperty Name="DeliveryPointId" ColumnName="DeliveryPointId" />
+          <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+          <ScalarProperty Name="ScheduleDeliveryDate" ColumnName="ScheduleDeliveryDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="DeliveryDetailId" ColumnName="DeliveryDetailId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_LoginDetail">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_LoginDetail">
+        <MappingFragment StoreEntitySet="TRN_LoginDetail">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_MapOrderToChef">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_MapOrderToChef">
+        <MappingFragment StoreEntitySet="TRN_MapOrderToChef">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ChefId" ColumnName="ChefId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="MapOrderID" ColumnName="MapOrderID" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_MealPackMapping">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_MealPackMapping">
+        <MappingFragment StoreEntitySet="TRN_MealPackMapping">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="MealPackId" ColumnName="MealPackId" />
+          <ScalarProperty Name="MealPackMappingId" ColumnName="MealPackMappingId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_MealPackProcessing">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_MealPackProcessing">
+        <MappingFragment StoreEntitySet="TRN_MealPackProcessing">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ScheduleDates" ColumnName="ScheduleDates" />
+          <ScalarProperty Name="RemainingMealCount" ColumnName="RemainingMealCount" />
+          <ScalarProperty Name="UsedMealCount" ColumnName="UsedMealCount" />
+          <ScalarProperty Name="TotalMealCount" ColumnName="TotalMealCount" />
+          <ScalarProperty Name="MealPackId" ColumnName="MealPackId" />
+          <ScalarProperty Name="MealPackProcessingId" ColumnName="MealPackProcessingId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_Order">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_Order">
+        <MappingFragment StoreEntitySet="TRN_Order">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="TotalDiscount" ColumnName="TotalDiscount" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ActualPrice" ColumnName="ActualPrice" />
+          <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+          <ScalarProperty Name="OrderCreatedDatetime" ColumnName="OrderCreatedDatetime" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="OrderTypeId" ColumnName="OrderTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_OrderAppliedDiscount">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_OrderAppliedDiscount">
+        <MappingFragment StoreEntitySet="TRN_OrderAppliedDiscount">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SpecialDiscountId" ColumnName="SpecialDiscountId" />
+          <ScalarProperty Name="DiscountId" ColumnName="DiscountId" />
+          <ScalarProperty Name="AppliedDiscountId" ColumnName="AppliedDiscountId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_OrderDetails">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_OrderDetails">
+        <MappingFragment StoreEntitySet="TRN_OrderDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDetailId" ColumnName="OrderDetailId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_SpecialDiscount">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_SpecialDiscount">
+        <MappingFragment StoreEntitySet="TRN_SpecialDiscount">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ValidityTo" ColumnName="ValidityTo" />
+          <ScalarProperty Name="ValidityFrom" ColumnName="ValidityFrom" />
+          <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+          <ScalarProperty Name="DiscountPrice" ColumnName="DiscountPrice" />
+          <ScalarProperty Name="IsDiscountUsed" ColumnName="IsDiscountUsed" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="DiscountTypeID" ColumnName="DiscountTypeID" />
+          <ScalarProperty Name="DiscountName" ColumnName="DiscountName" />
+          <ScalarProperty Name="SpecialDiscountId" ColumnName="SpecialDiscountId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_UserAddressDetails">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_UserAddressDetails">
+        <MappingFragment StoreEntitySet="TRN_UserAddressDetails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="DeliveryPointId" ColumnName="DeliveryPointId" />
+          <ScalarProperty Name="AddressTypeID" ColumnName="AddressTypeID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddressDetailId" ColumnName="AddressDetailId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_UserDetail">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_UserDetail">
+        <MappingFragment StoreEntitySet="TRN_UserDetail">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
