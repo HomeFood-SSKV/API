@@ -9,6 +9,10 @@ using DotnetCore.Business;
 using DotnetCore.Web.Controllers;
 using DotnetCore.Web.Models;
 using Neeyamo.Web.Helpers;
+using WebApi.Common.Helper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Chinook.API
 {
@@ -24,24 +28,51 @@ namespace Chinook.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var redisconnection = Configuration.GetConnectionString("RedisConnection");
+            var secret = Configuration.GetConnectionString("Secret");
+
             services.AddMvc();
 
+            //Add Jwt Token
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                  .AddJwtBearer(x =>
+                  {
+                      x.RequireHttpsMetadata = false;
+                      x.SaveToken = true;
+                      x.TokenValidationParameters = new TokenValidationParameters
+                      {
+                          ValidateIssuerSigningKey = true,
+                          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secret)),
+                          ValidateIssuer = false,
+                          ValidateAudience = false
+                      };
+                  });
+
+            //Add Session
             services.ConfigureRepositories()
                 .AddMiddleware()
                 .AddCorsConfiguration()
                 .AddConnectionProvider(Configuration)
                 .AddAppSettings(Configuration);
+
+            //Add Session
             services.AddSession();
+
             //Add distributed cache service backed by Redis cache
             services.AddDistributedRedisCache(option =>
             {
-                option.Configuration = Configuration.GetConnectionString("RedisConnection");
+                option.Configuration = redisconnection;
                 option.InstanceName = "master";
             });
 
+            //Add Session
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1", new Info {Title = "Chinook API", Description = "Chinook Music Store API"});
+                s.SwaggerDoc("v1", new Info { Title = "Chinook API", Description = "Chinook Music Store API" });
             });
         }
 
@@ -53,8 +84,10 @@ namespace Chinook.API
                 app.UseDeveloperExceptionPage();
             }
             BusinessSupervisor.DotnetCoreSvr = new DotnetCoreSvr();
-            BaseController.businessSupervisor =new BusinessSupervisor();
+            BaseController.businessSupervisor = new BusinessSupervisor();
+            BaseModel.businessSupervisor = new BusinessSupervisor();
             RedisDbWrapper.DotnetCoreSvr = new DotnetCoreSvr();
+
             app.UseCors("AllowAll");
 
             app.UseStaticFiles();

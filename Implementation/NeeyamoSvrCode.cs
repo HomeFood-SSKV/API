@@ -21,22 +21,10 @@ namespace DotnetCore.Business
 
     public partial class DotnetCoreSvr : IBusiness
     {
-
         private readonly IAmbientDbContextLocator _ambientDbContextLocator;
         private readonly IDbContextScopeFactory _dbContextScopeFactory;
         private static IMapper mapper;
         private HomeFoodEntities iHomeFoodEntities;
-        private HomeFoodEntities iPayrollDbContext
-        {
-            get
-            {
-                var dbContext = _ambientDbContextLocator.Get<HomeFoodEntities>();
-
-                if (dbContext == null)
-                    throw new InvalidOperationException("No ambient DbContext of type UserManagementDbContext found. This means that this repository method has been called outside of the scope of a DbContextScope. A repository must only be accessed within the scope of a DbContextScope, which takes care of creating the DbContext instances that the repositories need and making them available as ambient contexts. This is what ensures that, for any given DbContext-derived type, the same instance is used throughout the duration of a business transaction. To fix this issue, use IDbContextScopeFactory in your top-level business logic service method to create a DbContextScope that wraps the entire business transaction that your service method implements. Then access this repository within that scope. Refer to the comments in the IDbContextScope.cs file for more details.");
-                return dbContext;
-            }
-        }
 
         public DotnetCoreSvr()
         {
@@ -55,7 +43,6 @@ namespace DotnetCore.Business
 
         static DotnetCoreSvr()
         {
-
             var dbContextScopeFactory = new DbContextScopeFactory();
             if (typeof(HomeFoodEntities).IsSubclassOf(typeof(DbContext)))
             {
@@ -126,51 +113,8 @@ namespace DotnetCore.Business
                     cfg.CreateMap<TRN_UserDetailDto, TRN_UserDetail>();
                 });
                 mapper = config.CreateMapper();
-                /*  NOTE: You can rename following code for  Following Operation
-                 *  Create New Record
-                 *  Read Existing Record
-                 *  Update Existing Record
-                 *  Delete Existing Record
-      
-                ------------------------------------------------------------
-                 * 
-                 * Entity Framework CRUD Operation
-                 * 
-                 * ----------------------------------------------------------
-                     public List<TModel> GetModel()
-                       {
-                           return PersistSvr<TModel>.GetAll(ResourceData.DotnetCoreDbCOntext).ToList();
-                       }
-
-                       public void InsertModel(TModel model, bool commit)
-                       {
-                           PersistSvr<TModel>.Insert(model, commit);
-                       }
-
-                       public void UpdateModel(TModel currentModel, bool commit)
-                       {
-                           PersistSvr<TModel>.Update(currentModel, commit);
-                       }
-
-                       public void DeleteModel(String modelId, bool commit)
-                       {
-                           IQueryable<TModel> qAction = PersistSvr<TModel>.GetAll(ResourceData.DotnetCoreDbCOntext);
-                           List<TModel> act = (from c in qAction where c.modelId.ToString() == modelId select c).ToList();
-                           if (act.Count > 0)
-                           {
-                               act[0].Status = false;
-                               act[0].UpdatedBy = Globals._userLoginId;
-                               act[0].UpdatedDate = DateTime.Now;
-                               PersistSvr<TModel>.Delete(act[0], commit);
-                           }
-                       }  
-                 * 
-                 */
             }
         }
-
-
-
 
 
         public async Task<List<MAS_AddressTypeDto>> GetMASAddressType(CancellationToken ct = default(CancellationToken))

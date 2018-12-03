@@ -2578,11 +2578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\Homefood\\Source\\API\\Utilities\\Utilities.csproj",
+      "projectUniqueName": "F:\\Projects\\Homefood\\API PRoject\\API\\Utilities\\Utilities.csproj",
       "projectName": "Utilities",
-      "projectPath": "F:\\Projects\\Homefood\\Source\\API\\Utilities\\Utilities.csproj",
+      "projectPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Utilities\\Utilities.csproj",
       "packagesPath": "C:\\Users\\Srimaran Hacker\\.nuget\\packages\\",
-      "outputPath": "F:\\Projects\\Homefood\\Source\\API\\Utilities\\obj\\",
+      "outputPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

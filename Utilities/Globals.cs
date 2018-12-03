@@ -8,7 +8,7 @@ namespace Common.Utils
 {
     public class Globals
     {
-        public static List<EntityChangeObserver> observers = new List<EntityChangeObserver>();
+       
         public static T SetAddDefaultPageValue<T>(T sourceObject, int createdby = 0)
         {
             Type sourceType = sourceObject.GetType();

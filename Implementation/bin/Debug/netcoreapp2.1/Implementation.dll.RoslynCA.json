@@ -1,0 +1,1469 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "2.9.0.0",
+        "fileVersion": "2.9.0.63127 (4b223d58)",
+        "semanticVersion": "2.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 212,
+                  "startColumn": 9,
+                  "endLine": 212,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 56,
+                  "endLine": 127,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 21,
+                  "endLine": 124,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 21,
+                  "endLine": 171,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make 'iHomeFoodEntities' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 34,
+                  "endLine": 27,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 256,
+                  "startColumn": 52,
+                  "endLine": 256,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 254,
+                  "startColumn": 21,
+                  "endLine": 254,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3963",
+          "level": "warning",
+          "message": "Initialize all 'static fields' inline and remove the 'static constructor'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 9,
+                  "endLine": 117,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'dbContextScopeFactory'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 17,
+                  "endLine": 46,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 297,
+                  "startColumn": 52,
+                  "endLine": 297,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 295,
+                  "startColumn": 21,
+                  "endLine": 295,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 337,
+                  "startColumn": 52,
+                  "endLine": 337,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 335,
+                  "startColumn": 21,
+                  "endLine": 335,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 376,
+                  "startColumn": 52,
+                  "endLine": 376,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 374,
+                  "startColumn": 21,
+                  "endLine": 374,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 415,
+                  "startColumn": 52,
+                  "endLine": 415,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 413,
+                  "startColumn": 21,
+                  "endLine": 413,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 456,
+                  "startColumn": 52,
+                  "endLine": 456,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 454,
+                  "startColumn": 21,
+                  "endLine": 454,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 501,
+                  "startColumn": 52,
+                  "endLine": 501,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 499,
+                  "startColumn": 21,
+                  "endLine": 499,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 541,
+                  "startColumn": 52,
+                  "endLine": 541,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 539,
+                  "startColumn": 21,
+                  "endLine": 539,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 583,
+                  "startColumn": 52,
+                  "endLine": 583,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 581,
+                  "startColumn": 21,
+                  "endLine": 581,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 625,
+                  "startColumn": 52,
+                  "endLine": 625,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 623,
+                  "startColumn": 21,
+                  "endLine": 623,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 672,
+                  "startColumn": 52,
+                  "endLine": 672,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 670,
+                  "startColumn": 21,
+                  "endLine": 670,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 711,
+                  "startColumn": 52,
+                  "endLine": 711,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 709,
+                  "startColumn": 21,
+                  "endLine": 709,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 751,
+                  "startColumn": 52,
+                  "endLine": 751,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 749,
+                  "startColumn": 21,
+                  "endLine": 749,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 790,
+                  "startColumn": 52,
+                  "endLine": 790,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 788,
+                  "startColumn": 21,
+                  "endLine": 788,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 832,
+                  "startColumn": 52,
+                  "endLine": 832,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 830,
+                  "startColumn": 21,
+                  "endLine": 830,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 921,
+                  "startColumn": 52,
+                  "endLine": 921,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 872,
+                  "startColumn": 52,
+                  "endLine": 872,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 919,
+                  "startColumn": 21,
+                  "endLine": 919,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 870,
+                  "startColumn": 21,
+                  "endLine": 870,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 964,
+                  "startColumn": 52,
+                  "endLine": 964,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 962,
+                  "startColumn": 21,
+                  "endLine": 962,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1010,
+                  "startColumn": 52,
+                  "endLine": 1010,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1008,
+                  "startColumn": 21,
+                  "endLine": 1008,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1054,
+                  "startColumn": 52,
+                  "endLine": 1054,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1052,
+                  "startColumn": 21,
+                  "endLine": 1052,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1097,
+                  "startColumn": 52,
+                  "endLine": 1097,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1095,
+                  "startColumn": 21,
+                  "endLine": 1095,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1137,
+                  "startColumn": 52,
+                  "endLine": 1137,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1135,
+                  "startColumn": 21,
+                  "endLine": 1135,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1177,
+                  "startColumn": 52,
+                  "endLine": 1177,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1175,
+                  "startColumn": 21,
+                  "endLine": 1175,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1222,
+                  "startColumn": 52,
+                  "endLine": 1222,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1269,
+                  "startColumn": 52,
+                  "endLine": 1269,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1220,
+                  "startColumn": 21,
+                  "endLine": 1220,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1267,
+                  "startColumn": 21,
+                  "endLine": 1267,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1310,
+                  "startColumn": 52,
+                  "endLine": 1310,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1308,
+                  "startColumn": 21,
+                  "endLine": 1308,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1351,
+                  "startColumn": 52,
+                  "endLine": 1351,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1349,
+                  "startColumn": 21,
+                  "endLine": 1349,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1398,
+                  "startColumn": 52,
+                  "endLine": 1398,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1443,
+                  "startColumn": 52,
+                  "endLine": 1443,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1396,
+                  "startColumn": 21,
+                  "endLine": 1396,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'context'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Implementation/NeeyamoSvrCode.cs",
+                "region": {
+                  "startLine": 1441,
+                  "startColumn": 21,
+                  "endLine": 1441,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that's not marked readonly but is only set in the constructor, it could cause confusion about the field's intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3963": {
+          "id": "S3963",
+          "shortDescription": "\"static\" fields should be initialized inline",
+          "fullDescription": "When a static constructor serves no other purpose that initializing static fields, it comes with an unnecessary performance cost because the compiler generates a check before each static method or instance constructor invocation.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3963",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

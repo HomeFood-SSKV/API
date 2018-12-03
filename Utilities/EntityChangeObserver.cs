@@ -6,23 +6,23 @@ using System.Linq;
 namespace DotnetCore.Web.Helpers
 {
 
-    public class ChangeOperation : IChangeOperation
+    public class ChangeOperation : EntityChangeObserverMaster,IChangeOperation
     {
-
+       
 
         public void Attach(EntityChangeObserver observer)
         {
-            Globals.observers.Add(observer);
+            observers.Add(observer);
         }
 
         public void Detach(EntityChangeObserver observer)
         {
-            Globals.observers.Remove(observer);
+            observers.Remove(observer);
         }
 
         public bool Clone(EntityChangeObserver observer)
         {
-            List<EntityChangeObserver> _observerChild = Globals.observers.Where(n => n._clientId == observer._clientId && n._countryId == observer._countryId && n._buId == observer._buId && n._functionName == observer._functionName).ToList();
+            List<EntityChangeObserver> _observerChild = observers.Where(n => n._clientId == observer._clientId && n._countryId == observer._countryId && n._buId == observer._buId && n._functionName == observer._functionName).ToList();
             if (_observerChild.Count() >= 1)
             {
                 foreach (var elem in _observerChild)
@@ -66,13 +66,14 @@ namespace DotnetCore.Web.Helpers
         void Update(EntityChangeObserver observer);
     }
 
-    public static class EntityChangeObserverMaster
+    public  class EntityChangeObserverMaster
     {
+        protected static List<EntityChangeObserver> observers = new List<EntityChangeObserver>();
         public static bool DataSetObserver(string functionality, int clientId, int countryId, int buId)
         {
             ChangeOperation subject = new ChangeOperation();
             var entityAttachObserver = new EntityChangeObserver(clientId, countryId, buId, functionality);
-            if (Globals.observers.Count(n => n._clientId == entityAttachObserver._clientId && n._countryId == entityAttachObserver._countryId && n._buId == entityAttachObserver._buId && n._functionName == entityAttachObserver._functionName) == 0)
+            if (observers.Count(n => n._clientId == entityAttachObserver._clientId && n._countryId == entityAttachObserver._countryId && n._buId == entityAttachObserver._buId && n._functionName == entityAttachObserver._functionName) == 0)
             {
                 subject.Attach(entityAttachObserver);
             }

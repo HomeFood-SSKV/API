@@ -9,3 +9,15 @@ F:\Projects\Homefood\Source\API\Data.EF\bin\Debug\EntityFramework.SqlServer.dll
 F:\Projects\Homefood\Source\API\Data.EF\bin\Debug\EntityFramework.xml
 F:\Projects\Homefood\Source\API\Data.EF\bin\Debug\EntityFramework.SqlServer.xml
 F:\Projects\Homefood\Source\API\Data.EF\obj\Debug\Data.EF.csproj.CopyComplete
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\Data.EF.dll.config
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\Data.EF.dll
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\Data.EF.pdb
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\EntityFramework.dll
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\EntityFramework.xml
+F:\Projects\Homefood\API PRoject\API\Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csproj.CopyComplete
+F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.dll
+F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.pdb
+F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csprojAssemblyReference.cache

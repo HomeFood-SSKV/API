@@ -8,7 +8,7 @@ namespace Chinook.Data
 
         public HomeFoodEntities()
         {
-            
+
         }
         public virtual DbSet<MAS_AddressType> MAS_AddressType { get; set; }
         public virtual DbSet<MAS_Area> MAS_Area { get; set; }
@@ -42,13 +42,12 @@ namespace Chinook.Data
         public virtual DbSet<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
         public virtual DbSet<TRN_UserDetail> TRN_UserDetail { get; set; }
 
-        // private readonly string _dbName= "Server=DESKTOP-2F4H19O\\SQLEXPRESS;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sqlLogin;Password=neeyamo@123";
 
-       private readonly string _dbName= "Server=DOTNETCORE-FOOD\\SQLEXPRESS2017;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
+        private readonly string _dbName = "Server=DOTNETCORE-FOOD\\SQLEXPRESS2017;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
 
         public HomeFoodEntities(DbContextOptions<HomeFoodEntities> options) : base(options)
         {
-            
+
         }
 
         public HomeFoodEntities(string dbName)
@@ -59,26 +58,9 @@ namespace Chinook.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-
             if (!string.IsNullOrEmpty(_dbName))
                 optionsBuilder.UseSqlServer(_dbName);
         }
 
-
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //new AlbumConfiguration(modelBuilder.Entity<Album>());
-            //new ArtistConfiguration(modelBuilder.Entity<Artist>());
-            //new CustomerConfiguration(modelBuilder.Entity<Customer>());
-            //new EmployeeConfiguration(modelBuilder.Entity<Employee>());
-            //new GenreConfiguration(modelBuilder.Entity<Genre>());
-            //new InvoiceConfiguration(modelBuilder.Entity<Invoice>());
-            //new InvoiceLineConfiguration(modelBuilder.Entity<InvoiceLine>());
-            //new MediaTypeConfiguration(modelBuilder.Entity<MediaType>());
-            //new PlaylistConfiguration(modelBuilder.Entity<Playlist>());
-            //new PlaylistTrackConfiguration(modelBuilder.Entity<PlaylistTrack>());
-            //new TrackConfiguration(modelBuilder.Entity<Track>());
-        }
     }
 }

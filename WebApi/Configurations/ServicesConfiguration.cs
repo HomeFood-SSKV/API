@@ -10,18 +10,6 @@ namespace Chinook.API.Configurations
     {
         public static IServiceCollection ConfigureRepositories(this IServiceCollection services) =>
             services.AddScoped<IBusiness, DotnetCoreSvr>();
-             //.AddScoped<ICategoryRepository, CategoryRepository>()
-             //.AddScoped<IChefTypeRepository, ChefTypeRepository>()
-             //.AddScoped<IFoodRepository, FoodRepository>()
-             //.AddScoped<IFoodTypeRepository, FoodTypeRepository>()
-             //.AddScoped<IOrderTypeRepository, OrderTypeRepository>()
-             //.AddScoped<IPaymentTypeRepository, PaymentTypeRepository>()
-             //.AddScoped<IPriceRepository, PriceRepository>();
-
-        //public static IServiceCollection ConfigureSupervisor(this IServiceCollection services) =>
-        //    services.AddScoped<IChinookSupervisor, ChinookSupervisor>();
-     
-
 
         public static IServiceCollection AddMiddleware(this IServiceCollection services)
         {

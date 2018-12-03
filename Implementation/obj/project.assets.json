@@ -8113,11 +8113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\Homefood\\Source\\API\\Implementation\\Implementation.csproj",
+      "projectUniqueName": "F:\\Projects\\Homefood\\API PRoject\\API\\Implementation\\Implementation.csproj",
       "projectName": "Implementation",
-      "projectPath": "F:\\Projects\\Homefood\\Source\\API\\Implementation\\Implementation.csproj",
+      "projectPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Implementation\\Implementation.csproj",
       "packagesPath": "C:\\Users\\Srimaran Hacker\\.nuget\\packages\\",
-      "outputPath": "F:\\Projects\\Homefood\\Source\\API\\Implementation\\obj\\",
+      "outputPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Implementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8136,14 +8136,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "F:\\Projects\\Homefood\\Source\\API\\Entites\\Entites.csproj": {
-              "projectPath": "F:\\Projects\\Homefood\\Source\\API\\Entites\\Entites.csproj"
+            "F:\\Projects\\Homefood\\API PRoject\\API\\Entites\\Entites.csproj": {
+              "projectPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Entites\\Entites.csproj"
             },
-            "F:\\Projects\\Homefood\\Source\\API\\Interface\\IBusiness.csproj": {
-              "projectPath": "F:\\Projects\\Homefood\\Source\\API\\Interface\\IBusiness.csproj"
+            "F:\\Projects\\Homefood\\API PRoject\\API\\Interface\\IBusiness.csproj": {
+              "projectPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Interface\\IBusiness.csproj"
             },
-            "F:\\Projects\\Homefood\\Source\\API\\Persistance\\Persistance.csproj": {
-              "projectPath": "F:\\Projects\\Homefood\\Source\\API\\Persistance\\Persistance.csproj"
+            "F:\\Projects\\Homefood\\API PRoject\\API\\Persistance\\Persistance.csproj": {
+              "projectPath": "F:\\Projects\\Homefood\\API PRoject\\API\\Persistance\\Persistance.csproj"
             }
           }
         }

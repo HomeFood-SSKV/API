@@ -11,18 +11,13 @@ namespace Neeyamo.Web.Helpers
 {
     public static class RedisDbWrapper
     {
-        private const double ChacheExpirationInMinutes = 10;
-        private static string consolidatedKey;
-        private static ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
-
-        public static IBusiness _dotnetcoreSvr;
+        private static IBusiness _dotnetcoreSvr;
         public static IBusiness DotnetCoreSvr
         {
             get
             {
                 if (_dotnetcoreSvr == null)
-                    throw new ApplicationException("iGlobalPayController.iGlobalPaySvr: iGlobalPaySvr is null.");
-
+                    return null;
                 return _dotnetcoreSvr;
             }
             set { _dotnetcoreSvr = value; }
@@ -42,9 +37,6 @@ namespace Neeyamo.Web.Helpers
                 DateTime.Now.AddMinutes(1440).TimeOfDay, 
                 o);
         }
-
-
-   
 
 
         /// <summary>
@@ -98,7 +90,6 @@ namespace Neeyamo.Web.Helpers
                 value = default(T);
                 return false;
             }
-
             return true;
         }
     }

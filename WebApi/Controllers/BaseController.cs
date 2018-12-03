@@ -7,14 +7,10 @@ using DotnetCore.Web.Models;
 namespace DotnetCore.Web.Controllers
 {
 
-    //  [NoCache()]
     public class BaseController : Controller
     {
-        public static string SUCCESS = "success";
-        public static string ERROR = "error";
-        public string userid = "10";
-        public WebToken _sessionUserData = null;
 
+        private WebToken _sessionUserData { get; set; }
 
         protected virtual WebToken SessionUserData
         {

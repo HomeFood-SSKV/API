@@ -1,0 +1,2146 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "2.9.0.0",
+        "fileVersion": "2.9.0.63127 (4b223d58)",
+        "semanticVersion": "2.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 38,
+                  "endLine": 38,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 46,
+                  "endLine": 122,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0162",
+          "level": "warning",
+          "message": "Unreachable code detected",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 108,
+                  "endLine": 48,
+                  "endColumn": 114
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 13,
+                  "endLine": 40,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 9,
+                  "endLine": 57,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 13,
+                  "endLine": 86,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 13,
+                  "endLine": 155,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 203,
+                  "startColumn": 17,
+                  "endLine": 203,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/ServiceCode.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 10,
+                  "endLine": 10,
+                  "endColumn": 101
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/ServiceCode.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 17,
+                  "endLine": 13,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 70,
+                  "endLine": 80,
+                  "endColumn": 97
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 4,
+                  "endLine": 129,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Interfaces/IDbContextScope.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 9,
+                  "endLine": 76,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/AmbientContextSuppressor.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/AmbientContextSuppressor.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/AmbientContextSuppressor.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 21,
+                  "endLine": 44,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'AmbientContextSuppressor' or mark the type as 'sealed'.",
+              "1": "'AmbientContextSuppressor.Dispose()' should only invoke 'Dispose(true)' and 'GC.SuppressFinalize(this)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_AddressTypePrst' to match camel case naming rules, consider using 'MasAddressTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_AreaPrst' to match camel case naming rules, consider using 'MasAreaPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 18,
+                  "endLine": 39,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "Remove hard-coded password(s): 'password'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/ChinookContext.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 33,
+                  "endLine": 46,
+                  "endColumn": 191
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_CategoryPrst' to match camel case naming rules, consider using 'MasCategoryPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 18,
+                  "endLine": 54,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DiscountTypePrst' to match camel case naming rules, consider using 'MasDiscountTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 18,
+                  "endLine": 129,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_ChefTypePrst' to match camel case naming rules, consider using 'MasChefTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 18,
+                  "endLine": 69,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_FoodPrst' to match camel case naming rules, consider using 'MasFoodPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 144,
+                  "startColumn": 18,
+                  "endLine": 144,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_CityPrst' to match camel case naming rules, consider using 'MasCityPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 18,
+                  "endLine": 84,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_FoodTypePrst' to match camel case naming rules, consider using 'MasFoodTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 159,
+                  "startColumn": 18,
+                  "endLine": 159,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DeliveryLocationPrst' to match camel case naming rules, consider using 'MasDeliveryLocationPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 18,
+                  "endLine": 99,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_MealPackPrst' to match camel case naming rules, consider using 'MasMealPackPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 174,
+                  "startColumn": 18,
+                  "endLine": 174,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DiscountPrst' to match camel case naming rules, consider using 'MasDiscountPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 18,
+                  "endLine": 114,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_OrderStatusPrst' to match camel case naming rules, consider using 'MasOrderStatusPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 189,
+                  "startColumn": 18,
+                  "endLine": 189,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_PricePrst' to match camel case naming rules, consider using 'MasPricePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 234,
+                  "startColumn": 18,
+                  "endLine": 234,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_initializedDbContexts' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 45,
+                  "endLine": 33,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_transactions' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 62,
+                  "endLine": 34,
+                  "endColumn": 75
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_isolationLevel' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 33,
+                  "endLine": 35,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_readOnly' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 22,
+                  "endLine": 39,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_RolePrst' to match camel case naming rules, consider using 'MasRolePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 249,
+                  "startColumn": 18,
+                  "endLine": 249,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_OrderTypePrst' to match camel case naming rules, consider using 'MasOrderTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 204,
+                  "startColumn": 18,
+                  "endLine": 204,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 18,
+                  "endLine": 31,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 18,
+                  "endLine": 31,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 238,
+                  "startColumn": 21,
+                  "endLine": 238,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'DbContextCollection' or mark the type as 'sealed'.",
+              "1": "'DbContextCollection.Dispose()' should only invoke 'Dispose(true)' and 'GC.SuppressFinalize(this)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_PaymentTypePrst' to match camel case naming rules, consider using 'MasPaymentTypePrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 219,
+                  "startColumn": 18,
+                  "endLine": 219,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefDetailsPrst' to match camel case naming rules, consider using 'TrnChefDetailsPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 264,
+                  "startColumn": 18,
+                  "endLine": 264,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MealPackProcessingPrst' to match camel case naming rules, consider using 'TrnMealPackProcessingPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 369,
+                  "startColumn": 18,
+                  "endLine": 369,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefOrderPrst' to match camel case naming rules, consider using 'TrnChefOrderPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 18,
+                  "endLine": 279,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_internalScope' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextReadOnlyScope.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 32,
+                  "endLine": 14,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextReadOnlyScope.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextReadOnlyScope.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 40
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextReadOnlyScope.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 21,
+                  "endLine": 31,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'DbContextReadOnlyScope' or mark the type as 'sealed'.",
+              "1": "'DbContextReadOnlyScope.Dispose()' should only invoke 'Dispose(true)' and 'GC.SuppressFinalize(this)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderPrst' to match camel case naming rules, consider using 'TrnOrderPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 384,
+                  "startColumn": 18,
+                  "endLine": 384,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefOtherDetailsPrst' to match camel case naming rules, consider using 'TrnChefOtherDetailsPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 294,
+                  "startColumn": 18,
+                  "endLine": 294,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderAppliedDiscountPrst' to match camel case naming rules, consider using 'TrnOrderAppliedDiscountPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 399,
+                  "startColumn": 18,
+                  "endLine": 399,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_DeliveryDetailsPrst' to match camel case naming rules, consider using 'TrnDeliveryDetailsPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 309,
+                  "startColumn": 18,
+                  "endLine": 309,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderDetailsPrst' to match camel case naming rules, consider using 'TrnOrderDetailsPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 414,
+                  "startColumn": 18,
+                  "endLine": 414,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_LoginDetailPrst' to match camel case naming rules, consider using 'TrnLoginDetailPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 324,
+                  "startColumn": 18,
+                  "endLine": 324,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_SpecialDiscountPrst' to match camel case naming rules, consider using 'TrnSpecialDiscountPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 429,
+                  "startColumn": 18,
+                  "endLine": 429,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_readOnly' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 22,
+                  "endLine": 22,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_nested' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 22,
+                  "endLine": 24,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_parentScope' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 32,
+                  "endLine": 25,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_dbContexts' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 37,
+                  "endLine": 26,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_instanceIdentifier' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 423,
+                  "startColumn": 36,
+                  "endLine": 423,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MapOrderToChefPrst' to match camel case naming rules, consider using 'TrnMapOrderToChefPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 339,
+                  "startColumn": 18,
+                  "endLine": 339,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 18,
+                  "endLine": 19,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 18,
+                  "endLine": 19,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 235,
+                  "startColumn": 21,
+                  "endLine": 235,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'DbContextScope' or mark the type as 'sealed'.",
+              "1": "'DbContextScope.Dispose()' should only invoke 'Dispose(true)' and 'GC.SuppressFinalize(this)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_UserAddressDetailsPrst' to match camel case naming rules, consider using 'TrnUserAddressDetailsPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 444,
+                  "startColumn": 18,
+                  "endLine": 444,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MealPackMappingPrst' to match camel case naming rules, consider using 'TrnMealPackMappingPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 354,
+                  "startColumn": 18,
+                  "endLine": 354,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/ServiceCode.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_UserDetailPrst' to match camel case naming rules, consider using 'TrnUserDetailPrst'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/CodePrst.cs",
+                "region": {
+                  "startLine": 459,
+                  "startColumn": 18,
+                  "endLine": 459,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'CRUDCommonCode' to match camel case naming rules, consider using 'CrudCommonCode'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/ServiceCode.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4457",
+          "level": "warning",
+          "message": "Split this method into two, one handling parameters check and the other handling the asynchronous code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 32,
+                  "endLine": 92,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 23,
+                  "endLine": 95,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 19,
+                  "endLine": 41,
+                  "endColumn": 93
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2583",
+          "level": "warning",
+          "message": "Change this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 17,
+                  "endLine": 94,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 17,
+                  "endLine": 95,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 19,
+                  "endLine": 53,
+                  "endColumn": 93
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 19,
+                  "endLine": 63,
+                  "endColumn": 93
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3877",
+          "level": "warning",
+          "message": "Remove this 'throw' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 275,
+                  "startColumn": 17,
+                  "endLine": 275,
+                  "endColumn": 142
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 235,
+                  "startColumn": 21,
+                  "endLine": 235,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 237,
+                  "startColumn": 13,
+                  "endLine": 237,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 241,
+                  "startColumn": 13,
+                  "endLine": 241,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 243,
+                  "startColumn": 17,
+                  "endLine": 243,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 248,
+                  "startColumn": 25,
+                  "endLine": 248,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 254,
+                  "startColumn": 25,
+                  "endLine": 254,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 21,
+                  "endLine": 261,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 274,
+                  "startColumn": 13,
+                  "endLine": 274,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 13,
+                  "endLine": 279,
+                  "endColumn": 15
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 281,
+                  "startColumn": 17,
+                  "endLine": 281,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextScope.cs",
+                "region": {
+                  "startLine": 330,
+                  "startColumn": 17,
+                  "endLine": 330,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+1",
+              "2": "+2 (incl 1 for nesting)",
+              "3": "+3 (incl 2 for nesting)",
+              "4": "+1",
+              "5": "+3 (incl 2 for nesting)",
+              "6": "+1",
+              "7": "+1",
+              "8": "+2 (incl 1 for nesting)",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S3776",
+          "level": "warning",
+          "message": "Refactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 36,
+                  "endLine": 103,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 17,
+                  "endLine": 108,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 21,
+                  "endLine": 110,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 21,
+                  "endLine": 115,
+                  "endColumn": 25
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 13,
+                  "endLine": 122,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 17,
+                  "endLine": 125,
+                  "endColumn": 19
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 21,
+                  "endLine": 131,
+                  "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 25,
+                  "endLine": 133,
+                  "endColumn": 27
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 138,
+                  "startColumn": 25,
+                  "endLine": 138,
+                  "endColumn": 29
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 17,
+                  "endLine": 146,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 161,
+                  "startColumn": 13,
+                  "endLine": 161,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "+1",
+              "1": "+2 (incl 1 for nesting)",
+              "2": "+1",
+              "3": "+1",
+              "4": "+2 (incl 1 for nesting)",
+              "5": "+2 (incl 1 for nesting)",
+              "6": "+3 (incl 2 for nesting)",
+              "7": "+1",
+              "8": "+2 (incl 1 for nesting)",
+              "9": "+1"
+            }
+          }
+        },
+        {
+          "ruleId": "S4457",
+          "level": "warning",
+          "message": "Split this method into two, one handling parameters check and the other handling the asynchronous code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 152,
+                  "startColumn": 32,
+                  "endLine": 152,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 23,
+                  "endLine": 155,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/Common/DbCxt/PersistenceBase.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 38,
+                  "endLine": 125,
+                  "endColumn": 104
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2583",
+          "level": "warning",
+          "message": "Change this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 154,
+                  "startColumn": 17,
+                  "endLine": 154,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Persistance/DbContextScope/Implementations/DbContextCollection.cs",
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 17,
+                  "endLine": 155,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS0162": {
+          "id": "CS0162",
+          "shortDescription": "Unreachable code detected",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS0168": {
+          "id": "CS0168",
+          "shortDescription": "Variable is declared but never used",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS1998": {
+          "id": "CS1998",
+          "shortDescription": "Async method lacks 'await' operators and will run synchronously",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are using PascalCase. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S112": {
+          "id": "S112",
+          "shortDescription": "General exceptions should never be thrown",
+          "fullDescription": "Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors. ",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-112",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Credentials should not be hard-coded",
+          "fullDescription": "Because it is easy to extract strings from a compiled application, credentials should never be hard-coded. Do so, and they're almost guaranteed to end up in the hands of an attacker. This is particularly true for applications that are distributed.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "properties": {
+            "category": "Blocker Vulnerability",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S2583": {
+          "id": "S2583",
+          "shortDescription": "Conditionally executed blocks should be reachable",
+          "fullDescription": "Conditional expressions which are always true or false can lead to dead code. Such code is always buggy and should never be used in production.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2583",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that's not marked readonly but is only set in the constructor, it could cause confusion about the field's intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3776": {
+          "id": "S3776",
+          "shortDescription": "Cognitive Complexity of methods should not be too high",
+          "fullDescription": "Cognitive Complexity is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3776",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3877": {
+          "id": "S3877",
+          "shortDescription": "Exceptions should not be thrown from unexpected methods",
+          "fullDescription": "It is expected that some methods should be called with caution, but others, such as ToString, are expected to \"just work\". Throwing an exception from such a method is likely to break callers' code unexpectedly.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3877",
+          "properties": {
+            "category": "Blocker Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3881": {
+          "id": "S3881",
+          "shortDescription": "\"IDisposable\" should be implemented correctly",
+          "fullDescription": "The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3881",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S4457": {
+          "id": "S4457",
+          "shortDescription": "Parameter validation in \"async\"/\"await\" methods should be wrapped",
+          "fullDescription": "Because of the way async/await methods are rewritten by the compiler, any exceptions thrown during the parameters check will happen only when the task is observed. That could happen far away from the source of the buggy code or never happen for fire-and-forget tasks.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4457",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

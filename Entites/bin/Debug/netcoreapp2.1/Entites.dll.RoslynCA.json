@@ -1,0 +1,704 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "2.9.0.0",
+        "fileVersion": "2.9.0.63127 (4b223d58)",
+        "semanticVersion": "2.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/Program.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 11,
+                  "endLine": 5,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DeliveryLocationMetadata' to match camel case naming rules, consider using 'MasDeliveryLocationMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 156,
+                  "startColumn": 18,
+                  "endLine": 156,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DiscountMetadata' to match camel case naming rules, consider using 'MasDiscountMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 181,
+                  "startColumn": 18,
+                  "endLine": 181,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_DiscountTypeMetadata' to match camel case naming rules, consider using 'MasDiscountTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 221,
+                  "startColumn": 18,
+                  "endLine": 221,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_FoodMetadata' to match camel case naming rules, consider using 'MasFoodMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 245,
+                  "startColumn": 18,
+                  "endLine": 245,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_FoodTypeMetadata' to match camel case naming rules, consider using 'MasFoodTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 273,
+                  "startColumn": 18,
+                  "endLine": 273,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_MealPackMetadata' to match camel case naming rules, consider using 'MasMealPackMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 297,
+                  "startColumn": 18,
+                  "endLine": 297,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_OrderStatusMetadata' to match camel case naming rules, consider using 'MasOrderStatusMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 346,
+                  "startColumn": 18,
+                  "endLine": 346,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_OrderTypeMetadata' to match camel case naming rules, consider using 'MasOrderTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 368,
+                  "startColumn": 18,
+                  "endLine": 368,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_PaymentTypeMetadata' to match camel case naming rules, consider using 'MasPaymentTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 392,
+                  "startColumn": 18,
+                  "endLine": 392,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_PriceMetadata' to match camel case naming rules, consider using 'MasPriceMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 414,
+                  "startColumn": 18,
+                  "endLine": 414,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_RoleMetadata' to match camel case naming rules, consider using 'MasRoleMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 445,
+                  "startColumn": 18,
+                  "endLine": 445,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefDetailsMetadata' to match camel case naming rules, consider using 'TrnChefDetailsMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 467,
+                  "startColumn": 18,
+                  "endLine": 467,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefOrderMetadata' to match camel case naming rules, consider using 'TrnChefOrderMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 526,
+                  "startColumn": 18,
+                  "endLine": 526,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_ChefOtherDetailsMetadata' to match camel case naming rules, consider using 'TrnChefOtherDetailsMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 561,
+                  "startColumn": 18,
+                  "endLine": 561,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_DeliveryDetailsMetadata' to match camel case naming rules, consider using 'TrnDeliveryDetailsMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 601,
+                  "startColumn": 18,
+                  "endLine": 601,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_LoginDetailMetadata' to match camel case naming rules, consider using 'TrnLoginDetailMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 638,
+                  "startColumn": 18,
+                  "endLine": 638,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MapOrderToChefMetadata' to match camel case naming rules, consider using 'TrnMapOrderToChefMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 677,
+                  "startColumn": 18,
+                  "endLine": 677,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MealPackMappingMetadata' to match camel case naming rules, consider using 'TrnMealPackMappingMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 701,
+                  "startColumn": 18,
+                  "endLine": 701,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_MealPackProcessingMetadata' to match camel case naming rules, consider using 'TrnMealPackProcessingMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 725,
+                  "startColumn": 18,
+                  "endLine": 725,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderMetadata' to match camel case naming rules, consider using 'TrnOrderMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 765,
+                  "startColumn": 18,
+                  "endLine": 765,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_UserAddressDetailsMetadata' to match camel case naming rules, consider using 'TrnUserAddressDetailsMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 905,
+                  "startColumn": 18,
+                  "endLine": 905,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderAppliedDiscountMetadata' to match camel case naming rules, consider using 'TrnOrderAppliedDiscountMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 806,
+                  "startColumn": 18,
+                  "endLine": 806,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_UserDetailMetadata' to match camel case naming rules, consider using 'TrnUserDetailMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 945,
+                  "startColumn": 18,
+                  "endLine": 945,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_AddressTypeMetadata' to match camel case naming rules, consider using 'MasAddressTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 18,
+                  "endLine": 39,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_AreaMetadata' to match camel case naming rules, consider using 'MasAreaMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 18,
+                  "endLine": 64,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_CategoryMetadata' to match camel case naming rules, consider using 'MasCategoryMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 18,
+                  "endLine": 88,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_ChefTypeMetadata' to match camel case naming rules, consider using 'MasChefTypeMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 18,
+                  "endLine": 112,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MAS_CityMetadata' to match camel case naming rules, consider using 'MasCityMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 18,
+                  "endLine": 134,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_OrderDetailsMetadata' to match camel case naming rules, consider using 'TrnOrderDetailsMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 833,
+                  "startColumn": 18,
+                  "endLine": 833,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'TRN_SpecialDiscountMetadata' to match camel case naming rules, consider using 'TrnSpecialDiscountMetadata'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/Entites/MetaData/MetaData.cs",
+                "region": {
+                  "startLine": 860,
+                  "startColumn": 18,
+                  "endLine": 860,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are using PascalCase. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

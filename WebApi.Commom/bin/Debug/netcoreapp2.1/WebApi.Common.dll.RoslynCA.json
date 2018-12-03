@@ -1,0 +1,1783 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "2.9.0.0",
+        "fileVersion": "2.9.0.63127 (4b223d58)",
+        "semanticVersion": "2.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'e' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/JsonHelper.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 30,
+                  "endLine": 74,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'ex' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 30,
+                  "endLine": 74,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0168",
+          "level": "warning",
+          "message": "The variable 'ex' is declared but never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 30,
+                  "endLine": 96,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0649",
+          "level": "warning",
+          "message": "Field 'RedisWrapper.consolidatedKey' is never assigned to, and will always have its default value null",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31,
+                  "endLine": 12,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'RedisDbWrapper.consolidatedKey' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 31,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/GlobalModelBinder.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 8,
+                  "endLine": 11,
+                  "endColumn": 78
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/Redishelper.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 44,
+                  "endLine": 18,
+                  "endColumn": 107
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/JwtParser/JwtParser.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 18,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/JwtParser/JwtClaim.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 9,
+                  "endLine": 15,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3459",
+          "level": "warning",
+          "message": "Remove unassigned field 'consolidatedKey', or set its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31,
+                  "endLine": 12,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'ChacheExpirationInMinutes'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 9,
+                  "endLine": 14,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'consolidatedKey'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 9,
+                  "endLine": 15,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'redis'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 9,
+                  "endLine": 16,
+                  "endColumn": 97
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'ChacheExpirationInMinutes'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 9,
+                  "endLine": 11,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'redis'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 9,
+                  "endLine": 13,
+                  "endColumn": 97
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of '_dotnetcoreSvr' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 33,
+                  "endLine": 18,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 33,
+                  "endLine": 18,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/Redishelper.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 18,
+                  "endLine": 12,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2342",
+          "level": "warning",
+          "message": "Rename this enumeration to match the regular expression: '^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?$'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/Constants.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 17,
+                  "endLine": 7,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1144",
+          "level": "warning",
+          "message": "Remove the unused private field 'ChacheExpirationInMinutes'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/JsonHelper.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 9,
+                  "endLine": 13,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2933",
+          "level": "warning",
+          "message": "Make '_JwtClaims' 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/JwtParser/JwtService.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 32,
+                  "endLine": 25,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2328",
+          "level": "warning",
+          "message": " Refactor 'GetHashCode' to not reference mutable fields.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/ShortGuid.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 23,
+                  "endLine": 129,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/ShortGuid.cs",
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 11,
+                  "endLine": 131,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Remove this use of '_guid' or make it 'readonly'."
+            }
+          }
+        },
+        {
+          "ruleId": "S1155",
+          "level": "warning",
+          "message": "Use '.Any()' to test whether this 'IEnumerable<TSource>' is empty or not.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/LinqExtension.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 44,
+                  "endLine": 12,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1116",
+          "level": "warning",
+          "message": "Remove this empty statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/JsonHelper.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 30,
+                  "endLine": 71,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'userName' to 'JwtClaimname' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/JwtParser/JwtService.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 57,
+                  "endLine": 34,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1117",
+          "level": "warning",
+          "message": "Rename 'consolidatedKey' which hides the field with the same name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 20,
+                  "endLine": 24,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2583",
+          "level": "warning",
+          "message": "Change this condition so that it does not always evaluate to 'false'; some subsequent code is never executed.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/ShortGuid.cs",
+                "region": {
+                  "startLine": 209,
+                  "startColumn": 8,
+                  "endLine": 209,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/ShortGuid.cs",
+                "region": {
+                  "startLine": 209,
+                  "startColumn": 27,
+                  "endLine": 209,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S112",
+          "level": "warning",
+          "message": "'System.ApplicationException' should not be thrown by user code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 27,
+                  "endLine": 24,
+                  "endColumn": 113
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1117",
+          "level": "warning",
+          "message": "Rename 'consolidatedKey' which hides the field with the same name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisWrapper.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 24,
+                  "endLine": 60,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1117",
+          "level": "warning",
+          "message": "Rename 'consolidatedKey' which hides the field with the same name.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 20,
+                  "endLine": 40,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2372",
+          "level": "warning",
+          "message": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 21,
+                  "endLine": 24,
+                  "endColumn": 114
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/RedisDbWrapper.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 95,
+                  "endLine": 83,
+                  "endColumn": 101
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3963",
+          "level": "warning",
+          "message": "Initialize all 'static fields' inline and remove the 'static constructor'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/Redishelper.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 9,
+                  "endLine": 25,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3966",
+          "level": "warning",
+          "message": "Refactor this code to make sure 'fs' is disposed only once.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/JsonHelper.cs",
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 39,
+                  "endLine": 95,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3966",
+          "level": "warning",
+          "message": "Refactor this code to make sure 'fs' is disposed only once.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Helper/JsonHelper.cs",
+                "region": {
+                  "startLine": 120,
+                  "startColumn": 39,
+                  "endLine": 120,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 245,
+                  "startColumn": 53,
+                  "endLine": 245,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1168",
+          "level": "warning",
+          "message": "Return an empty collection instead of null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/Redishelper.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 17,
+                  "endLine": 64,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 314,
+                  "startColumn": 35,
+                  "endLine": 314,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 386,
+                  "startColumn": 35,
+                  "endLine": 386,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 455,
+                  "startColumn": 35,
+                  "endLine": 455,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 524,
+                  "startColumn": 35,
+                  "endLine": 524,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 593,
+                  "startColumn": 35,
+                  "endLine": 593,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 662,
+                  "startColumn": 35,
+                  "endLine": 662,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 734,
+                  "startColumn": 35,
+                  "endLine": 734,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 803,
+                  "startColumn": 35,
+                  "endLine": 803,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 872,
+                  "startColumn": 35,
+                  "endLine": 872,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 941,
+                  "startColumn": 35,
+                  "endLine": 941,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1010,
+                  "startColumn": 35,
+                  "endLine": 1010,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1079,
+                  "startColumn": 35,
+                  "endLine": 1079,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1148,
+                  "startColumn": 35,
+                  "endLine": 1148,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1221,
+                  "startColumn": 35,
+                  "endLine": 1221,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1290,
+                  "startColumn": 35,
+                  "endLine": 1290,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1359,
+                  "startColumn": 35,
+                  "endLine": 1359,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1428,
+                  "startColumn": 35,
+                  "endLine": 1428,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1500,
+                  "startColumn": 35,
+                  "endLine": 1500,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1572,
+                  "startColumn": 35,
+                  "endLine": 1572,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1644,
+                  "startColumn": 35,
+                  "endLine": 1644,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1713,
+                  "startColumn": 35,
+                  "endLine": 1713,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1782,
+                  "startColumn": 35,
+                  "endLine": 1782,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1852,
+                  "startColumn": 35,
+                  "endLine": 1852,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1924,
+                  "startColumn": 35,
+                  "endLine": 1924,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 1995,
+                  "startColumn": 35,
+                  "endLine": 1995,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 2067,
+                  "startColumn": 35,
+                  "endLine": 2067,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1854",
+          "level": "warning",
+          "message": "Remove this useless assignment to local variable 'fieldListTemp'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///F:/Projects/Homefood/API%20PRoject/API/WebApi.Commom/Cache/BusinessSupervisor.cs",
+                "region": {
+                  "startLine": 2139,
+                  "startColumn": 35,
+                  "endLine": 2139,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS0168": {
+          "id": "CS0168",
+          "shortDescription": "Variable is declared but never used",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "Field is never used",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS0649": {
+          "id": "CS0649",
+          "shortDescription": "Field is never assigned to, and will always have its default value",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1104": {
+          "id": "S1104",
+          "shortDescription": "Fields should not have public accessibility",
+          "fullDescription": "Public fields in public classes do not respect the encapsulation principle and has three main disadvantages:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1104",
+          "properties": {
+            "category": "Minor Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1116": {
+          "id": "S1116",
+          "shortDescription": "Empty statements should be removed",
+          "fullDescription": "Empty statements, i.e. ;, are usually introduced by mistake, for example because:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1116",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1117": {
+          "id": "S1117",
+          "shortDescription": "Local variables should not shadow class fields",
+          "fullDescription": "Shadowing fields with a local variable is a bad practice that reduces code readability: it makes it confusing to know whether the field or the variable is being used.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1117",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S112": {
+          "id": "S112",
+          "shortDescription": "General exceptions should never be thrown",
+          "fullDescription": "Throwing such general exceptions as Exception, SystemException, ApplicationException, IndexOutOfRangeException, NullReferenceException, OutOfMemoryException and ExecutionEngineException prevents calling methods from handling true, system-generated exceptions differently than application-generated errors. ",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-112",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1144": {
+          "id": "S1144",
+          "shortDescription": "Unused private types or members should be removed",
+          "fullDescription": "private or internal types or private members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1144",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1155": {
+          "id": "S1155",
+          "shortDescription": "\"Any()\" should be used to test for emptiness",
+          "fullDescription": "Using .Count() to test for emptiness works, but using .Any() makes the intent clearer, and the code more readable. However, there are some cases where special attention should be paid:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1155",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1168": {
+          "id": "S1168",
+          "shortDescription": "Empty arrays and collections should be returned instead of null",
+          "fullDescription": "Returning null instead of an actual array or collection forces callers of the method to explicitly test for nullity, making them more complex and less readable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1168",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1854": {
+          "id": "S1854",
+          "shortDescription": "Dead stores should be removed",
+          "fullDescription": "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code. Even if it's not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1854",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2223": {
+          "id": "S2223",
+          "shortDescription": "Non-constant static fields should not be visible",
+          "fullDescription": "A static field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with locks. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked readonly or converted to constants.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2223",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S2328": {
+          "id": "S2328",
+          "shortDescription": "\"GetHashCode\" should not reference mutable fields",
+          "fullDescription": "GetHashCode is used to file an object in a Dictionary or Hashtable. If GetHashCode uses non-readonly fields and those fields change after the object is stored, the object immediately becomes mis-filed in the Hashtable. Any subsequent test to see if the object is in the Hashtable will return a false negative.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2328",
+          "properties": {
+            "category": "Minor Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2342": {
+          "id": "S2342",
+          "shortDescription": "Enumeration types should comply with a naming convention",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all enum names match a provided regular expression.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2342",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2372": {
+          "id": "S2372",
+          "shortDescription": "Exceptions should not be thrown from property getters",
+          "fullDescription": "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method. ",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2372",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S2583": {
+          "id": "S2583",
+          "shortDescription": "Conditionally executed blocks should be reachable",
+          "fullDescription": "Conditional expressions which are always true or false can lead to dead code. Such code is always buggy and should never be used in production.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2583",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2933": {
+          "id": "S2933",
+          "shortDescription": "Fields that are only assigned in the constructor should be \"readonly\"",
+          "fullDescription": "readonly fields can only be assigned in a class constructor. If a class has a field that's not marked readonly but is only set in the constructor, it could cause confusion about the field's intended use. To avoid confusion, such fields should be marked readonly to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2933",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3459": {
+          "id": "S3459",
+          "shortDescription": "Unassigned members should be removed",
+          "fullDescription": "Fields and auto-properties that are never assigned to hold the default values for their types. They are either pointless code or, more likely, mistakes. ",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3459",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3963": {
+          "id": "S3963",
+          "shortDescription": "\"static\" fields should be initialized inline",
+          "fullDescription": "When a static constructor serves no other purpose that initializing static fields, it comes with an unnecessary performance cost because the compiler generates a check before each static method or instance constructor invocation.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3963",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3966": {
+          "id": "S3966",
+          "shortDescription": "Objects should not be disposed more than once",
+          "fullDescription": "A proper implementation of IDisposable.Dispose should allow for it to be called multiple times on the same object, however this is not guaranteed and could result in an exception being thrown.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3966",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "parameter names should match base declaration and other partial definitions",
+          "fullDescription": "The name of a parameter in an externally visible method override does not match the name of the parameter in the base declaration of the method, or the name of the parameter in the interface declaration of the method or the name of any other partial definition.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ﻿
+using DotnetCore.Business;
 using DotnetCore.Business.Entities;
 using DotnetCore.Business.Interfaces;
 using DotnetCore.Web.Helpers;
@@ -16,57 +17,55 @@ namespace DotnetCore.Web.Models
 {
     public class BusinessSupervisor
     {
-        public static IBusiness _dotnetcoreSvr;
+        private static IBusiness _dotnetcoreSvr;
         public static IBusiness DotnetCoreSvr
         {
             get
             {
                 if (_dotnetcoreSvr == null)
-                    throw new ApplicationException("iGlobalPayController.iGlobalPaySvr: iGlobalPaySvr is null.");
-
+                    _dotnetcoreSvr = new DotnetCoreSvr();
                 return _dotnetcoreSvr;
             }
-            set { _dotnetcoreSvr = value; }
+            set
+            {
+                _dotnetcoreSvr = value;
+            }
         }
 
-        public string sessionAddressType = enumTableList.MAS_AddressType.ToString();
-        public string sessionArea = enumTableList.MAS_Area.ToString();
-        public string sessionCategory = enumTableList.MAS_Category.ToString();
-        public string sessionChefType = enumTableList.MAS_ChefType.ToString();
-        public string sessionCity = enumTableList.MAS_City.ToString();
-        public string sessionDeliveryLocation = enumTableList.MAS_DeliveryLocation.ToString();
-        public string sessionDiscount = enumTableList.MAS_Discount.ToString();
-        public string sessionDiscountType = enumTableList.MAS_DiscountType.ToString();
-        public string sessionFood = enumTableList.MAS_Food.ToString();
-        public string sessionFoodType = enumTableList.MAS_FoodType.ToString();
-        public string sessionMealPack = enumTableList.MAS_MealPack.ToString();
-        public string sessionOrderStatus = enumTableList.MAS_OrderStatus.ToString();
-        public string sessionOrderType = enumTableList.MAS_OrderType.ToString();
-        public string sessionPaymentType = enumTableList.MAS_PaymentType.ToString();
-        public string sessionPrice = enumTableList.MAS_AddressType.ToString();
-        public string sessionRole = enumTableList.MAS_Price.ToString();
-        public string sessionChefDetails = enumTableList.TRN_ChefDetails.ToString();
-        public string sessionChefOrder = enumTableList.TRN_ChefOrder.ToString();
-        public string sessionChefOtherDetails = enumTableList.TRN_ChefOtherDetails.ToString();
-        public string sessionDeliveryDetails = enumTableList.TRN_DeliveryDetails.ToString();
-        public string sessionLoginDetail = enumTableList.TRN_LoginDetail.ToString();
-        public string sessionMapOrderToChef = enumTableList.TRN_MapOrderToChef.ToString();
-        public string sessionMealPackMapping = enumTableList.TRN_MealPackMapping.ToString();
-        public string sessionMealPackProcessing = enumTableList.TRN_MealPackProcessing.ToString();
-        public string sessionOrder = enumTableList.TRN_Order.ToString();
-        public string sessionOrderAppliedDiscount = enumTableList.TRN_OrderAppliedDiscount.ToString();
-        public string sessionOrderDetails = enumTableList.TRN_OrderDetails.ToString();
-        public string sessionSpecialDiscount = enumTableList.TRN_SpecialDiscount.ToString();
-        public string sessionUserAddressDetails = enumTableList.TRN_UserAddressDetails.ToString();
-        public string sessionUserDetail = enumTableList.TRN_UserDetail.ToString();
-
-        public string Set = "1";
-        public string Get = "2";
-        public int Zero = 0;
+        private readonly string  sessionAddressType = enumTableList.MAS_AddressType.ToString();
+        private readonly string   sessionArea = enumTableList.MAS_Area.ToString();
+        private readonly string   sessionCategory = enumTableList.MAS_Category.ToString();
+        private readonly string   sessionChefType = enumTableList.MAS_ChefType.ToString();
+        private readonly string   sessionCity = enumTableList.MAS_City.ToString();
+        private readonly string   sessionDeliveryLocation = enumTableList.MAS_DeliveryLocation.ToString();
+        private readonly string   sessionDiscount = enumTableList.MAS_Discount.ToString();
+        private readonly string   sessionDiscountType = enumTableList.MAS_DiscountType.ToString();
+        private readonly string   sessionFood = enumTableList.MAS_Food.ToString();
+        private readonly string   sessionFoodType = enumTableList.MAS_FoodType.ToString();
+        private readonly string   sessionMealPack = enumTableList.MAS_MealPack.ToString();
+        private readonly string   sessionOrderStatus = enumTableList.MAS_OrderStatus.ToString();
+        private readonly string   sessionOrderType = enumTableList.MAS_OrderType.ToString();
+        private readonly string   sessionPaymentType = enumTableList.MAS_PaymentType.ToString();
+        private readonly string   sessionPrice = enumTableList.MAS_AddressType.ToString();
+        private readonly string   sessionRole = enumTableList.MAS_Price.ToString();
+        private readonly string   sessionChefDetails = enumTableList.TRN_ChefDetails.ToString();
+        private readonly string   sessionChefOrder = enumTableList.TRN_ChefOrder.ToString();
+        private readonly string   sessionChefOtherDetails = enumTableList.TRN_ChefOtherDetails.ToString();
+        private readonly string   sessionDeliveryDetails = enumTableList.TRN_DeliveryDetails.ToString();
+        private readonly string   sessionLoginDetail = enumTableList.TRN_LoginDetail.ToString();
+        private readonly string   sessionMapOrderToChef = enumTableList.TRN_MapOrderToChef.ToString();
+        private readonly string   sessionMealPackMapping = enumTableList.TRN_MealPackMapping.ToString();
+        private readonly string   sessionMealPackProcessing = enumTableList.TRN_MealPackProcessing.ToString();
+        private readonly string   sessionOrder = enumTableList.TRN_Order.ToString();
+        private readonly string   sessionOrderAppliedDiscount = enumTableList.TRN_OrderAppliedDiscount.ToString();
+        private readonly string   sessionOrderDetails = enumTableList.TRN_OrderDetails.ToString();
+        private readonly string   sessionSpecialDiscount = enumTableList.TRN_SpecialDiscount.ToString();
+        private readonly string   sessionUserAddressDetails = enumTableList.TRN_UserAddressDetails.ToString();
+        private readonly string   sessionUserDetail = enumTableList.TRN_UserDetail.ToString();
+        private readonly int Zero = 0;
 
         public void ResetAll()
         {
-          
             ResetAddressType();
             ResetArea();
             ResetCategory();
@@ -96,15 +95,13 @@ namespace DotnetCore.Web.Models
             ResetSpecialDiscount();
             ResetUserAddressDetails();
             ResetUserDetail();
-       
         }
-
 
         public async Task<List<MAS_AddressTypeDto>> GetMASAddressType(CancellationToken ct = default(CancellationToken))
         {
             try
             {
-                var fieldListTemp = new List<MAS_AddressTypeDto>();
+                List<MAS_AddressTypeDto> fieldListTemp;
                 if (!RedisDbWrapper.Get(sessionAddressType, Zero, Zero, Zero, out fieldListTemp))
                 {
                     fieldListTemp = await DotnetCoreSvr.GetMASAddressType(ct);
@@ -112,7 +109,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -125,7 +122,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASAddressType(ct);
                 return result.FirstOrDefault(s => s.AddressTypeId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -175,7 +172,7 @@ namespace DotnetCore.Web.Models
         {
             try
             {
-                var fieldListTemp = new List<MAS_AreaDto>();
+                List<MAS_AreaDto> fieldListTemp;
                 if (!RedisDbWrapper.Get(sessionArea, Zero, Zero, Zero, out fieldListTemp))
                 {
                     fieldListTemp = await DotnetCoreSvr.GetMASArea(ct);
@@ -183,7 +180,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -196,7 +193,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASArea(ct);
                 return result.FirstOrDefault(s => s.AreaId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -245,7 +242,7 @@ namespace DotnetCore.Web.Models
         {
             try
             {
-                var fieldListTemp = new List<MAS_CategoryDto>();
+                List<MAS_CategoryDto> fieldListTemp = new List<MAS_CategoryDto>();
                 if (!RedisDbWrapper.Get(sessionCategory, Zero, Zero, Zero, out fieldListTemp))
                 {
                     fieldListTemp = await DotnetCoreSvr.GetMASCategory(ct);
@@ -253,7 +250,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -266,7 +263,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASCategory(ct);
                 return result.FirstOrDefault(s => s.CategoryId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -322,7 +319,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -394,7 +391,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -407,7 +404,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASCity(ct);
                 return result.FirstOrDefault(s => s.CityId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -463,7 +460,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -476,7 +473,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASDeliveryLocation(ct);
                 return result.FirstOrDefault(s => s.DeliveyPointId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -532,7 +529,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -545,7 +542,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASDiscount(ct);
                 return result.FirstOrDefault(s => s.DiscountId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -601,7 +598,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -614,7 +611,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASDiscountType(ct);
                 return result.FirstOrDefault(s => s.DiscountTypeID == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -670,7 +667,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -683,7 +680,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASFood(ct);
                 return result.FirstOrDefault(s => s.FoodId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -742,7 +739,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -755,7 +752,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASFoodType(ct);
                 return result.FirstOrDefault(s => s.FoodTypeID == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -811,7 +808,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -824,7 +821,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASMealPack(ct);
                 return result.FirstOrDefault(s => s.MealPackId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -880,7 +877,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -893,7 +890,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASOrderStatus(ct);
                 return result.FirstOrDefault(s => s.OrderStatusId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -949,7 +946,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -962,7 +959,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASOrderType(ct);
                 return result.FirstOrDefault(s => s.OrderTypeId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1018,7 +1015,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1031,7 +1028,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASPaymentType(ct);
                 return result.FirstOrDefault(s => s.PaymentTypeId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1087,7 +1084,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1100,7 +1097,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASPrice(ct);
                 return result.FirstOrDefault(s => s.PriceId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1156,7 +1153,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1169,7 +1166,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetMASRole(ct);
                 return result.FirstOrDefault(s => s.RoleId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1229,7 +1226,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1242,7 +1239,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNChefDetails(ct);
                 return result.FirstOrDefault(s => s.ChefId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1298,7 +1295,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1311,7 +1308,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNChefOrder(ct);
                 return result.FirstOrDefault(s => s.ChefOrderId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1367,7 +1364,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1380,7 +1377,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNChefOtherDetails(ct);
                 return result.FirstOrDefault(s => s.ChefOtherDetailID == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1436,7 +1433,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1449,7 +1446,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNDeliveryDetails(ct);
                 return result.FirstOrDefault(s => s.DeliveryDetailId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1508,7 +1505,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1521,7 +1518,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNLoginDetail(ct);
                 return result.FirstOrDefault(s => s.LoginId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1580,7 +1577,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1593,7 +1590,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNMapOrderToChef(ct);
                 return result.FirstOrDefault(s => s.MapOrderID == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1652,7 +1649,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1665,7 +1662,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNMealPackMapping(ct);
                 return result.FirstOrDefault(s => s.MealPackMappingId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1721,7 +1718,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1734,7 +1731,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNMealPackProcessing(ct);
                 return result.FirstOrDefault(s => s.MealPackProcessingId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1790,7 +1787,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1803,7 +1800,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNOrder(ct);
                 return result.FirstOrDefault(s => s.OrderId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1860,7 +1857,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1873,7 +1870,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNOrderAppliedDiscount(ct);
                 return result.FirstOrDefault(s => s.AppliedDiscountId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1932,7 +1929,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -1945,7 +1942,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNOrderDetails(ct);
                 return result.FirstOrDefault(s => s.OrderDetailId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2003,7 +2000,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2016,7 +2013,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNSpecialDiscount(ct);
                 return result.FirstOrDefault(s => s.SpecialDiscountId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2075,7 +2072,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2088,7 +2085,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNUserAddressDetails(ct);
                 return result.FirstOrDefault(s => s.AddressDetailId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2147,7 +2144,7 @@ namespace DotnetCore.Web.Models
                 }
                 return fieldListTemp;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
@@ -2160,7 +2157,7 @@ namespace DotnetCore.Web.Models
                 var result = await GetTRNUserDetail(ct);
                 return result.FirstOrDefault(s => s.UserId == id);
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
