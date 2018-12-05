@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,8 +17,7 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(ObserveMetadata))]
+    [ModelMetadataType(typeof(ObserveMetadata))]
     [DataContract(IsReference = true)]
     public partial class Observe  :BusinessEntityBase 
     {

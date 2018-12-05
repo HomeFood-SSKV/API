@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,57 +17,56 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_UserDetailMetadata))]
+    [ModelMetadataType(typeof(TRN_UserDetailMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Role))]
     [KnownType(typeof(TRN_ChefDetails))]
-    [KnownType(typeof(TRN_LoginDetail))]
     [KnownType(typeof(TRN_MealPackProcessing))]
     [KnownType(typeof(TRN_Order))]
     [KnownType(typeof(TRN_SpecialDiscount))]
     [KnownType(typeof(TRN_UserAddressDetails))]
-    public partial class TRN_UserDetail : BusinessEntityBase
+    [KnownType(typeof(TRN_UserRights))]
+    public partial class TRN_UserDetail  :BusinessEntityBase 
     {
-        public TRN_UserDetail()
-        {
-            this.TRN_ChefDetails = new HashSet<TRN_ChefDetails>();
-            this.TRN_LoginDetail = new HashSet<TRN_LoginDetail>();
-            this.TRN_MealPackProcessing = new HashSet<TRN_MealPackProcessing>();
-            this.TRN_Order = new HashSet<TRN_Order>();
-            this.TRN_SpecialDiscount = new HashSet<TRN_SpecialDiscount>();
-            this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-                [Key]
-        public int UserId { get; set; }
-        [DataMember]
-        public string Name { get; set; }
-        [DataMember]
-        public string EmailId { get; set; }
-        [DataMember]
-        public string PhoneNo { get; set; }
-        [DataMember]
-        public int RoleId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_Role MAS_Role { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_ChefDetails> TRN_ChefDetails { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_LoginDetail> TRN_LoginDetail { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_MealPackProcessing> TRN_MealPackProcessing { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_Order> TRN_Order { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_SpecialDiscount> TRN_SpecialDiscount { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    public TRN_UserDetail()
+    {
+    this.TRN_ChefDetails = new HashSet<TRN_ChefDetails>();
+    this.TRN_MealPackProcessing = new HashSet<TRN_MealPackProcessing>();
+    this.TRN_Order = new HashSet<TRN_Order>();
+    this.TRN_SpecialDiscount = new HashSet<TRN_SpecialDiscount>();
+    this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
+    this.TRN_UserRights = new HashSet<TRN_UserRights>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int UserId { get; set; }
+    [DataMember]
+    public string Name { get; set; }
+    [DataMember]
+    public string EmailId { get; set; }
+    [DataMember]
+    public string PhoneNo { get; set; }
+    [DataMember]
+    public int RoleId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Role MAS_Role { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_ChefDetails> TRN_ChefDetails { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_MealPackProcessing> TRN_MealPackProcessing { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_Order> TRN_Order { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_SpecialDiscount> TRN_SpecialDiscount { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_UserRights> TRN_UserRights { get; set; }
+    }
+    
 }

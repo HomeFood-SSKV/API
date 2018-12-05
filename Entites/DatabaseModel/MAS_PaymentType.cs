@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_PaymentTypeMetadata))]
+    [ModelMetadataType(typeof(MAS_PaymentTypeMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(TRN_Order))]
     public partial class MAS_PaymentType  :BusinessEntityBase 
@@ -29,7 +30,6 @@ namespace DotnetCore.Business.Entities
     [DataMember]
     public System.Guid UniqueId { get; set; }
     [DataMember]
-    [Key]
     public int PaymentTypeId { get; set; }
     [DataMember]
     public string PaymentType { get; set; }

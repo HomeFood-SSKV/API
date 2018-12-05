@@ -13,13 +13,13 @@ using WebApi.Common.Helper;
 namespace WebApi.Common.JwtParser
 {
 
-    public interface IJwtService
-    {
-        Task<JwtClaim> Authenticate(string JwtClaimname, string password);
-        IEnumerable<JwtClaim> GetAll();
-    }
+    //public interface IJwtService
+    //{
+    //    Task<JwtClaim> Authenticate(string JwtClaimname, string password);
+    //    IEnumerable<JwtClaim> GetAll();
+    //}
 
-    public class JwtService : BaseModel, IJwtService
+    public class JwtService : BaseModel //, IJwtService
     {
         // JwtClaims hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<JwtClaim> _JwtClaims = new List<JwtClaim>();
@@ -33,13 +33,14 @@ namespace WebApi.Common.JwtParser
 
         public async Task<JwtClaim> Authenticate(string userName, string password)
         {
-            var loginList = await businessSupervisor.GetTRNLoginDetail();
+            var loginList = await businessSupervisor.GetTRNUserPassword();
             var userList = await businessSupervisor.GetTRNUserDetail();
             var login = loginList.SingleOrDefault(x => x.LoginName == userName && x.Password == password);
-            var user = userList.SingleOrDefault(x => x.UserId == login.UserId);
+            
             // return null if JwtClaim not found
             if (login == null)
                 return null;
+            var user = userList.SingleOrDefault(x => x.UserId == login.UserId);
 
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();

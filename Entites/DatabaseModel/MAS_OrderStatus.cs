@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,28 +17,27 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_OrderStatusMetadata))]
+    [ModelMetadataType(typeof(MAS_OrderStatusMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(TRN_Order))]
-    public partial class MAS_OrderStatus : BusinessEntityBase
+    public partial class MAS_OrderStatus  :BusinessEntityBase 
     {
-        public MAS_OrderStatus()
-        {
-            this.TRN_Order = new HashSet<TRN_Order>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int OrderStatusId { get; set; }
-        [DataMember]
-        public string OrderStatus { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual ICollection<TRN_Order> TRN_Order { get; set; }
+    public MAS_OrderStatus()
+    {
+    this.TRN_Order = new HashSet<TRN_Order>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int OrderStatusId { get; set; }
+    [DataMember]
+    public string OrderStatus { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual ICollection<TRN_Order> TRN_Order { get; set; }
+    }
+    
 }

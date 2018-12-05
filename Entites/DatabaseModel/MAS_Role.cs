@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,28 +17,31 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_RoleMetadata))]
+    [ModelMetadataType(typeof(MAS_RoleMetadata))]
     [DataContract(IsReference = true)]
+    [KnownType(typeof(TRN_GroupRights))]
     [KnownType(typeof(TRN_UserDetail))]
-    public partial class MAS_Role : BusinessEntityBase
+    public partial class MAS_Role  :BusinessEntityBase 
     {
-        public MAS_Role()
-        {
-            this.TRN_UserDetail = new HashSet<TRN_UserDetail>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int RoleId { get; set; }
-        [DataMember]
-        public string RoleName { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual ICollection<TRN_UserDetail> TRN_UserDetail { get; set; }
+    public MAS_Role()
+    {
+    this.TRN_GroupRights = new HashSet<TRN_GroupRights>();
+    this.TRN_UserDetail = new HashSet<TRN_UserDetail>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int RoleId { get; set; }
+    [DataMember]
+    public string RoleName { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual ICollection<TRN_GroupRights> TRN_GroupRights { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_UserDetail> TRN_UserDetail { get; set; }
+    }
+    
 }

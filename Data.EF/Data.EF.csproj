@@ -49,115 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="EF.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EF.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
     <Compile Include="EF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EF.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MAS_AddressType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Area.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Category.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_ChefType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_City.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_DeliveryLocation.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Discount.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_DiscountType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Food.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_FoodType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_MealPack.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_OrderStatus.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_OrderType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_PaymentType.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Price.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MAS_Role.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Observe.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TRN_ChefDetails.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_ChefOrder.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_ChefOtherDetails.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_DeliveryDetails.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_LoginDetail.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_MapOrderToChef.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_MealPackMapping.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_MealPackProcessing.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_Order.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_OrderAppliedDiscount.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_OrderDetails.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_SpecialDiscount.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_UserAddressDetails.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TRN_UserDetail.cs">
-      <DependentUpon>EF.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EF.edmx">

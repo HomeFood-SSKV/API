@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,27 +17,26 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_ChefOrderMetadata))]
+    [ModelMetadataType(typeof(TRN_ChefOrderMetadata))]
     [DataContract(IsReference = true)]
-    public partial class TRN_ChefOrder : BusinessEntityBase
+    public partial class TRN_ChefOrder  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int ChefOrderId { get; set; }
-        [DataMember]
-        public System.DateTime OrderGivenDatetime { get; set; }
-        [DataMember]
-        public System.TimeSpan ChefDeliveredDateTime { get; set; }
-        [DataMember]
-        public System.DateTime AssignedPickUpDate { get; set; }
-        [DataMember]
-        public System.TimeSpan AssignedPickUpTime { get; set; }
-        [DataMember]
-        public int TaskStatusID { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int ChefOrderId { get; set; }
+    [DataMember]
+    public System.DateTime OrderGivenDatetime { get; set; }
+    [DataMember]
+    public System.TimeSpan ChefDeliveredDateTime { get; set; }
+    [DataMember]
+    public System.DateTime AssignedPickUpDate { get; set; }
+    [DataMember]
+    public System.TimeSpan AssignedPickUpTime { get; set; }
+    [DataMember]
+    public int TaskStatusID { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
     }
-
+    
 }

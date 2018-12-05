@@ -16,13 +16,14 @@
     <EntitySet Name="MAS_OrderType" EntityType="HomeFoodModel.MAS_OrderType" />
     <EntitySet Name="MAS_PaymentType" EntityType="HomeFoodModel.MAS_PaymentType" />
     <EntitySet Name="MAS_Price" EntityType="HomeFoodModel.MAS_Price" />
+    <EntitySet Name="MAS_Rights" EntityType="HomeFoodModel.MAS_Rights" />
     <EntitySet Name="MAS_Role" EntityType="HomeFoodModel.MAS_Role" />
     <EntitySet Name="Observes" EntityType="HomeFoodModel.Observe" />
     <EntitySet Name="TRN_ChefDetails" EntityType="HomeFoodModel.TRN_ChefDetails" />
     <EntitySet Name="TRN_ChefOrder" EntityType="HomeFoodModel.TRN_ChefOrder" />
     <EntitySet Name="TRN_ChefOtherDetails" EntityType="HomeFoodModel.TRN_ChefOtherDetails" />
     <EntitySet Name="TRN_DeliveryDetails" EntityType="HomeFoodModel.TRN_DeliveryDetails" />
-    <EntitySet Name="TRN_LoginDetail" EntityType="HomeFoodModel.TRN_LoginDetail" />
+    <EntitySet Name="TRN_GroupRights" EntityType="HomeFoodModel.TRN_GroupRights" />
     <EntitySet Name="TRN_MapOrderToChef" EntityType="HomeFoodModel.TRN_MapOrderToChef" />
     <EntitySet Name="TRN_MealPackMapping" EntityType="HomeFoodModel.TRN_MealPackMapping" />
     <EntitySet Name="TRN_MealPackProcessing" EntityType="HomeFoodModel.TRN_MealPackProcessing" />
@@ -32,6 +33,8 @@
     <EntitySet Name="TRN_SpecialDiscount" EntityType="HomeFoodModel.TRN_SpecialDiscount" />
     <EntitySet Name="TRN_UserAddressDetails" EntityType="HomeFoodModel.TRN_UserAddressDetails" />
     <EntitySet Name="TRN_UserDetail" EntityType="HomeFoodModel.TRN_UserDetail" />
+    <EntitySet Name="TRN_UserPassword" EntityType="HomeFoodModel.TRN_UserPassword" />
+    <EntitySet Name="TRN_UserRights" EntityType="HomeFoodModel.TRN_UserRights" />
     <AssociationSet Name="FK__TRN_UserA__Addre__6D0D32F4" Association="HomeFoodModel.FK__TRN_UserA__Addre__6D0D32F4">
       <End Role="MAS_AddressType" EntitySet="MAS_AddressType" />
       <End Role="TRN_UserAddressDetails" EntitySet="TRN_UserAddressDetails" />
@@ -124,6 +127,18 @@
       <End Role="MAS_PaymentType" EntitySet="MAS_PaymentType" />
       <End Role="TRN_Order" EntitySet="TRN_Order" />
     </AssociationSet>
+    <AssociationSet Name="FK__TRAN_Grou__Right__7D0E9093" Association="HomeFoodModel.FK__TRAN_Grou__Right__7D0E9093">
+      <End Role="MAS_Rights" EntitySet="MAS_Rights" />
+      <End Role="TRN_GroupRights" EntitySet="TRN_GroupRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TRAN_User__Right__01D345B0" Association="HomeFoodModel.FK__TRAN_User__Right__01D345B0">
+      <End Role="MAS_Rights" EntitySet="MAS_Rights" />
+      <End Role="TRN_UserRights" EntitySet="TRN_UserRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TRAN_Grou__RoleI__7C1A6C5A" Association="HomeFoodModel.FK__TRAN_Grou__RoleI__7C1A6C5A">
+      <End Role="MAS_Role" EntitySet="MAS_Role" />
+      <End Role="TRN_GroupRights" EntitySet="TRN_GroupRights" />
+    </AssociationSet>
     <AssociationSet Name="FK__TRN_UserD__RoleI__68487DD7" Association="HomeFoodModel.FK__TRN_UserD__RoleI__68487DD7">
       <End Role="MAS_Role" EntitySet="MAS_Role" />
       <End Role="TRN_UserDetail" EntitySet="TRN_UserDetail" />
@@ -147,10 +162,6 @@
     <AssociationSet Name="FK__TRN_Deliv__Order__14270015" Association="HomeFoodModel.FK__TRN_Deliv__Order__14270015">
       <End Role="TRN_Order" EntitySet="TRN_Order" />
       <End Role="TRN_DeliveryDetails" EntitySet="TRN_DeliveryDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TRN_Login__UserI__72C60C4A" Association="HomeFoodModel.FK__TRN_Login__UserI__72C60C4A">
-      <End Role="TRN_UserDetail" EntitySet="TRN_UserDetail" />
-      <End Role="TRN_LoginDetail" EntitySet="TRN_LoginDetail" />
     </AssociationSet>
     <AssociationSet Name="FK__TRN_MapOr__Order__30C33EC3" Association="HomeFoodModel.FK__TRN_MapOr__Order__30C33EC3">
       <End Role="TRN_Order" EntitySet="TRN_Order" />
@@ -187,6 +198,10 @@
     <AssociationSet Name="FK__TRN_UserA__UserI__6C190EBB" Association="HomeFoodModel.FK__TRN_UserA__UserI__6C190EBB">
       <End Role="TRN_UserDetail" EntitySet="TRN_UserDetail" />
       <End Role="TRN_UserAddressDetails" EntitySet="TRN_UserAddressDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TRAN_User__Useri__00DF2177" Association="HomeFoodModel.FK__TRAN_User__Useri__00DF2177">
+      <End Role="TRN_UserDetail" EntitySet="TRN_UserDetail" />
+      <End Role="TRN_UserRights" EntitySet="TRN_UserRights" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="MAS_AddressType">
@@ -382,6 +397,17 @@
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="MAS_Food" Relationship="HomeFoodModel.FK__MAS_Price__FoodI__59FA5E80" FromRole="MAS_Price" ToRole="MAS_Food" />
   </EntityType>
+  <EntityType Name="MAS_Rights">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="UniqueId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rights" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TRN_GroupRights" Relationship="HomeFoodModel.FK__TRAN_Grou__Right__7D0E9093" FromRole="MAS_Rights" ToRole="TRN_GroupRights" />
+    <NavigationProperty Name="TRN_UserRights" Relationship="HomeFoodModel.FK__TRAN_User__Right__01D345B0" FromRole="MAS_Rights" ToRole="TRN_UserRights" />
+  </EntityType>
   <EntityType Name="MAS_Role">
     <Key>
       <PropertyRef Name="RoleId" />
@@ -390,6 +416,7 @@
     <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RoleName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TRN_GroupRights" Relationship="HomeFoodModel.FK__TRAN_Grou__RoleI__7C1A6C5A" FromRole="MAS_Role" ToRole="TRN_GroupRights" />
     <NavigationProperty Name="TRN_UserDetail" Relationship="HomeFoodModel.FK__TRN_UserD__RoleI__68487DD7" FromRole="MAS_Role" ToRole="TRN_UserDetail" />
   </EntityType>
   <EntityType Name="Observe">
@@ -473,19 +500,18 @@
     <NavigationProperty Name="TRN_UserAddressDetails" Relationship="HomeFoodModel.FK__TRN_Deliv__Addre__160F4887" FromRole="TRN_DeliveryDetails" ToRole="TRN_UserAddressDetails" />
     <NavigationProperty Name="TRN_Order" Relationship="HomeFoodModel.FK__TRN_Deliv__Order__14270015" FromRole="TRN_DeliveryDetails" ToRole="TRN_Order" />
   </EntityType>
-  <EntityType Name="TRN_LoginDetail">
+  <EntityType Name="TRN_GroupRights">
     <Key>
-      <PropertyRef Name="LoginId" />
+      <PropertyRef Name="Id" />
     </Key>
     <Property Name="UniqueId" Type="Guid" Nullable="false" />
-    <Property Name="LoginId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserId" Type="Int32" Nullable="false" />
-    <Property Name="LoginName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="EmailId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="PhoneNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="RightsId" Type="Int32" Nullable="false" />
     <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="TRN_UserDetail" Relationship="HomeFoodModel.FK__TRN_Login__UserI__72C60C4A" FromRole="TRN_LoginDetail" ToRole="TRN_UserDetail" />
+    <NavigationProperty Name="MAS_Rights" Relationship="HomeFoodModel.FK__TRAN_Grou__Right__7D0E9093" FromRole="TRN_GroupRights" ToRole="MAS_Rights" />
+    <NavigationProperty Name="MAS_Role" Relationship="HomeFoodModel.FK__TRAN_Grou__RoleI__7C1A6C5A" FromRole="TRN_GroupRights" ToRole="MAS_Role" />
   </EntityType>
   <EntityType Name="TRN_MapOrderToChef">
     <Key>
@@ -635,11 +661,35 @@
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="MAS_Role" Relationship="HomeFoodModel.FK__TRN_UserD__RoleI__68487DD7" FromRole="TRN_UserDetail" ToRole="MAS_Role" />
     <NavigationProperty Name="TRN_ChefDetails" Relationship="HomeFoodModel.FK__TRN_ChefD__UserI__787EE5A0" FromRole="TRN_UserDetail" ToRole="TRN_ChefDetails" />
-    <NavigationProperty Name="TRN_LoginDetail" Relationship="HomeFoodModel.FK__TRN_Login__UserI__72C60C4A" FromRole="TRN_UserDetail" ToRole="TRN_LoginDetail" />
     <NavigationProperty Name="TRN_MealPackProcessing" Relationship="HomeFoodModel.FK__TRN_MealP__UserI__29221CFB" FromRole="TRN_UserDetail" ToRole="TRN_MealPackProcessing" />
     <NavigationProperty Name="TRN_Order" Relationship="HomeFoodModel.FK__TRN_Order__UserI__03F0984C" FromRole="TRN_UserDetail" ToRole="TRN_Order" />
     <NavigationProperty Name="TRN_SpecialDiscount" Relationship="HomeFoodModel.FK__TRN_Speci__UserI__10566F31" FromRole="TRN_UserDetail" ToRole="TRN_SpecialDiscount" />
     <NavigationProperty Name="TRN_UserAddressDetails" Relationship="HomeFoodModel.FK__TRN_UserA__UserI__6C190EBB" FromRole="TRN_UserDetail" ToRole="TRN_UserAddressDetails" />
+    <NavigationProperty Name="TRN_UserRights" Relationship="HomeFoodModel.FK__TRAN_User__Useri__00DF2177" FromRole="TRN_UserDetail" ToRole="TRN_UserRights" />
+  </EntityType>
+  <EntityType Name="TRN_UserPassword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="UniqueId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRN_UserRights">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="UniqueId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Userid" Type="Int32" Nullable="false" />
+    <Property Name="RightsId" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MAS_Rights" Relationship="HomeFoodModel.FK__TRAN_User__Right__01D345B0" FromRole="TRN_UserRights" ToRole="MAS_Rights" />
+    <NavigationProperty Name="TRN_UserDetail" Relationship="HomeFoodModel.FK__TRAN_User__Useri__00DF2177" FromRole="TRN_UserRights" ToRole="TRN_UserDetail" />
   </EntityType>
   <Association Name="FK__TRN_UserA__Addre__6D0D32F4">
     <End Type="HomeFoodModel.MAS_AddressType" Role="MAS_AddressType" Multiplicity="1" />
@@ -917,6 +967,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__TRAN_Grou__Right__7D0E9093">
+    <End Type="HomeFoodModel.MAS_Rights" Role="MAS_Rights" Multiplicity="1" />
+    <End Type="HomeFoodModel.TRN_GroupRights" Role="TRN_GroupRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAS_Rights">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TRN_GroupRights">
+        <PropertyRef Name="RightsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TRAN_User__Right__01D345B0">
+    <End Type="HomeFoodModel.MAS_Rights" Role="MAS_Rights" Multiplicity="1" />
+    <End Type="HomeFoodModel.TRN_UserRights" Role="TRN_UserRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAS_Rights">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TRN_UserRights">
+        <PropertyRef Name="RightsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TRAN_Grou__RoleI__7C1A6C5A">
+    <End Type="HomeFoodModel.MAS_Role" Role="MAS_Role" Multiplicity="1" />
+    <End Type="HomeFoodModel.TRN_GroupRights" Role="TRN_GroupRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAS_Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="TRN_GroupRights">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__TRN_UserD__RoleI__68487DD7">
     <End Type="HomeFoodModel.MAS_Role" Role="MAS_Role" Multiplicity="1" />
     <End Type="HomeFoodModel.TRN_UserDetail" Role="TRN_UserDetail" Multiplicity="*" />
@@ -986,18 +1072,6 @@
       </Principal>
       <Dependent Role="TRN_DeliveryDetails">
         <PropertyRef Name="OrderId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TRN_Login__UserI__72C60C4A">
-    <End Type="HomeFoodModel.TRN_UserDetail" Role="TRN_UserDetail" Multiplicity="1" />
-    <End Type="HomeFoodModel.TRN_LoginDetail" Role="TRN_LoginDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TRN_UserDetail">
-        <PropertyRef Name="UserId" />
-      </Principal>
-      <Dependent Role="TRN_LoginDetail">
-        <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1106,6 +1180,18 @@
       </Principal>
       <Dependent Role="TRN_UserAddressDetails">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TRAN_User__Useri__00DF2177">
+    <End Type="HomeFoodModel.TRN_UserDetail" Role="TRN_UserDetail" Multiplicity="1" />
+    <End Type="HomeFoodModel.TRN_UserRights" Role="TRN_UserRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRN_UserDetail">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TRN_UserRights">
+        <PropertyRef Name="Userid" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

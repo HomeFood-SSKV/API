@@ -6,9 +6,71 @@ using Microsoft.EntityFrameworkCore;
 using DotnetCore.Business.Entities;
 using Persistence.Common.DbCxt;
 using System.Threading.Tasks;
+ 
 
 namespace Persistence.DbCxt
 {
+
+    public class MAS_RightsPrst : PersistenceBase<MAS_Rights>
+    {
+        protected override IQueryable<MAS_Rights> EntitySet(DbContext context)
+        {
+            return (context as HomeFoodEntities).MAS_Rights;
+        }
+
+        protected override MAS_Rights FindMatchedOne(MAS_Rights toBeMatched, DbContext context)
+        {
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.Id == toBeMatched.Id);
+        }
+
+    }
+
+
+    public class TRN_GroupRightsPrst : PersistenceBase<TRN_GroupRights>
+    {
+        protected override IQueryable<TRN_GroupRights> EntitySet(DbContext context)
+        {
+            return (context as HomeFoodEntities).TRN_GroupRights;
+        }
+
+        protected override TRN_GroupRights FindMatchedOne(TRN_GroupRights toBeMatched, DbContext context)
+        {
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.Id == toBeMatched.Id);
+        }
+
+    }
+
+
+    public class TRN_UserPasswordPrst : PersistenceBase<TRN_UserPassword>
+    {
+        protected override IQueryable<TRN_UserPassword> EntitySet(DbContext context)
+        {
+            return (context as HomeFoodEntities).TRN_UserPassword;
+        }
+
+        protected override TRN_UserPassword FindMatchedOne(TRN_UserPassword toBeMatched, DbContext context)
+        {
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.Id == toBeMatched.Id);
+        }
+
+    }
+
+
+    public class TRN_UserRightsPrst : PersistenceBase<TRN_UserRights>
+    {
+        protected override IQueryable<TRN_UserRights> EntitySet(DbContext context)
+        {
+            return (context as HomeFoodEntities).TRN_UserRights;
+        }
+
+        protected override TRN_UserRights FindMatchedOne(TRN_UserRights toBeMatched, DbContext context)
+        {
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.Id == toBeMatched.Id);
+        }
+
+    }
+
+
     public class MAS_AddressTypePrst : PersistenceBase<MAS_AddressType>
     {
         protected override IQueryable<MAS_AddressType> EntitySet(DbContext context)
@@ -321,19 +383,19 @@ namespace Persistence.DbCxt
     }
 
 
-    public class TRN_LoginDetailPrst : PersistenceBase<TRN_LoginDetail>
-    {
-        protected override IQueryable<TRN_LoginDetail> EntitySet(DbContext context)
-        {
-            return (context as HomeFoodEntities).TRN_LoginDetail;
-        }
+    //public class TRN_LoginDetailPrst : PersistenceBase<TRN_LoginDetail>
+    //{
+    //    protected override IQueryable<TRN_LoginDetail> EntitySet(DbContext context)
+    //    {
+    //        return (context as HomeFoodEntities).TRN_LoginDetail;
+    //    }
 
-        protected override TRN_LoginDetail FindMatchedOne(TRN_LoginDetail toBeMatched, DbContext context)
-        {
-            return EntitySet(context).DefaultIfEmpty(null).First(o => o.LoginId == toBeMatched.LoginId);
-        }
+    //    protected override TRN_LoginDetail FindMatchedOne(TRN_LoginDetail toBeMatched, DbContext context)
+    //    {
+    //        return EntitySet(context).DefaultIfEmpty(null).First(o => o.LoginId == toBeMatched.LoginId);
+    //    }
 
-    }
+    //}
 
 
     public class TRN_MapOrderToChefPrst : PersistenceBase<TRN_MapOrderToChef>

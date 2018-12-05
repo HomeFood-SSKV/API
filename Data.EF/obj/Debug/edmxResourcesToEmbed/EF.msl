@@ -178,6 +178,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MAS_Rights">
+      <EntityTypeMapping TypeName="HomeFoodModel.MAS_Rights">
+        <MappingFragment StoreEntitySet="MAS_Rights">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Rights" ColumnName="Rights" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="MAS_Role">
       <EntityTypeMapping TypeName="HomeFoodModel.MAS_Role">
         <MappingFragment StoreEntitySet="MAS_Role">
@@ -190,7 +200,7 @@
     </EntitySetMapping>
     <EntitySetMapping Name="Observes">
       <EntityTypeMapping TypeName="HomeFoodModel.Observe">
-        <MappingFragment StoreEntitySet="Observe">
+        <MappingFragment StoreEntitySet="Observes">
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Changed" ColumnName="Changed" />
           <ScalarProperty Name="TableName" ColumnName="TableName" />
@@ -264,16 +274,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TRN_LoginDetail">
-      <EntityTypeMapping TypeName="HomeFoodModel.TRN_LoginDetail">
-        <MappingFragment StoreEntitySet="TRN_LoginDetail">
+    <EntitySetMapping Name="TRN_GroupRights">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_GroupRights">
+        <MappingFragment StoreEntitySet="TRN_GroupRights">
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
-          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
-          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="RightsId" ColumnName="RightsId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -401,6 +409,30 @@
           <ScalarProperty Name="EmailId" ColumnName="EmailId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_UserPassword">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_UserPassword">
+        <MappingFragment StoreEntitySet="TRN_UserPassword">
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRN_UserRights">
+      <EntityTypeMapping TypeName="HomeFoodModel.TRN_UserRights">
+        <MappingFragment StoreEntitySet="TRN_UserRights">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RightsId" ColumnName="RightsId" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
         </MappingFragment>
       </EntityTypeMapping>

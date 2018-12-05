@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,41 +17,40 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_MealPackProcessingMetadata))]
+    [ModelMetadataType(typeof(TRN_MealPackProcessingMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_MealPack))]
     [KnownType(typeof(TRN_Order))]
     [KnownType(typeof(TRN_UserDetail))]
-    public partial class TRN_MealPackProcessing : BusinessEntityBase
+    public partial class TRN_MealPackProcessing  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int MealPackProcessingId { get; set; }
-        [DataMember]
-        public int MealPackId { get; set; }
-        [DataMember]
-        public int TotalMealCount { get; set; }
-        [DataMember]
-        public int UsedMealCount { get; set; }
-        [DataMember]
-        public int RemainingMealCount { get; set; }
-        [DataMember]
-        public System.DateTime ScheduleDates { get; set; }
-        [DataMember]
-        public int UserId { get; set; }
-        [DataMember]
-        public int OrderId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_MealPack MAS_MealPack { get; set; }
-        [DataMember]
-        public virtual TRN_Order TRN_Order { get; set; }
-        [DataMember]
-        public virtual TRN_UserDetail TRN_UserDetail { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int MealPackProcessingId { get; set; }
+    [DataMember]
+    public int MealPackId { get; set; }
+    [DataMember]
+    public int TotalMealCount { get; set; }
+    [DataMember]
+    public int UsedMealCount { get; set; }
+    [DataMember]
+    public int RemainingMealCount { get; set; }
+    [DataMember]
+    public System.DateTime ScheduleDates { get; set; }
+    [DataMember]
+    public int UserId { get; set; }
+    [DataMember]
+    public int OrderId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_MealPack MAS_MealPack { get; set; }
+    [DataMember]
+    public virtual TRN_Order TRN_Order { get; set; }
+    [DataMember]
+    public virtual TRN_UserDetail TRN_UserDetail { get; set; }
     }
-
+    
 }

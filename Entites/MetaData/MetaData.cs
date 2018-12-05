@@ -9,6 +9,109 @@ using Common;
 namespace DotnetCore.Business.Entities
 {
 
+    [ModelMetadataType(typeof(MAS_RightsMetadata))]
+    public partial class MAS_RightsDto : BusinessEntityBase
+    { }
+    public class MAS_RightsMetadata
+    {
+
+        [Required(ErrorMessage = "Unique is required")]
+        public Guid UniqueId { get; set; }
+
+        [Required(ErrorMessage = "Id is required")]
+        public Int32 Id { get; set; }
+
+        [Required(ErrorMessage = "Rights is required")]
+        [StringLength(100)]
+        public String Rights { get; set; }
+
+        [Required(ErrorMessage = "Is Deleted is required")]
+        public Boolean IsDeleted { get; set; }
+
+    }
+
+
+    [ModelMetadataType(typeof(TRN_GroupRightsMetadata))]
+    public partial class TRN_GroupRightsDto : BusinessEntityBase
+    { }
+    public class TRN_GroupRightsMetadata
+    {
+
+        [Required(ErrorMessage = "Unique is required")]
+        public Guid UniqueId { get; set; }
+
+        [Required(ErrorMessage = "Id is required")]
+        public Int32 Id { get; set; }
+
+        [Required(ErrorMessage = "Role is required")]
+        public Int32 RoleId { get; set; }
+
+        [Required(ErrorMessage = "Rights is required")]
+        public Int32 RightsId { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(100)]
+        public String Password { get; set; }
+
+        [Required(ErrorMessage = "Is Deleted is required")]
+        public Boolean IsDeleted { get; set; }
+
+    }
+
+
+    [ModelMetadataType(typeof(TRN_UserPasswordMetadata))]
+    public partial class TRN_UserPasswordDto : BusinessEntityBase
+    { }
+    public class TRN_UserPasswordMetadata
+    {
+
+        [Required(ErrorMessage = "Unique is required")]
+        public Guid UniqueId { get; set; }
+
+        [Required(ErrorMessage = "Id is required")]
+        public Int32 Id { get; set; }
+
+        [Required(ErrorMessage = "User is required")]
+        public Int32 UserId { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(100)]
+        public String Password { get; set; }
+
+        [Required(ErrorMessage = "Is Deleted is required")]
+        public Boolean IsDeleted { get; set; }
+
+    }
+
+
+    [ModelMetadataType(typeof(TRN_UserRightsMetadata))]
+    public partial class TRN_UserRightsDto : BusinessEntityBase
+    { }
+    public class TRN_UserRightsMetadata
+    {
+
+        [Required(ErrorMessage = "Unique is required")]
+        public Guid UniqueId { get; set; }
+
+        [Required(ErrorMessage = "Id is required")]
+        public Int32 Id { get; set; }
+
+        [Required(ErrorMessage = "Userid is required")]
+        public Int32 Userid { get; set; }
+
+        [Required(ErrorMessage = "Rights is required")]
+        public Int32 RightsId { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(100)]
+        public String Password { get; set; }
+
+        [Required(ErrorMessage = "Is Deleted is required")]
+        public Boolean IsDeleted { get; set; }
+
+    }
+
+
     [ModelMetadataType(typeof(ObserveMetadata))]
     public partial class ObserveDto : BusinessEntityBase
     { }
@@ -632,43 +735,7 @@ namespace DotnetCore.Business.Entities
     }
 
 
-    [ModelMetadataType(typeof(TRN_LoginDetailMetadata))]
-    public partial class TRN_LoginDetailDto : BusinessEntityBase
-    { }
-    public class TRN_LoginDetailMetadata
-    {
-
-        [Required(ErrorMessage = "Unique is required")]
-        public Guid UniqueId { get; set; }
-
-        [Required(ErrorMessage = "Login is required")]
-        public Int32 LoginId { get; set; }
-
-        [Required(ErrorMessage = "User is required")]
-        public Int32 UserId { get; set; }
-
-        [Required(ErrorMessage = "Login Name is required")]
-        [StringLength(100)]
-        public String LoginName { get; set; }
-
-        [Required(ErrorMessage = "Email is required")]
-        [StringLength(100)]
-        [DataType(DataType.EmailAddress)]
-        public String EmailId { get; set; }
-
-        [Required(ErrorMessage = "Phone No is required")]
-        [StringLength(20)]
-        [DataType(DataType.PhoneNumber)]
-        public String PhoneNo { get; set; }
-
-        [Required(ErrorMessage = "Password is required")]
-        [StringLength(100)]
-        public String Password { get; set; }
-
-        [Required(ErrorMessage = "Is Deleted is required")]
-        public Boolean IsDeleted { get; set; }
-
-    }
+ 
 
 
     [ModelMetadataType(typeof(TRN_MapOrderToChefMetadata))]

@@ -8,36 +8,38 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_OrderDetailsMetadata))]
+    [ModelMetadataType(typeof(TRN_OrderDetailsMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Food))]
     [KnownType(typeof(TRN_Order))]
-    public partial class TRN_OrderDetails : BusinessEntityBase
+    public partial class TRN_OrderDetails  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int OrderDetailId { get; set; }
-        [DataMember]
-        public int OrderId { get; set; }
-        [DataMember]
-        public int FoodId { get; set; }
-        [DataMember]
-        public int Quantity { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_Food MAS_Food { get; set; }
-        [DataMember]
-        public virtual TRN_Order TRN_Order { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int OrderDetailId { get; set; }
+    [DataMember]
+    public int OrderId { get; set; }
+    [DataMember]
+    public int FoodId { get; set; }
+    [DataMember]
+    public int Quantity { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Food MAS_Food { get; set; }
+    [DataMember]
+    public virtual TRN_Order TRN_Order { get; set; }
     }
-
+    
 }

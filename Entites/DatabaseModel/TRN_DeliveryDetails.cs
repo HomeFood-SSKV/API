@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,39 +17,38 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_DeliveryDetailsMetadata))]
+    [ModelMetadataType(typeof(TRN_DeliveryDetailsMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_DeliveryLocation))]
     [KnownType(typeof(TRN_UserAddressDetails))]
     [KnownType(typeof(TRN_Order))]
-    public partial class TRN_DeliveryDetails : BusinessEntityBase
+    public partial class TRN_DeliveryDetails  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int DeliveryDetailId { get; set; }
-        [DataMember]
-        public int OrderId { get; set; }
-        [DataMember]
-        public System.DateTime OrderDate { get; set; }
-        [DataMember]
-        public System.DateTime ScheduleDeliveryDate { get; set; }
-        [DataMember]
-        public Nullable<bool> IsDelivered { get; set; }
-        [DataMember]
-        public int DeliveryPointId { get; set; }
-        [DataMember]
-        public int AddressDetailId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_DeliveryLocation MAS_DeliveryLocation { get; set; }
-        [DataMember]
-        public virtual TRN_UserAddressDetails TRN_UserAddressDetails { get; set; }
-        [DataMember]
-        public virtual TRN_Order TRN_Order { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int DeliveryDetailId { get; set; }
+    [DataMember]
+    public int OrderId { get; set; }
+    [DataMember]
+    public System.DateTime OrderDate { get; set; }
+    [DataMember]
+    public System.DateTime ScheduleDeliveryDate { get; set; }
+    [DataMember]
+    public Nullable<bool> IsDelivered { get; set; }
+    [DataMember]
+    public int DeliveryPointId { get; set; }
+    [DataMember]
+    public int AddressDetailId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_DeliveryLocation MAS_DeliveryLocation { get; set; }
+    [DataMember]
+    public virtual TRN_UserAddressDetails TRN_UserAddressDetails { get; set; }
+    [DataMember]
+    public virtual TRN_Order TRN_Order { get; set; }
     }
-
+    
 }

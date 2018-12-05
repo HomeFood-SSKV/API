@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,29 +17,28 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_PriceMetadata))]
+    [ModelMetadataType(typeof(MAS_PriceMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Food))]
-    public partial class MAS_Price : BusinessEntityBase
+    public partial class MAS_Price  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int PriceId { get; set; }
-        [DataMember]
-        public int FoodId { get; set; }
-        [DataMember]
-        public string Price { get; set; }
-        [DataMember]
-        public string GSTPrice { get; set; }
-        [DataMember]
-        public string GSTPercentage { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_Food MAS_Food { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int PriceId { get; set; }
+    [DataMember]
+    public int FoodId { get; set; }
+    [DataMember]
+    public string Price { get; set; }
+    [DataMember]
+    public string GSTPrice { get; set; }
+    [DataMember]
+    public string GSTPercentage { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Food MAS_Food { get; set; }
     }
-
+    
 }

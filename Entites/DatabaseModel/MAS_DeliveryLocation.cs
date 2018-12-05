@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,34 +17,33 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_DeliveryLocationMetadata))]
+    [ModelMetadataType(typeof(MAS_DeliveryLocationMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(TRN_DeliveryDetails))]
     [KnownType(typeof(TRN_UserAddressDetails))]
-    public partial class MAS_DeliveryLocation : BusinessEntityBase
+    public partial class MAS_DeliveryLocation  :BusinessEntityBase 
     {
-        public MAS_DeliveryLocation()
-        {
-            this.TRN_DeliveryDetails = new HashSet<TRN_DeliveryDetails>();
-            this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int DeliveyPointId { get; set; }
-        [DataMember]
-        public string DeliveryPointName { get; set; }
-        [DataMember]
-        public int AreaId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual ICollection<TRN_DeliveryDetails> TRN_DeliveryDetails { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    public MAS_DeliveryLocation()
+    {
+    this.TRN_DeliveryDetails = new HashSet<TRN_DeliveryDetails>();
+    this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int DeliveyPointId { get; set; }
+    [DataMember]
+    public string DeliveryPointName { get; set; }
+    [DataMember]
+    public int AreaId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual ICollection<TRN_DeliveryDetails> TRN_DeliveryDetails { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    }
+    
 }

@@ -21,30 +21,29 @@ namespace DotnetCore.Business.Entities
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_MealPack))]
     [KnownType(typeof(TRN_Order))]
-    public partial class MAS_OrderType : BusinessEntityBase
+    public partial class MAS_OrderType  :BusinessEntityBase 
     {
-        public MAS_OrderType()
-        {
-            this.MAS_MealPack = new HashSet<MAS_MealPack>();
-            this.TRN_Order = new HashSet<TRN_Order>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int OrderTypeId { get; set; }
-        [DataMember]
-        public string OrderTypeCode { get; set; }
-        [DataMember]
-        public string Descriptions { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual ICollection<MAS_MealPack> MAS_MealPack { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_Order> TRN_Order { get; set; }
+    public MAS_OrderType()
+    {
+    this.MAS_MealPack = new HashSet<MAS_MealPack>();
+    this.TRN_Order = new HashSet<TRN_Order>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int OrderTypeId { get; set; }
+    [DataMember]
+    public string OrderTypeCode { get; set; }
+    [DataMember]
+    public string Descriptions { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual ICollection<MAS_MealPack> MAS_MealPack { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_Order> TRN_Order { get; set; }
+    }
+    
 }

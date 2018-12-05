@@ -3,13 +3,15 @@ using Microsoft.Extensions.DependencyInjection;
 using DotnetCore.Business;
 using DotnetCore.Business.Interfaces;
 using Newtonsoft.Json;
+using WebApi.Common.JwtParser;
 
 namespace Chinook.API.Configurations
 {
     public static class ServicesConfiguration
     {
         public static IServiceCollection ConfigureRepositories(this IServiceCollection services) =>
-            services.AddScoped<IBusiness, DotnetCoreSvr>();
+            services.AddScoped<IBusiness, DotnetCoreSvr>().
+         AddScoped<JwtService>();
 
         public static IServiceCollection AddMiddleware(this IServiceCollection services)
         {

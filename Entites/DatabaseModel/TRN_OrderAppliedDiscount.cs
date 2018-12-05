@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,33 +17,32 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_OrderAppliedDiscountMetadata))]
+    [ModelMetadataType(typeof(TRN_OrderAppliedDiscountMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Discount))]
     [KnownType(typeof(TRN_Order))]
     [KnownType(typeof(TRN_SpecialDiscount))]
-    public partial class TRN_OrderAppliedDiscount : BusinessEntityBase
+    public partial class TRN_OrderAppliedDiscount  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int AppliedDiscountId { get; set; }
-        [DataMember]
-        public int DiscountId { get; set; }
-        [DataMember]
-        public int SpecialDiscountId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-        [DataMember]
-        public int OrderId { get; set; }
-
-        [DataMember]
-        public virtual MAS_Discount MAS_Discount { get; set; }
-        [DataMember]
-        public virtual TRN_Order TRN_Order { get; set; }
-        [DataMember]
-        public virtual TRN_SpecialDiscount TRN_SpecialDiscount { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int AppliedDiscountId { get; set; }
+    [DataMember]
+    public int DiscountId { get; set; }
+    [DataMember]
+    public int SpecialDiscountId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    [DataMember]
+    public int OrderId { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Discount MAS_Discount { get; set; }
+    [DataMember]
+    public virtual TRN_Order TRN_Order { get; set; }
+    [DataMember]
+    public virtual TRN_SpecialDiscount TRN_SpecialDiscount { get; set; }
     }
-
+    
 }

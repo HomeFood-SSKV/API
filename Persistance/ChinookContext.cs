@@ -25,13 +25,14 @@ namespace Chinook.Data
         public virtual DbSet<MAS_OrderType> MAS_OrderType { get; set; }
         public virtual DbSet<MAS_PaymentType> MAS_PaymentType { get; set; }
         public virtual DbSet<MAS_Price> MAS_Price { get; set; }
+        public virtual DbSet<MAS_Rights> MAS_Rights { get; set; }
         public virtual DbSet<MAS_Role> MAS_Role { get; set; }
         public virtual DbSet<Observe> Observes { get; set; }
         public virtual DbSet<TRN_ChefDetails> TRN_ChefDetails { get; set; }
         public virtual DbSet<TRN_ChefOrder> TRN_ChefOrder { get; set; }
         public virtual DbSet<TRN_ChefOtherDetails> TRN_ChefOtherDetails { get; set; }
         public virtual DbSet<TRN_DeliveryDetails> TRN_DeliveryDetails { get; set; }
-        public virtual DbSet<TRN_LoginDetail> TRN_LoginDetail { get; set; }
+        public virtual DbSet<TRN_GroupRights> TRN_GroupRights { get; set; }
         public virtual DbSet<TRN_MapOrderToChef> TRN_MapOrderToChef { get; set; }
         public virtual DbSet<TRN_MealPackMapping> TRN_MealPackMapping { get; set; }
         public virtual DbSet<TRN_MealPackProcessing> TRN_MealPackProcessing { get; set; }
@@ -41,7 +42,8 @@ namespace Chinook.Data
         public virtual DbSet<TRN_SpecialDiscount> TRN_SpecialDiscount { get; set; }
         public virtual DbSet<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
         public virtual DbSet<TRN_UserDetail> TRN_UserDetail { get; set; }
-
+        public virtual DbSet<TRN_UserPassword> TRN_UserPassword { get; set; }
+        public virtual DbSet<TRN_UserRights> TRN_UserRights { get; set; }
 
         private readonly string _dbName = "Server=DOTNETCORE-FOOD\\SQLEXPRESS2017;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
 

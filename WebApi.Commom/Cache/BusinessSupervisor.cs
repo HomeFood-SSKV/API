@@ -32,36 +32,41 @@ namespace DotnetCore.Web.Models
             }
         }
 
-        private readonly string  sessionAddressType = enumTableList.MAS_AddressType.ToString();
-        private readonly string   sessionArea = enumTableList.MAS_Area.ToString();
-        private readonly string   sessionCategory = enumTableList.MAS_Category.ToString();
-        private readonly string   sessionChefType = enumTableList.MAS_ChefType.ToString();
-        private readonly string   sessionCity = enumTableList.MAS_City.ToString();
-        private readonly string   sessionDeliveryLocation = enumTableList.MAS_DeliveryLocation.ToString();
-        private readonly string   sessionDiscount = enumTableList.MAS_Discount.ToString();
-        private readonly string   sessionDiscountType = enumTableList.MAS_DiscountType.ToString();
-        private readonly string   sessionFood = enumTableList.MAS_Food.ToString();
-        private readonly string   sessionFoodType = enumTableList.MAS_FoodType.ToString();
-        private readonly string   sessionMealPack = enumTableList.MAS_MealPack.ToString();
-        private readonly string   sessionOrderStatus = enumTableList.MAS_OrderStatus.ToString();
-        private readonly string   sessionOrderType = enumTableList.MAS_OrderType.ToString();
-        private readonly string   sessionPaymentType = enumTableList.MAS_PaymentType.ToString();
-        private readonly string   sessionPrice = enumTableList.MAS_AddressType.ToString();
-        private readonly string   sessionRole = enumTableList.MAS_Price.ToString();
-        private readonly string   sessionChefDetails = enumTableList.TRN_ChefDetails.ToString();
-        private readonly string   sessionChefOrder = enumTableList.TRN_ChefOrder.ToString();
-        private readonly string   sessionChefOtherDetails = enumTableList.TRN_ChefOtherDetails.ToString();
-        private readonly string   sessionDeliveryDetails = enumTableList.TRN_DeliveryDetails.ToString();
-        private readonly string   sessionLoginDetail = enumTableList.TRN_LoginDetail.ToString();
-        private readonly string   sessionMapOrderToChef = enumTableList.TRN_MapOrderToChef.ToString();
-        private readonly string   sessionMealPackMapping = enumTableList.TRN_MealPackMapping.ToString();
-        private readonly string   sessionMealPackProcessing = enumTableList.TRN_MealPackProcessing.ToString();
-        private readonly string   sessionOrder = enumTableList.TRN_Order.ToString();
-        private readonly string   sessionOrderAppliedDiscount = enumTableList.TRN_OrderAppliedDiscount.ToString();
-        private readonly string   sessionOrderDetails = enumTableList.TRN_OrderDetails.ToString();
-        private readonly string   sessionSpecialDiscount = enumTableList.TRN_SpecialDiscount.ToString();
-        private readonly string   sessionUserAddressDetails = enumTableList.TRN_UserAddressDetails.ToString();
-        private readonly string   sessionUserDetail = enumTableList.TRN_UserDetail.ToString();
+
+        private readonly string sessionRights = enumTableList.MAS_Rights.ToString();
+        private readonly string sessionGroupRights = enumTableList.TRN_GroupRights.ToString();
+        private readonly string sessionUserPassword = enumTableList.TRN_UserPassword.ToString();
+        private readonly string sessionUserRights = enumTableList.TRN_UserRights.ToString();
+        private readonly string sessionAddressType = enumTableList.MAS_AddressType.ToString();
+        private readonly string sessionArea = enumTableList.MAS_Area.ToString();
+        private readonly string sessionCategory = enumTableList.MAS_Category.ToString();
+        private readonly string sessionChefType = enumTableList.MAS_ChefType.ToString();
+        private readonly string sessionCity = enumTableList.MAS_City.ToString();
+        private readonly string sessionDeliveryLocation = enumTableList.MAS_DeliveryLocation.ToString();
+        private readonly string sessionDiscount = enumTableList.MAS_Discount.ToString();
+        private readonly string sessionDiscountType = enumTableList.MAS_DiscountType.ToString();
+        private readonly string sessionFood = enumTableList.MAS_Food.ToString();
+        private readonly string sessionFoodType = enumTableList.MAS_FoodType.ToString();
+        private readonly string sessionMealPack = enumTableList.MAS_MealPack.ToString();
+        private readonly string sessionOrderStatus = enumTableList.MAS_OrderStatus.ToString();
+        private readonly string sessionOrderType = enumTableList.MAS_OrderType.ToString();
+        private readonly string sessionPaymentType = enumTableList.MAS_PaymentType.ToString();
+        private readonly string sessionPrice = enumTableList.MAS_AddressType.ToString();
+        private readonly string sessionRole = enumTableList.MAS_Price.ToString();
+        private readonly string sessionChefDetails = enumTableList.TRN_ChefDetails.ToString();
+        private readonly string sessionChefOrder = enumTableList.TRN_ChefOrder.ToString();
+        private readonly string sessionChefOtherDetails = enumTableList.TRN_ChefOtherDetails.ToString();
+        private readonly string sessionDeliveryDetails = enumTableList.TRN_DeliveryDetails.ToString();
+        private readonly string sessionLoginDetail = enumTableList.TRN_LoginDetail.ToString();
+        private readonly string sessionMapOrderToChef = enumTableList.TRN_MapOrderToChef.ToString();
+        private readonly string sessionMealPackMapping = enumTableList.TRN_MealPackMapping.ToString();
+        private readonly string sessionMealPackProcessing = enumTableList.TRN_MealPackProcessing.ToString();
+        private readonly string sessionOrder = enumTableList.TRN_Order.ToString();
+        private readonly string sessionOrderAppliedDiscount = enumTableList.TRN_OrderAppliedDiscount.ToString();
+        private readonly string sessionOrderDetails = enumTableList.TRN_OrderDetails.ToString();
+        private readonly string sessionSpecialDiscount = enumTableList.TRN_SpecialDiscount.ToString();
+        private readonly string sessionUserAddressDetails = enumTableList.TRN_UserAddressDetails.ToString();
+        private readonly string sessionUserDetail = enumTableList.TRN_UserDetail.ToString();
         private readonly int Zero = 0;
 
         public void ResetAll()
@@ -85,7 +90,7 @@ namespace DotnetCore.Web.Models
             ResetChefOrder();
             ResetChefOtherDetails();
             ResetDeliveryDetails();
-            ResetLoginDetail();
+           // ResetLoginDetail();
             ResetMapOrderToChef();
             ResetMealPackMapping();
             ResetMealPackProcessing();
@@ -166,6 +171,80 @@ namespace DotnetCore.Web.Models
                EntityChangeObserverMaster.DataSetObserver(sessionAddressType, Zero, Zero, Zero);
            });
         }
+
+
+
+
+        public async Task<List<MAS_RightsDto>> GetMASRights(CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                List<MAS_RightsDto> fieldListTemp;
+                if (!RedisDbWrapper.Get(sessionRights, Zero, Zero, Zero, out fieldListTemp))
+                {
+                    fieldListTemp = await DotnetCoreSvr.GetMASRights(ct);
+                    RedisDbWrapper.Add(fieldListTemp, sessionRights, Zero, Zero, Zero);
+                }
+                return fieldListTemp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<MAS_RightsDto> GetMASRightsById(int id, CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var result = await GetMASRights(ct);
+                return result.FirstOrDefault(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<int> InsertMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.InsertMASRights(customObject, commit, ct);
+            if (result != 0)
+                ResetRights();
+            return result;
+        }
+
+        public async Task<bool> UpdateMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.UpdateMASRights(customObject, commit, ct);
+            if (result)
+                ResetRights();
+            return result;
+        }
+
+        public async Task<bool> DeleteMASRights(int id, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await GetMASRightsById(id, ct);
+            if (result != null)
+            {
+                result.IsDeleted = true;
+                var isUpdated = await UpdateMASRights(result, commit, ct);
+                if (isUpdated)
+                    ResetRights();
+                return isUpdated;
+            }
+            return false;
+        }
+
+
+        private void ResetRights()
+        {
+            Task.Run(() =>
+            {
+                EntityChangeObserverMaster.DataSetObserver(sessionRights, Zero, Zero, Zero);
+            });
+        }
+
 
 
         public async Task<List<MAS_AreaDto>> GetMASArea(CancellationToken ct = default(CancellationToken))
@@ -1493,75 +1572,75 @@ namespace DotnetCore.Web.Models
 
 
 
-        public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken))
-        {
-            try
-            {
-                var fieldListTemp = new List<TRN_LoginDetailDto>();
-                if (!RedisDbWrapper.Get(sessionLoginDetail, Zero, Zero, Zero, out fieldListTemp))
-                {
-                    fieldListTemp = await DotnetCoreSvr.GetTRNLoginDetail(ct);
-                    RedisDbWrapper.Add(fieldListTemp, sessionLoginDetail, Zero, Zero, Zero);
-                }
-                return fieldListTemp;
-            }
-            catch
-            {
-                return null;
-            }
-        }
+        //public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken))
+        //{
+        //    try
+        //    {
+        //        var fieldListTemp = new List<TRN_LoginDetailDto>();
+        //        if (!RedisDbWrapper.Get(sessionLoginDetail, Zero, Zero, Zero, out fieldListTemp))
+        //        {
+        //            fieldListTemp = await DotnetCoreSvr.GetTRNLoginDetail(ct);
+        //            RedisDbWrapper.Add(fieldListTemp, sessionLoginDetail, Zero, Zero, Zero);
+        //        }
+        //        return fieldListTemp;
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public async Task<TRN_LoginDetailDto> GetLoginDetailById(int id, CancellationToken ct = default(CancellationToken))
-        {
-            try
-            {
-                var result = await GetTRNLoginDetail(ct);
-                return result.FirstOrDefault(s => s.LoginId == id);
-            }
-            catch
-            {
-                return null;
-            }
-        }
+        //public async Task<TRN_LoginDetailDto> GetLoginDetailById(int id, CancellationToken ct = default(CancellationToken))
+        //{
+        //    try
+        //    {
+        //        var result = await GetTRNLoginDetail(ct);
+        //        return result.FirstOrDefault(s => s.LoginId == id);
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
-        {
-            var result = await DotnetCoreSvr.InsertTRNLoginDetail(customObject, commit, ct);
-            if (result != 0)
-                ResetLoginDetail();
-            return result;
-        }
+        //public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        //{
+        //    var result = await DotnetCoreSvr.InsertTRNLoginDetail(customObject, commit, ct);
+        //    if (result != 0)
+        //        ResetLoginDetail();
+        //    return result;
+        //}
 
-        public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
-        {
-            var result = await DotnetCoreSvr.UpdateTRNLoginDetail(customObject, commit, ct);
-            if (result)
-                ResetLoginDetail();
-            return result;
-        }
+        //public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        //{
+        //    var result = await DotnetCoreSvr.UpdateTRNLoginDetail(customObject, commit, ct);
+        //    if (result)
+        //        ResetLoginDetail();
+        //    return result;
+        //}
 
-        public async Task<bool> DeleteTRNLoginDetail(int id, bool commit, CancellationToken ct = default(CancellationToken))
-        {
-            var resultItem = await GetLoginDetailById(id);
-            if (resultItem != null)
-            {
-                resultItem.IsDeleted = true;
-                var isUpdated = await UpdateTRNLoginDetail(resultItem, commit, ct);
-                if (isUpdated)
-                    ResetLoginDetail();
-                return isUpdated;
-            }
-            return false;
-        }
+        //public async Task<bool> DeleteTRNLoginDetail(int id, bool commit, CancellationToken ct = default(CancellationToken))
+        //{
+        //    var resultItem = await GetLoginDetailById(id);
+        //    if (resultItem != null)
+        //    {
+        //        resultItem.IsDeleted = true;
+        //        var isUpdated = await UpdateTRNLoginDetail(resultItem, commit, ct);
+        //        if (isUpdated)
+        //            ResetLoginDetail();
+        //        return isUpdated;
+        //    }
+        //    return false;
+        //}
 
 
-        private void ResetLoginDetail()
-        {
-            Task.Run(() =>
-            {
-                EntityChangeObserverMaster.DataSetObserver(sessionLoginDetail, Zero, Zero, Zero);
-            });
-        }
+        //private void ResetLoginDetail()
+        //{
+        //    Task.Run(() =>
+        //    {
+        //        EntityChangeObserverMaster.DataSetObserver(sessionLoginDetail, Zero, Zero, Zero);
+        //    });
+        //}
 
 
 
@@ -2132,6 +2211,221 @@ namespace DotnetCore.Web.Models
 
 
 
+        public async Task<List<TRN_GroupRightsDto>> GetTRNGroupRights(CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var fieldListTemp = new List<TRN_GroupRightsDto>();
+                if (!RedisDbWrapper.Get(sessionGroupRights, Zero, Zero, Zero, out fieldListTemp))
+                {
+                    fieldListTemp = await DotnetCoreSvr.GetTRNGroupRights(ct);
+                    RedisDbWrapper.Add(fieldListTemp, sessionGroupRights, Zero, Zero, Zero);
+                }
+                return fieldListTemp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<TRN_GroupRightsDto> GetGroupRightsById(int id, CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var result = await GetTRNGroupRights(ct);
+                return result.FirstOrDefault(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<int> InsertTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.InsertTRNGroupRights(customObject, commit, ct);
+            if (result != 0)
+                ResetGroupRights();
+            return result;
+        }
+
+        public async Task<bool> UpdateTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.UpdateTRNGroupRights(customObject, commit, ct);
+            if (result)
+                ResetGroupRights();
+            return result;
+        }
+
+        public async Task<bool> DeleteTRNGroupRights(int id, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var resultItem = await GetGroupRightsById(id);
+            if (resultItem != null)
+            {
+                resultItem.IsDeleted = true;
+                var isUpdated = await UpdateTRNGroupRights(resultItem, commit, ct);
+                if (isUpdated)
+                    ResetGroupRights();
+                return isUpdated;
+            }
+            return false;
+        }
+
+
+        private void ResetGroupRights()
+        {
+            Task.Run(() =>
+            {
+                EntityChangeObserverMaster.DataSetObserver(sessionGroupRights, Zero, Zero, Zero);
+            });
+        }
+
+
+
+        public async Task<List<TRN_UserPasswordDto>> GetTRNUserPassword(CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var fieldListTemp = new List<TRN_UserPasswordDto>();
+                if (!RedisDbWrapper.Get(sessionUserPassword, Zero, Zero, Zero, out fieldListTemp))
+                {
+                    fieldListTemp = await DotnetCoreSvr.GetTRNUserPassword(ct);
+                    RedisDbWrapper.Add(fieldListTemp, sessionUserPassword, Zero, Zero, Zero);
+                }
+                return fieldListTemp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<TRN_UserPasswordDto> GetUserPasswordById(int id, CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var result = await GetTRNUserPassword(ct);
+                return result.FirstOrDefault(s => s.UserId == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<int> InsertTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.InsertTRNUserPassword(customObject, commit, ct);
+            if (result != 0)
+                ResetUserPassword();
+            return result;
+        }
+
+        public async Task<bool> UpdateTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.UpdateTRNUserPassword(customObject, commit, ct);
+            if (result)
+                ResetUserPassword();
+            return result;
+        }
+
+        public async Task<bool> DeleteTRNUserPassword(int id, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var resultItem = await GetUserPasswordById(id);
+            if (resultItem != null)
+            {
+                resultItem.IsDeleted = true;
+                var isUpdated = await UpdateTRNUserPassword(resultItem, commit, ct);
+                if (isUpdated)
+                    ResetUserPassword();
+                return isUpdated;
+            }
+            return false;
+        }
+
+
+        private void ResetUserPassword()
+        {
+            Task.Run(() =>
+            {
+                EntityChangeObserverMaster.DataSetObserver(sessionUserPassword, Zero, Zero, Zero);
+            });
+        }
+
+
+
+        public async Task<List<TRN_UserRightsDto>> GetTRNUserRights(CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var fieldListTemp = new List<TRN_UserRightsDto>();
+                if (!RedisDbWrapper.Get(sessionUserRights, Zero, Zero, Zero, out fieldListTemp))
+                {
+                    fieldListTemp = await DotnetCoreSvr.GetTRNUserRights(ct);
+                    RedisDbWrapper.Add(fieldListTemp, sessionUserRights, Zero, Zero, Zero);
+                }
+                return fieldListTemp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<TRN_UserRightsDto> GetUserRightsById(int id, CancellationToken ct = default(CancellationToken))
+        {
+            try
+            {
+                var result = await GetTRNUserRights(ct);
+                return result.FirstOrDefault(s => s.Id == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<int> InsertTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.InsertTRNUserRights(customObject, commit, ct);
+            if (result != 0)
+                ResetUserRights();
+            return result;
+        }
+
+        public async Task<bool> UpdateTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var result = await DotnetCoreSvr.UpdateTRNUserRights(customObject, commit, ct);
+            if (result)
+                ResetUserRights();
+            return result;
+        }
+
+        public async Task<bool> DeleteTRNUserRights(int id, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            var resultItem = await GetUserRightsById(id);
+            if (resultItem != null)
+            {
+                resultItem.IsDeleted = true;
+                var isUpdated = await UpdateTRNUserRights(resultItem, commit, ct);
+                if (isUpdated)
+                    ResetUserRights();
+                return isUpdated;
+            }
+            return false;
+        }
+
+
+        private void ResetUserRights()
+        {
+            Task.Run(() =>
+            {
+                EntityChangeObserverMaster.DataSetObserver(sessionUserRights, Zero, Zero, Zero);
+            });
+        }
+
+
         public async Task<List<TRN_UserDetailDto>> GetTRNUserDetail(CancellationToken ct = default(CancellationToken))
         {
             try
@@ -2201,7 +2495,5 @@ namespace DotnetCore.Web.Models
                 EntityChangeObserverMaster.DataSetObserver(sessionUserDetail, Zero, Zero, Zero);
             });
         }
-
-
     }
 }

@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,28 +17,27 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(TRN_MealPackMappingMetadata))]
+    [ModelMetadataType(typeof(TRN_MealPackMappingMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Food))]
     [KnownType(typeof(MAS_MealPack))]
-    public partial class TRN_MealPackMapping : BusinessEntityBase
+    public partial class TRN_MealPackMapping  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int MealPackMappingId { get; set; }
-        [DataMember]
-        public int MealPackId { get; set; }
-        [DataMember]
-        public int FoodId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_Food MAS_Food { get; set; }
-        [DataMember]
-        public virtual MAS_MealPack MAS_MealPack { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int MealPackMappingId { get; set; }
+    [DataMember]
+    public int MealPackId { get; set; }
+    [DataMember]
+    public int FoodId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Food MAS_Food { get; set; }
+    [DataMember]
+    public virtual MAS_MealPack MAS_MealPack { get; set; }
     }
-
+    
 }

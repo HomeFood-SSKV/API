@@ -37,5 +37,9 @@ namespace WebApi.Common
         MAS_Discount = 29,
         MAS_OrderType = 30,
         MAS_OrderStatus = 31,
+        MAS_Rights = 32,
+        TRN_GroupRights = 33,
+        TRN_UserPassword = 34,
+        TRN_UserRights = 35,
     }
 }

@@ -5,37 +5,40 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="46c8d6b7217a4077b0267d982636e3a8" Name="Diagram1">
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_AddressType" Width="1.5" PointX="0.75" PointY="28.875" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Area" Width="1.5" PointX="3" PointY="45.875" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Category" Width="1.5" PointX="3.75" PointY="4.875" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_ChefType" Width="1.5" PointX="3.75" PointY="36.875" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_City" Width="1.5" PointX="0.75" PointY="25.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_DeliveryLocation" Width="1.5" PointX="3" PointY="31.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Discount" Width="1.5" PointX="6" PointY="41.5" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_DiscountType" Width="1.5" PointX="3.75" PointY="42" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Food" Width="1.5" PointX="6" PointY="2.125" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_FoodType" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_MealPack" Width="1.5" PointX="3" PointY="16.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_OrderStatus" Width="1.5" PointX="0.75" PointY="8.375" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_OrderType" Width="1.5" PointX="0.75" PointY="11.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_PaymentType" Width="1.5" PointX="0.75" PointY="15" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Price" Width="1.5" PointX="8.25" PointY="2.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.MAS_Role" Width="1.5" PointX="1.5" PointY="22.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.Observe" Width="1.5" PointX="0.75" PointY="1.5" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefDetails" Width="1.5" PointX="6" PointY="35.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefOrder" Width="1.5" PointX="0.75" PointY="4.5" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefOtherDetails" Width="1.5" PointX="8.25" PointY="19.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_DeliveryDetails" Width="1.5" PointX="5.25" PointY="8.25" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_LoginDetail" Width="1.5" PointX="3" PointY="49.25" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_MapOrderToChef" Width="1.5" PointX="8.25" PointY="11.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_MealPackMapping" Width="1.5" PointX="5.25" PointY="17.5" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_MealPackProcessing" Width="1.5" PointX="5.25" PointY="12.75" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_Order" Width="1.5" PointX="3" PointY="10.375" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_OrderAppliedDiscount" Width="1.5" PointX="8.25" PointY="15.5" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_OrderDetails" Width="1.5" PointX="8.25" PointY="7.625" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_SpecialDiscount" Width="1.5" PointX="6" PointY="20.875" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserAddressDetails" Width="1.5" PointX="3" PointY="26.375" />
-        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserDetail" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_AddressType" Width="1.5" PointX="6" PointY="35.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Area" Width="1.5" PointX="5.25" PointY="38.375" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Category" Width="1.5" PointX="6.75" PointY="7.625" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_ChefType" Width="1.5" PointX="3" PointY="37.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_City" Width="1.5" PointX="3" PointY="34.375" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_DeliveryLocation" Width="1.5" PointX="6" PointY="11.375" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Discount" Width="1.5" PointX="11.25" PointY="6.875" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_DiscountType" Width="1.5" PointX="6" PointY="14.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Food" Width="1.5" PointX="9" PointY="6.875" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_FoodType" Width="1.5" PointX="8.25" PointY="14.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_MealPack" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_OrderStatus" Width="1.5" PointX="3" PointY="28.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_OrderType" Width="1.5" PointX="0.75" PointY="13" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_PaymentType" Width="1.5" PointX="3" PointY="31.25" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Price" Width="1.5" PointX="11.25" PointY="11.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Rights" Width="1.5" PointX="0.75" PointY="17.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.MAS_Role" Width="1.5" PointX="0.75" PointY="20.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.Observe" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefDetails" Width="1.5" PointX="5.25" PointY="22.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefOrder" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_ChefOtherDetails" Width="1.5" PointX="10.5" PointY="23.125" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_DeliveryDetails" Width="1.5" PointX="13.5" PointY="26.5" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_GroupRights" Width="1.5" PointX="3" PointY="19.25" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_MapOrderToChef" Width="1.5" PointX="10.5" PointY="27.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_MealPackMapping" Width="1.5" PointX="14.25" PointY="10.375" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_MealPackProcessing" Width="1.5" PointX="5.25" PointY="18.125" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_Order" Width="1.5" PointX="5.25" PointY="28.375" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_OrderAppliedDiscount" Width="1.5" PointX="13.5" PointY="22.25" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_OrderDetails" Width="1.5" PointX="7.5" PointY="31.625" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_SpecialDiscount" Width="1.5" PointX="8.25" PointY="17.875" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserAddressDetails" Width="1.5" PointX="8.25" PointY="22.875" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserDetail" Width="1.5" PointX="3" PointY="23" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserPassword" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HomeFoodModel.TRN_UserRights" Width="1.5" PointX="8.25" PointY="27.625" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_UserA__Addre__6D0D32F4" />
         <AssociationConnector Association="HomeFoodModel.FK__MAS_Area__CityId__4316F928" />
         <AssociationConnector Association="HomeFoodModel.FK__MAS_Food__Catego__5535A963" />
@@ -59,13 +62,15 @@
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Order__Order__05D8E0BE" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Order__Order__04E4BC85" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Order__Payme__06CD04F7" />
+        <AssociationConnector Association="HomeFoodModel.FK__TRAN_Grou__Right__7D0E9093" />
+        <AssociationConnector Association="HomeFoodModel.FK__TRAN_User__Right__01D345B0" />
+        <AssociationConnector Association="HomeFoodModel.FK__TRAN_Grou__RoleI__7C1A6C5A" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_UserD__RoleI__68487DD7" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_ChefD__UserI__787EE5A0" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_ChefO__ChefI__7C4F7684" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_MapOr__ChefI__31B762FC" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Deliv__Addre__160F4887" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Deliv__Order__14270015" />
-        <AssociationConnector Association="HomeFoodModel.FK__TRN_Login__UserI__72C60C4A" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_MapOr__Order__30C33EC3" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_MealP__Order__2A164134" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_MealP__UserI__29221CFB" />
@@ -75,6 +80,7 @@
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Order__Speci__1AD3FDA4" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_Speci__UserI__10566F31" />
         <AssociationConnector Association="HomeFoodModel.FK__TRN_UserA__UserI__6C190EBB" />
+        <AssociationConnector Association="HomeFoodModel.FK__TRAN_User__Useri__00DF2177" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

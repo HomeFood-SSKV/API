@@ -20,4 +20,3 @@ F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csproj.CoreCompil
 F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csproj.CopyComplete
 F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.dll
 F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.pdb
-F:\Projects\Homefood\API PRoject\API\Data.EF\obj\Debug\Data.EF.csprojAssemblyReference.cache

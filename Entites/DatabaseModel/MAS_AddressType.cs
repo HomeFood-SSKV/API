@@ -20,25 +20,24 @@ namespace DotnetCore.Business.Entities
     [ModelMetadataType(typeof(MAS_AddressTypeMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(TRN_UserAddressDetails))]
-    public partial class MAS_AddressType : BusinessEntityBase
+    public partial class MAS_AddressType  :BusinessEntityBase 
     {
-        public MAS_AddressType()
-        {
-            this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int AddressTypeId { get; set; }
-        [DataMember]
-        public string AddressType { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    public MAS_AddressType()
+    {
+    this.TRN_UserAddressDetails = new HashSet<TRN_UserAddressDetails>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int AddressTypeId { get; set; }
+    [DataMember]
+    public string AddressType { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual ICollection<TRN_UserAddressDetails> TRN_UserAddressDetails { get; set; }
+    }
+    
 }

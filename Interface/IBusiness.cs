@@ -28,6 +28,19 @@ namespace DotnetCore.Business.Interfaces
         Task<bool> UpdateMASAddressType(MAS_AddressTypeDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
 
+
+
+
+        //CRUD Declaration for MAS_Rights   
+        //More than crud operation it supports WCF Service implementation
+
+        Task<List<MAS_RightsDto>> GetMASRights(CancellationToken ct = default(CancellationToken));
+
+        Task<int> InsertMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        Task<bool> UpdateMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+
        
         //CRUD Declaration for MAS_Area   
         //More than crud operation it supports WCF Service implementation
@@ -223,11 +236,11 @@ namespace DotnetCore.Business.Interfaces
         //More than crud operation it supports WCF Service implementation
 
 
-        Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken));
+        //Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken));
 
-        Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+        //Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
-        Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+        //Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
         //CRUD Declaration for TRN_MapOrderToChef   
         //More than crud operation it supports WCF Service implementation
@@ -298,6 +311,36 @@ namespace DotnetCore.Business.Interfaces
         Task<int> InsertTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
         Task<bool> UpdateTRNSpecialDiscount(TRN_SpecialDiscountDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        //CRUD Declaration for TRN_GroupRights   
+        //More than crud operation it supports WCF Service implementation
+
+
+        Task<List<TRN_GroupRightsDto>> GetTRNGroupRights(CancellationToken ct = default(CancellationToken));
+
+        Task<int> InsertTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        Task<bool> UpdateTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        //CRUD Declaration for TRN_UserPassword   
+        //More than crud operation it supports WCF Service implementation
+
+
+        Task<List<TRN_UserPasswordDto>> GetTRNUserPassword(CancellationToken ct = default(CancellationToken));
+
+        Task<int> InsertTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        Task<bool> UpdateTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        //CRUD Declaration for TRN_UserRights   
+        //More than crud operation it supports WCF Service implementation
+
+
+        Task<List<TRN_UserRightsDto>> GetTRNUserRights(CancellationToken ct = default(CancellationToken));
+
+        Task<int> InsertTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
+
+        Task<bool> UpdateTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken));
 
         //CRUD Declaration for TRN_UserAddressDetails   
         //More than crud operation it supports WCF Service implementation

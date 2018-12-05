@@ -68,7 +68,7 @@ namespace DotnetCore.Business
                 ServiceLocator<IPersistence<TRN_ChefOrder>>.RegisterService<Persistence.DbCxt.TRN_ChefOrderPrst>();
                 ServiceLocator<IPersistence<TRN_ChefOtherDetails>>.RegisterService<Persistence.DbCxt.TRN_ChefOtherDetailsPrst>();
                 ServiceLocator<IPersistence<TRN_DeliveryDetails>>.RegisterService<Persistence.DbCxt.TRN_DeliveryDetailsPrst>();
-                ServiceLocator<IPersistence<TRN_LoginDetail>>.RegisterService<Persistence.DbCxt.TRN_LoginDetailPrst>();
+               // ServiceLocator<IPersistence<TRN_LoginDetail>>.RegisterService<Persistence.DbCxt.TRN_LoginDetailPrst>();
                 ServiceLocator<IPersistence<TRN_MapOrderToChef>>.RegisterService<Persistence.DbCxt.TRN_MapOrderToChefPrst>();
                 ServiceLocator<IPersistence<TRN_MealPackMapping>>.RegisterService<Persistence.DbCxt.TRN_MealPackMappingPrst>();
                 ServiceLocator<IPersistence<TRN_MealPackProcessing>>.RegisterService<Persistence.DbCxt.TRN_MealPackProcessingPrst>();
@@ -78,8 +78,18 @@ namespace DotnetCore.Business
                 ServiceLocator<IPersistence<TRN_SpecialDiscount>>.RegisterService<Persistence.DbCxt.TRN_SpecialDiscountPrst>();
                 ServiceLocator<IPersistence<TRN_UserAddressDetails>>.RegisterService<Persistence.DbCxt.TRN_UserAddressDetailsPrst>();
                 ServiceLocator<IPersistence<TRN_UserDetail>>.RegisterService<Persistence.DbCxt.TRN_UserDetailPrst>();
+
+                ServiceLocator<IPersistence<MAS_Rights>>.RegisterService<Persistence.DbCxt.MAS_RightsPrst>();
+                ServiceLocator<IPersistence<TRN_UserPassword>>.RegisterService<Persistence.DbCxt.TRN_UserPasswordPrst>();
+                ServiceLocator<IPersistence<TRN_GroupRights>>.RegisterService<Persistence.DbCxt.TRN_GroupRightsPrst>();
+                ServiceLocator<IPersistence<TRN_UserRights>>.RegisterService<Persistence.DbCxt.TRN_UserRightsPrst>();
+
                 var config = new MapperConfiguration(cfg =>
                 {
+                    cfg.CreateMap<MAS_RightsDto, MAS_Rights>();
+                    cfg.CreateMap<TRN_UserPasswordDto, TRN_UserPassword>();
+                    cfg.CreateMap<TRN_GroupRightsDto, TRN_GroupRights>();
+                    cfg.CreateMap<TRN_UserRightsDto, TRN_UserRights>();
                     cfg.CreateMap<ObserveDto, Observe>();
                     cfg.CreateMap<MAS_AddressTypeDto, MAS_AddressType>();
                     cfg.CreateMap<MAS_AreaDto, MAS_Area>();
@@ -101,7 +111,7 @@ namespace DotnetCore.Business
                     cfg.CreateMap<TRN_ChefOrderDto, TRN_ChefOrder>();
                     cfg.CreateMap<TRN_ChefOtherDetailsDto, TRN_ChefOtherDetails>();
                     cfg.CreateMap<TRN_DeliveryDetailsDto, TRN_DeliveryDetails>();
-                    cfg.CreateMap<TRN_LoginDetailDto, TRN_LoginDetail>();
+                   // cfg.CreateMap<TRN_LoginDetailDto, TRN_LoginDetail>();
                     cfg.CreateMap<TRN_MapOrderToChefDto, TRN_MapOrderToChef>();
                     cfg.CreateMap<TRN_MealPackMappingDto, TRN_MealPackMapping>();
                     cfg.CreateMap<TRN_MealPackProcessingDto, TRN_MealPackProcessing>();
@@ -115,6 +125,55 @@ namespace DotnetCore.Business
                 mapper = config.CreateMapper();
             }
         }
+
+
+        public async Task<List<MAS_RightsDto>> GetMASRights(CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                {
+                    return await (from r in iHomeFoodEntities.MAS_Rights
+                                  where r.IsDeleted == false
+                                  select new MAS_RightsDto
+                                  {
+                                      Id = r.Id,
+                                      Rights = r.Rights,
+                                      UniqueId = r.UniqueId,
+
+                                  }).ToListAsync<MAS_RightsDto>();
+                }
+            }
+        }
+
+        public async Task<int> InsertMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                {
+                    var activity = mapper.Map<MAS_RightsDto, MAS_Rights>(customObject);
+                    if (await PersistSvr<MAS_Rights>.Insert(activity, commit, context, ct))
+                        return activity.Id;
+                    else
+                        return 0;
+                }
+            }
+        }
+
+        public async Task<bool> UpdateMASRights(MAS_RightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                {
+                    var activity = mapper.Map<MAS_RightsDto, MAS_Rights>(customObject);
+                    return await PersistSvr<MAS_Rights>.Update(activity, commit, context, ct);
+                }
+            }
+        }
+
+
 
 
         public async Task<List<MAS_AddressTypeDto>> GetMASAddressType(CancellationToken ct = default(CancellationToken))
@@ -1045,48 +1104,178 @@ namespace DotnetCore.Business
             }
         }
 
-        public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken))
+        //public async Task<List<TRN_LoginDetailDto>> GetTRNLoginDetail(CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        return await (from r in iHomeFoodEntities.TRN_LoginDetail
+        //                      where r.IsDeleted == false
+        //                      select new TRN_LoginDetailDto
+        //                      {
+        //                          UniqueId = r.UniqueId,
+        //                          LoginId = r.LoginId,
+        //                          UserId = r.UserId,
+        //                          LoginName = r.LoginName,
+        //                          EmailId = r.EmailId,
+        //                          PhoneNo = r.PhoneNo,
+        //                          Password = r.Password
+        //                      }).ToListAsync();
+        //    }
+        //}
+
+        //public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        TRN_LoginDetail TRN_LoginDetailitem = Mapper.Map<TRN_LoginDetailDto, TRN_LoginDetail>(customObject);
+        //        if (await PersistSvr<TRN_LoginDetail>.Insert(TRN_LoginDetailitem, commit, context))
+        //            return TRN_LoginDetailitem.LoginId;
+        //        else
+        //            return 0;
+        //    }
+        //}
+
+        //public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        //{
+        //    using (var dbContextScope = _dbContextScopeFactory.Create())
+        //    {
+        //        var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+        //        TRN_LoginDetail TRN_LoginDetailitem = Mapper.Map<TRN_LoginDetailDto, TRN_LoginDetail>(customObject);
+        //        return await PersistSvr<TRN_LoginDetail>.Update(TRN_LoginDetailitem, commit, (DbContext)context);
+        //    }
+        //}
+
+
+
+        public async Task<List<TRN_UserPasswordDto>> GetTRNUserPassword(CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return await (from r in iHomeFoodEntities.TRN_LoginDetail
+                return await (from r in iHomeFoodEntities.TRN_UserPassword
                               where r.IsDeleted == false
-                              select new TRN_LoginDetailDto
+                              select new TRN_UserPasswordDto
                               {
                                   UniqueId = r.UniqueId,
-                                  LoginId = r.LoginId,
                                   UserId = r.UserId,
-                                  LoginName = r.LoginName,
-                                  EmailId = r.EmailId,
-                                  PhoneNo = r.PhoneNo,
-                                  Password = r.Password
+                                  Password = r.Password,
                               }).ToListAsync();
             }
         }
 
-        public async Task<int> InsertTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        public async Task<int> InsertTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                TRN_LoginDetail TRN_LoginDetailitem = Mapper.Map<TRN_LoginDetailDto, TRN_LoginDetail>(customObject);
-                if (await PersistSvr<TRN_LoginDetail>.Insert(TRN_LoginDetailitem, commit, context))
-                    return TRN_LoginDetailitem.LoginId;
+                TRN_UserPassword TRN_UserPassworditem = Mapper.Map<TRN_UserPasswordDto, TRN_UserPassword>(customObject);
+                if (await PersistSvr<TRN_UserPassword>.Insert(TRN_UserPassworditem, commit, context))
+                    return TRN_UserPassworditem.Id;
                 else
                     return 0;
             }
         }
 
-        public async Task<bool> UpdateTRNLoginDetail(TRN_LoginDetailDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        public async Task<bool> UpdateTRNUserPassword(TRN_UserPasswordDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
         {
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                TRN_LoginDetail TRN_LoginDetailitem = Mapper.Map<TRN_LoginDetailDto, TRN_LoginDetail>(customObject);
-                return await PersistSvr<TRN_LoginDetail>.Update(TRN_LoginDetailitem, commit, (DbContext)context);
+                TRN_UserPassword TRN_UserPassworditem = Mapper.Map<TRN_UserPasswordDto, TRN_UserPassword>(customObject);
+                return await PersistSvr<TRN_UserPassword>.Update(TRN_UserPassworditem, commit, (DbContext)context);
             }
         }
+
+
+
+
+        public async Task<List<TRN_GroupRightsDto>> GetTRNGroupRights(CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                return await (from r in iHomeFoodEntities.TRN_GroupRights
+                              where r.IsDeleted == false
+                              select new TRN_GroupRightsDto
+                              {
+                                  UniqueId = r.UniqueId,
+                                  RoleId = r.RoleId,
+                                  Id = r.Id,
+                                  RightsId = r.RightsId,
+                              }).ToListAsync();
+            }
+        }
+
+        public async Task<int> InsertTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                TRN_GroupRights TRN_GroupRightsitem = Mapper.Map<TRN_GroupRightsDto, TRN_GroupRights>(customObject);
+                if (await PersistSvr<TRN_GroupRights>.Insert(TRN_GroupRightsitem, commit, context))
+                    return TRN_GroupRightsitem.Id;
+                else
+                    return 0;
+            }
+        }
+
+        public async Task<bool> UpdateTRNGroupRights(TRN_GroupRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                TRN_GroupRights TRN_GroupRightsitem = Mapper.Map<TRN_GroupRightsDto, TRN_GroupRights>(customObject);
+                return await PersistSvr<TRN_GroupRights>.Update(TRN_GroupRightsitem, commit, (DbContext)context);
+            }
+        }
+
+
+
+        public async Task<List<TRN_UserRightsDto>> GetTRNUserRights(CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                return await (from r in iHomeFoodEntities.TRN_UserRights
+                              where r.IsDeleted == false
+                              select new TRN_UserRightsDto
+                              {
+                                  UniqueId = r.UniqueId,
+                                  Id = r.Id,
+                                  Userid = r.Userid,
+                                  RightsId = r.RightsId,
+                              }).ToListAsync();
+            }
+        }
+
+        public async Task<int> InsertTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                TRN_UserRights TRN_UserRightsitem = Mapper.Map<TRN_UserRightsDto, TRN_UserRights>(customObject);
+                if (await PersistSvr<TRN_UserRights>.Insert(TRN_UserRightsitem, commit, context))
+                    return TRN_UserRightsitem.Id;
+                else
+                    return 0;
+            }
+        }
+
+        public async Task<bool> UpdateTRNUserRights(TRN_UserRightsDto customObject, bool commit, CancellationToken ct = default(CancellationToken))
+        {
+            using (var dbContextScope = _dbContextScopeFactory.Create())
+            {
+                var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
+                TRN_UserRights TRN_UserRightsitem = Mapper.Map<TRN_UserRightsDto, TRN_UserRights>(customObject);
+                return await PersistSvr<TRN_UserRights>.Update(TRN_UserRightsitem, commit, (DbContext)context);
+            }
+        }
+
+
+
+
 
         public async Task<List<TRN_MapOrderToChefDto>> GetTRNMapOrderToChef(CancellationToken ct = default(CancellationToken))
         {

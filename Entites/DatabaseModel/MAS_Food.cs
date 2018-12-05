@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_FoodMetadata))]
+    [ModelMetadataType(typeof(MAS_FoodMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_Category))]
     [KnownType(typeof(MAS_Discount))]
@@ -24,44 +25,43 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(MAS_Price))]
     [KnownType(typeof(TRN_MealPackMapping))]
     [KnownType(typeof(TRN_OrderDetails))]
-    public partial class MAS_Food : BusinessEntityBase
+    public partial class MAS_Food  :BusinessEntityBase 
     {
-        public MAS_Food()
-        {
-            this.MAS_Discount = new HashSet<MAS_Discount>();
-            this.MAS_Price = new HashSet<MAS_Price>();
-            this.TRN_MealPackMapping = new HashSet<TRN_MealPackMapping>();
-            this.TRN_OrderDetails = new HashSet<TRN_OrderDetails>();
-        }
-
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int FoodId { get; set; }
-        [DataMember]
-        public string FoodName { get; set; }
-        [DataMember]
-        public string Descriptions { get; set; }
-        [DataMember]
-        public Nullable<int> CategoryId { get; set; }
-        [DataMember]
-        public Nullable<int> FoodTypeID { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_Category MAS_Category { get; set; }
-        [DataMember]
-        public virtual ICollection<MAS_Discount> MAS_Discount { get; set; }
-        [DataMember]
-        public virtual MAS_FoodType MAS_FoodType { get; set; }
-        [DataMember]
-        public virtual ICollection<MAS_Price> MAS_Price { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_MealPackMapping> TRN_MealPackMapping { get; set; }
-        [DataMember]
-        public virtual ICollection<TRN_OrderDetails> TRN_OrderDetails { get; set; }
+    public MAS_Food()
+    {
+    this.MAS_Discount = new HashSet<MAS_Discount>();
+    this.MAS_Price = new HashSet<MAS_Price>();
+    this.TRN_MealPackMapping = new HashSet<TRN_MealPackMapping>();
+    this.TRN_OrderDetails = new HashSet<TRN_OrderDetails>();
     }
-
+    
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int FoodId { get; set; }
+    [DataMember]
+    public string FoodName { get; set; }
+    [DataMember]
+    public string Descriptions { get; set; }
+    [DataMember]
+    public Nullable<int> CategoryId { get; set; }
+    [DataMember]
+    public Nullable<int> FoodTypeID { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_Category MAS_Category { get; set; }
+    [DataMember]
+    public virtual ICollection<MAS_Discount> MAS_Discount { get; set; }
+    [DataMember]
+    public virtual MAS_FoodType MAS_FoodType { get; set; }
+    [DataMember]
+    public virtual ICollection<MAS_Price> MAS_Price { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_MealPackMapping> TRN_MealPackMapping { get; set; }
+    [DataMember]
+    public virtual ICollection<TRN_OrderDetails> TRN_OrderDetails { get; set; }
+    }
+    
 }

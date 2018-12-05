@@ -8,32 +8,33 @@
 //------------------------------------------------------------------------------
 
 using Common;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 
 namespace DotnetCore.Business.Entities
 {
-    [Microsoft.AspNetCore.Mvc.ModelMetadataType(typeof(MAS_AreaMetadata))]
+    [ModelMetadataType(typeof(MAS_AreaMetadata))]
     [DataContract(IsReference = true)]
     [KnownType(typeof(MAS_City))]
-    public partial class MAS_Area : BusinessEntityBase
+    public partial class MAS_Area  :BusinessEntityBase 
     {
-        [DataMember]
-        public System.Guid UniqueId { get; set; }
-        [DataMember]
-        [Key]
-        public int AreaId { get; set; }
-        [DataMember]
-        public string AreaName { get; set; }
-        [DataMember]
-        public Nullable<int> CityId { get; set; }
-        [DataMember]
-        public bool IsDeleted { get; set; }
-
-        [DataMember]
-        public virtual MAS_City MAS_City { get; set; }
+    [DataMember]
+    public System.Guid UniqueId { get; set; }
+    [DataMember]
+    public int AreaId { get; set; }
+    [DataMember]
+    public string AreaName { get; set; }
+    [DataMember]
+    public Nullable<int> CityId { get; set; }
+    [DataMember]
+    public bool IsDeleted { get; set; }
+    
+    [DataMember]
+    public virtual MAS_City MAS_City { get; set; }
     }
-
+    
 }
