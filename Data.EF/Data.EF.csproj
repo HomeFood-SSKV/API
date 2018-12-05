@@ -79,6 +79,7 @@
       <LastGenOutput>EF.cs</LastGenOutput>
       <DependentUpon>EF.edmx</DependentUpon>
     </Content>
+    <Content Include="HomeFood1.sql" />
     <Content Include="Tool\Entities\Conceptual\iPaySystemDto.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>iPaySystemDto1.cs</LastGenOutput>
