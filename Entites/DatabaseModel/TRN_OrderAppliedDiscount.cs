@@ -24,17 +24,18 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_SpecialDiscount))]
     public partial class TRN_OrderAppliedDiscount  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int AppliedDiscountId { get; set; }
-    [DataMember]
+     [DataMember]
     public int DiscountId { get; set; }
-    [DataMember]
+     [DataMember]
     public int SpecialDiscountId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderId { get; set; }
     
     [DataMember]

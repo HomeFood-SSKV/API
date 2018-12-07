@@ -21,21 +21,22 @@ namespace DotnetCore.Business.Entities
     [DataContract(IsReference = true)]
     public partial class TRN_ChefOrder  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int ChefOrderId { get; set; }
-    [DataMember]
+     [DataMember]
     public System.DateTime OrderGivenDatetime { get; set; }
-    [DataMember]
+     [DataMember]
     public System.TimeSpan ChefDeliveredDateTime { get; set; }
-    [DataMember]
+     [DataMember]
     public System.DateTime AssignedPickUpDate { get; set; }
-    [DataMember]
+     [DataMember]
     public System.TimeSpan AssignedPickUpTime { get; set; }
-    [DataMember]
+     [DataMember]
     public int TaskStatusID { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     }
     

@@ -27,15 +27,16 @@ namespace DotnetCore.Business.Entities
     this.MAS_Food = new HashSet<MAS_Food>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int CategoryId { get; set; }
-    [DataMember]
+     [DataMember]
     public string Name { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

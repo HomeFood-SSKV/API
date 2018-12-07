@@ -22,19 +22,20 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(MAS_Food))]
     public partial class MAS_Price  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int PriceId { get; set; }
-    [DataMember]
+     [DataMember]
     public int FoodId { get; set; }
-    [DataMember]
+     [DataMember]
     public string Price { get; set; }
-    [DataMember]
+     [DataMember]
     public string GSTPrice { get; set; }
-    [DataMember]
+     [DataMember]
     public string GSTPercentage { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

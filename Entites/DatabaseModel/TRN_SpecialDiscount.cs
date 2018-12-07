@@ -29,29 +29,30 @@ namespace DotnetCore.Business.Entities
     this.TRN_OrderAppliedDiscount = new HashSet<TRN_OrderAppliedDiscount>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int SpecialDiscountId { get; set; }
-    [DataMember]
+     [DataMember]
     public string DiscountName { get; set; }
-    [DataMember]
+     [DataMember]
     public int DiscountTypeID { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDiscountUsed { get; set; }
-    [DataMember]
+     [DataMember]
     public int DiscountPrice { get; set; }
-    [DataMember]
+     [DataMember]
     public int DiscountPercentage { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<System.DateTime> ValidityFrom { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<System.DateTime> ValidityTo { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

@@ -24,25 +24,26 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_UserDetail))]
     public partial class TRN_MealPackProcessing  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int MealPackProcessingId { get; set; }
-    [DataMember]
+     [DataMember]
     public int MealPackId { get; set; }
-    [DataMember]
+     [DataMember]
     public int TotalMealCount { get; set; }
-    [DataMember]
+     [DataMember]
     public int UsedMealCount { get; set; }
-    [DataMember]
+     [DataMember]
     public int RemainingMealCount { get; set; }
-    [DataMember]
+     [DataMember]
     public System.DateTime ScheduleDates { get; set; }
-    [DataMember]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

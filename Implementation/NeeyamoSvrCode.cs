@@ -68,7 +68,7 @@ namespace DotnetCore.Business
                 ServiceLocator<IPersistence<TRN_ChefOrder>>.RegisterService<Persistence.DbCxt.TRN_ChefOrderPrst>();
                 ServiceLocator<IPersistence<TRN_ChefOtherDetails>>.RegisterService<Persistence.DbCxt.TRN_ChefOtherDetailsPrst>();
                 ServiceLocator<IPersistence<TRN_DeliveryDetails>>.RegisterService<Persistence.DbCxt.TRN_DeliveryDetailsPrst>();
-               // ServiceLocator<IPersistence<TRN_LoginDetail>>.RegisterService<Persistence.DbCxt.TRN_LoginDetailPrst>();
+                // ServiceLocator<IPersistence<TRN_LoginDetail>>.RegisterService<Persistence.DbCxt.TRN_LoginDetailPrst>();
                 ServiceLocator<IPersistence<TRN_MapOrderToChef>>.RegisterService<Persistence.DbCxt.TRN_MapOrderToChefPrst>();
                 ServiceLocator<IPersistence<TRN_MealPackMapping>>.RegisterService<Persistence.DbCxt.TRN_MealPackMappingPrst>();
                 ServiceLocator<IPersistence<TRN_MealPackProcessing>>.RegisterService<Persistence.DbCxt.TRN_MealPackProcessingPrst>();
@@ -111,7 +111,7 @@ namespace DotnetCore.Business
                     cfg.CreateMap<TRN_ChefOrderDto, TRN_ChefOrder>();
                     cfg.CreateMap<TRN_ChefOtherDetailsDto, TRN_ChefOtherDetails>();
                     cfg.CreateMap<TRN_DeliveryDetailsDto, TRN_DeliveryDetails>();
-                   // cfg.CreateMap<TRN_LoginDetailDto, TRN_LoginDetail>();
+                    // cfg.CreateMap<TRN_LoginDetailDto, TRN_LoginDetail>();
                     cfg.CreateMap<TRN_MapOrderToChefDto, TRN_MapOrderToChef>();
                     cfg.CreateMap<TRN_MealPackMappingDto, TRN_MealPackMapping>();
                     cfg.CreateMap<TRN_MealPackProcessingDto, TRN_MealPackProcessing>();
@@ -182,15 +182,24 @@ namespace DotnetCore.Business
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
                 {
-                    return await (from r in iHomeFoodEntities.MAS_AddressType
-                                  where r.IsDeleted == false
-                                  select new MAS_AddressTypeDto
-                                  {
-                                      AddressTypeId = r.AddressTypeId,
-                                      AddressType = r.AddressType,
-                                      UniqueId = r.UniqueId,
 
-                                  }).ToListAsync<MAS_AddressTypeDto>();
+                    try
+                    {
+                        return await (from r in iHomeFoodEntities.MAS_AddressType
+                                      where r.IsDeleted == false
+                                      select new MAS_AddressTypeDto
+                                      {
+                                          AddressTypeId = r.AddressTypeId,
+                                          AddressType = r.AddressType,
+                                          UniqueId = r.UniqueId,
+
+                                      }).ToListAsync<MAS_AddressTypeDto>();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        return new List<MAS_AddressTypeDto>();
+                    }
                 }
             }
         }

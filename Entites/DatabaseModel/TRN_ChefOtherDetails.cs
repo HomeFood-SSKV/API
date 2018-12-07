@@ -23,27 +23,28 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_ChefDetails))]
     public partial class TRN_ChefOtherDetails  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int ChefOtherDetailID { get; set; }
-    [DataMember]
+     [DataMember]
     public int ChefId { get; set; }
-    [DataMember]
+     [DataMember]
     public int FoodTypeId { get; set; }
-    [DataMember]
+     [DataMember]
     public string SpecialistAt { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<int> AvaiableDays { get; set; }
-    [DataMember]
+     [DataMember]
     public string AvailableTime { get; set; }
-    [DataMember]
+     [DataMember]
     public bool AvaiableForLunch { get; set; }
-    [DataMember]
+     [DataMember]
     public bool AvailableForDinner { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

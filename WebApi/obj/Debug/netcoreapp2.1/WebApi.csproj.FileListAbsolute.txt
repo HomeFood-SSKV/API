@@ -79,3 +79,30 @@ F:\Projects\Homefood\API PRoject\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.Razor
 F:\Projects\Homefood\API PRoject\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.csproj.CopyComplete
 F:\Projects\Homefood\API PRoject\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.dll
 F:\Projects\Homefood\API PRoject\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.deps.json
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.runtimeconfig.json
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.runtimeconfig.dev.json
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Entites.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\IBusiness.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Implementation.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Persistance.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Utilities.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.Common.dll
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Entites.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\WebApi.Common.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\IBusiness.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Implementation.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Persistance.pdb
+D:\Application\HF\API\WebApi\bin\Debug\netcoreapp2.1\Utilities.pdb
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.csprojAssemblyReference.cache
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.csproj.CoreCompileInputs.cache
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.RazorAssemblyInfo.cache
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.RazorAssemblyInfo.cs
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.AssemblyInfoInputs.cache
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.AssemblyInfo.cs
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.RazorTargetAssemblyInfo.cache
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.csproj.CopyComplete
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.dll
+D:\Application\HF\API\WebApi\obj\Debug\netcoreapp2.1\WebApi.pdb

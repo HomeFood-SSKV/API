@@ -58,3 +58,23 @@ F:\Projects\Homefood\API PRoject\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebAp
 F:\Projects\Homefood\API PRoject\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CopyComplete
 F:\Projects\Homefood\API PRoject\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.dll
 F:\Projects\Homefood\API PRoject\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.deps.json
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Entites.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\IBusiness.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Implementation.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Persistance.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Utilities.dll
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Entites.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Implementation.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\IBusiness.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Persistance.pdb
+D:\Application\HF\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Utilities.pdb
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csprojAssemblyReference.cache
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CoreCompileInputs.cache
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.AssemblyInfoInputs.cache
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.AssemblyInfo.cs
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CopyComplete
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.dll
+D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.pdb

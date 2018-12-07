@@ -31,25 +31,26 @@ namespace DotnetCore.Business.Entities
     this.TRN_DeliveryDetails = new HashSet<TRN_DeliveryDetails>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int AddressDetailId { get; set; }
-    [DataMember]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public int AddressTypeID { get; set; }
-    [DataMember]
+     [DataMember]
     public int DeliveryPointId { get; set; }
-    [DataMember]
+     [DataMember]
     public string AreaName { get; set; }
-    [DataMember]
+     [DataMember]
     public string AddressLine1 { get; set; }
-    [DataMember]
+     [DataMember]
     public string AddressLine2 { get; set; }
-    [DataMember]
+     [DataMember]
     public int CityId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

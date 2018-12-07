@@ -24,23 +24,24 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_Order))]
     public partial class TRN_DeliveryDetails  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int DeliveryDetailId { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderId { get; set; }
-    [DataMember]
+     [DataMember]
     public System.DateTime OrderDate { get; set; }
-    [DataMember]
+     [DataMember]
     public System.DateTime ScheduleDeliveryDate { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<bool> IsDelivered { get; set; }
-    [DataMember]
+     [DataMember]
     public int DeliveryPointId { get; set; }
-    [DataMember]
+     [DataMember]
     public int AddressDetailId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

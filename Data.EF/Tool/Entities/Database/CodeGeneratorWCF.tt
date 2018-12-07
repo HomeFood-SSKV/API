@@ -8,7 +8,7 @@ CodeRegion region = new CodeRegion(this, 1);
 MetadataTools ef = new MetadataTools(this);
 
 string inputFile = @"GHiGlobalPayModels.edmx";
-inputFile = @"F:\Projects\Homefood\API PRoject\API\Data.EF\EF.edmx"; 
+inputFile = @"D:\Application\HF\API\Data.EF\EF.edmx"; 
 EdmItemCollection ItemCollection = loader.CreateEdmItemCollection(inputFile);
 string namespaceName = code.VsNamespaceSuggestion();
 
@@ -65,6 +65,11 @@ if (primitiveProperties.Any())
 {
 foreach (var edmProperty in primitiveProperties)
 {
+
+#>
+ <#if (ef.IsKey(edmProperty))
+   {#>[Key()]
+ <#}#><#
 WriteProperty(code, edmProperty);
 }
 }
@@ -76,6 +81,7 @@ if (complexProperties.Any())
 <#
 foreach(var complexProperty in complexProperties)
 {
+
 WriteProperty(code, complexProperty);
 }
 }
@@ -140,6 +146,11 @@ if (primitiveProperties.Any())
 {
 foreach(var edmProperty in primitiveProperties)
 {
+#>
+ <#if (ef.IsKey(edmProperty))
+   {#>      [Key()]
+   <#}#>
+<#
 WriteProperty(code, edmProperty);
 }
 }

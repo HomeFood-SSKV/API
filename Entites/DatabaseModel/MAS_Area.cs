@@ -22,15 +22,17 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(MAS_City))]
     public partial class MAS_Area  :BusinessEntityBase 
     {
-    [DataMember]
+     [Key()]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int AreaId { get; set; }
-    [DataMember]
+     [DataMember]
     public string AreaName { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<int> CityId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

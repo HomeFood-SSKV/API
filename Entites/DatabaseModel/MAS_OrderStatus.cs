@@ -27,13 +27,14 @@ namespace DotnetCore.Business.Entities
     this.TRN_Order = new HashSet<TRN_Order>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int OrderStatusId { get; set; }
-    [DataMember]
+     [DataMember]
     public string OrderStatus { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

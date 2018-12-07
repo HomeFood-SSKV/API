@@ -45,7 +45,7 @@ namespace Chinook.Data
         public virtual DbSet<TRN_UserPassword> TRN_UserPassword { get; set; }
         public virtual DbSet<TRN_UserRights> TRN_UserRights { get; set; }
 
-        private readonly string _dbName = "Server=DOTNETCORE-FOOD\\SQLEXPRESS2017;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
+        private readonly string _dbName = "Server=NYMMDUCPU0294\\SQLSEVER2014;Database=homefood3;persist security info=True;MultipleActiveResultSets=True;User ID=sa;Password=neeyamo@123";
 
         public HomeFoodEntities(DbContextOptions<HomeFoodEntities> options) : base(options)
         {

@@ -29,15 +29,16 @@ namespace DotnetCore.Business.Entities
     this.TRN_SpecialDiscount = new HashSet<TRN_SpecialDiscount>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int DiscountTypeID { get; set; }
-    [DataMember]
+     [DataMember]
     public string DiscountType { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

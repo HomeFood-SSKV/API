@@ -32,33 +32,34 @@ namespace DotnetCore.Business.Entities
     this.TRN_MapOrderToChef = new HashSet<TRN_MapOrderToChef>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int ChefId { get; set; }
-    [DataMember]
+     [DataMember]
     public string ChefFullName { get; set; }
-    [DataMember]
+     [DataMember]
     public int ChefTypeId { get; set; }
-    [DataMember]
+     [DataMember]
     public string MobileNumber { get; set; }
-    [DataMember]
+     [DataMember]
     public string AlternateMobileNumber { get; set; }
-    [DataMember]
+     [DataMember]
     public string PhoneNumber { get; set; }
-    [DataMember]
+     [DataMember]
     public string EmailId { get; set; }
-    [DataMember]
+     [DataMember]
     public int CityId { get; set; }
-    [DataMember]
+     [DataMember]
     public string AreaName { get; set; }
-    [DataMember]
+     [DataMember]
     public string AddressLine1 { get; set; }
-    [DataMember]
+     [DataMember]
     public string AddressLine2 { get; set; }
-    [DataMember]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

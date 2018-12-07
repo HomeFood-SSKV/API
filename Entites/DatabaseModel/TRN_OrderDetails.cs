@@ -23,17 +23,18 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_Order))]
     public partial class TRN_OrderDetails  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int OrderDetailId { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderId { get; set; }
-    [DataMember]
+     [DataMember]
     public int FoodId { get; set; }
-    [DataMember]
+     [DataMember]
     public int Quantity { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

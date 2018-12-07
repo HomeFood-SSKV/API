@@ -38,19 +38,20 @@ namespace DotnetCore.Business.Entities
     this.TRN_UserRights = new HashSet<TRN_UserRights>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public string Name { get; set; }
-    [DataMember]
+     [DataMember]
     public string EmailId { get; set; }
-    [DataMember]
+     [DataMember]
     public string PhoneNo { get; set; }
-    [DataMember]
+     [DataMember]
     public int RoleId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

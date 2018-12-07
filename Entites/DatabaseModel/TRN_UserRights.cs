@@ -23,17 +23,18 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_UserDetail))]
     public partial class TRN_UserRights  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int Id { get; set; }
-    [DataMember]
+     [DataMember]
     public int Userid { get; set; }
-    [DataMember]
+     [DataMember]
     public int RightsId { get; set; }
-    [DataMember]
+     [DataMember]
     public string Password { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

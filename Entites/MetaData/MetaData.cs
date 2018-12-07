@@ -19,6 +19,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Id is required")]
+        [Key]
         public Int32 Id { get; set; }
 
         [Required(ErrorMessage = "Rights is required")]
@@ -41,6 +42,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Id is required")]
+        [Key]
         public Int32 Id { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
@@ -69,6 +71,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Id is required")]
+        [Key]
         public Int32 Id { get; set; }
 
         [Required(ErrorMessage = "User is required")]
@@ -94,6 +97,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Id is required")]
+        [Key]
         public Int32 Id { get; set; }
 
         [Required(ErrorMessage = "Userid is required")]
@@ -119,6 +123,7 @@ namespace DotnetCore.Business.Entities
     {
 
         [Required(ErrorMessage = "Observe is required")]
+        [Key]
         public Int32 ObserveId { get; set; }
 
         [Required(ErrorMessage = "Table Name is required")]
@@ -171,6 +176,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Area is required")]
+        [Key]
         public Int32 AreaId { get; set; }
 
         [Required(ErrorMessage = "Area Name is required")]
@@ -195,6 +201,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Category is required")]
+        [Key]
         public Int32 CategoryId { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
@@ -219,6 +226,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Chef Type is required")]
+        [Key]
         public Int32 ChefTypeId { get; set; }
 
         [Required(ErrorMessage = "Chef Type is required")]
@@ -241,6 +249,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "City is required")]
+        [Key]
         public Int32 CityId { get; set; }
 
         [Required(ErrorMessage = "City Name is required")]
@@ -263,6 +272,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Delivey Point is required")]
+        [Key]
         public Int32 DeliveyPointId { get; set; }
 
         [Required(ErrorMessage = "Delivery Point Name is required")]
@@ -288,6 +298,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Discount is required")]
+        [Key]
         public Int32 DiscountId { get; set; }
 
         [Required(ErrorMessage = "Discount Name is required")]
@@ -328,6 +339,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Discount Type is required")]
+        [Key]
         public Int32 DiscountTypeID { get; set; }
 
         [Required(ErrorMessage = "Discount Type is required")]
@@ -352,6 +364,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Food is required")]
+        [Key]
         public Int32 FoodId { get; set; }
 
         [Required(ErrorMessage = "Food Name is required")]
@@ -380,6 +393,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Food Type is required")]
+        [Key]
         public Int32 FoodTypeID { get; set; }
 
         [Required(ErrorMessage = "Food Type is required")]
@@ -404,6 +418,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack is required")]
+        [Key]
         public Int32 MealPackId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack Name is required")]
@@ -453,6 +468,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Order Status is required")]
+        [Key]
         public Int32 OrderStatusId { get; set; }
 
         [Required(ErrorMessage = "Order Status is required")]
@@ -475,6 +491,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Order Type is required")]
+        [Key]
         public Int32 OrderTypeId { get; set; }
 
         [Required(ErrorMessage = "Order Type Code is required")]
@@ -499,6 +516,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Payment Type is required")]
+        [Key]
         public Int32 PaymentTypeId { get; set; }
 
         [Required(ErrorMessage = "Payment Type is required")]
@@ -521,6 +539,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Price is required")]
+        [Key]
         public Int32 PriceId { get; set; }
 
         [Required(ErrorMessage = "Food is required")]
@@ -552,6 +571,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
+        [Key]
         public Int32 RoleId { get; set; }
 
         [Required(ErrorMessage = "Role Name is required")]
@@ -574,6 +594,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Chef is required")]
+        [Key]
         public Int32 ChefId { get; set; }
 
         [Required(ErrorMessage = "Chef Full Name is required")]
@@ -633,6 +654,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Chef Order is required")]
+        [Key]
         public Int32 ChefOrderId { get; set; }
 
         [Required(ErrorMessage = "Order Given Datetime is required")]
@@ -668,6 +690,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Chef Other Detail is required")]
+        [Key]
         public Int32 ChefOtherDetailID { get; set; }
 
         [Required(ErrorMessage = "Chef is required")]
@@ -708,6 +731,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Delivery Detail is required")]
+        [Key]
         public Int32 DeliveryDetailId { get; set; }
 
         [Required(ErrorMessage = "Order is required")]
@@ -748,6 +772,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Map Order is required")]
+        [Key]
         public Int32 MapOrderID { get; set; }
 
         [Required(ErrorMessage = "Order is required")]
@@ -772,6 +797,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack Mapping is required")]
+        [Key]
         public Int32 MealPackMappingId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack is required")]
@@ -796,6 +822,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack Processing is required")]
+        [Key]
         public Int32 MealPackProcessingId { get; set; }
 
         [Required(ErrorMessage = "Meal Pack is required")]
@@ -836,6 +863,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Order is required")]
+        [Key]
         public Int32 OrderId { get; set; }
 
         [Required(ErrorMessage = "User is required")]
@@ -877,6 +905,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Applied Discount is required")]
+        [Key]
         public Int32 AppliedDiscountId { get; set; }
 
         [Required(ErrorMessage = "Discount is required")]
@@ -904,6 +933,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Order Detail is required")]
+        [Key]
         public Int32 OrderDetailId { get; set; }
 
         [Required(ErrorMessage = "Order is required")]
@@ -931,6 +961,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Special Discount is required")]
+        [Key]
         public Int32 SpecialDiscountId { get; set; }
 
         [Required(ErrorMessage = "Discount Name is required")]
@@ -976,6 +1007,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "Address Detail is required")]
+        [Key]
         public Int32 AddressDetailId { get; set; }
 
         [Required(ErrorMessage = "User is required")]
@@ -1016,6 +1048,7 @@ namespace DotnetCore.Business.Entities
         public Guid UniqueId { get; set; }
 
         [Required(ErrorMessage = "User is required")]
+        [Key]
         public Int32 UserId { get; set; }
 
         [Required(ErrorMessage = "Name is required")]

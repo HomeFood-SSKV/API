@@ -23,15 +23,16 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(TRN_Order))]
     public partial class TRN_MapOrderToChef  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int MapOrderID { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderId { get; set; }
-    [DataMember]
+     [DataMember]
     public int ChefId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

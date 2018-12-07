@@ -21,17 +21,18 @@ namespace DotnetCore.Business.Entities
     [DataContract(IsReference = true)]
     public partial class TRN_UserPassword  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int Id { get; set; }
-    [DataMember]
+     [DataMember]
     public int UserId { get; set; }
-    [DataMember]
+     [DataMember]
     public string Password { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
-    [DataMember]
+     [DataMember]
     public string LoginName { get; set; }
     }
     

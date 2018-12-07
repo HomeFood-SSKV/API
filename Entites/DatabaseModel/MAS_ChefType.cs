@@ -27,13 +27,14 @@ namespace DotnetCore.Business.Entities
     this.TRN_ChefDetails = new HashSet<TRN_ChefDetails>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int ChefTypeId { get; set; }
-    [DataMember]
+     [DataMember]
     public string ChefType { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

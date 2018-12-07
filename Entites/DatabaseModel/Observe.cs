@@ -21,13 +21,14 @@ namespace DotnetCore.Business.Entities
     [DataContract(IsReference = true)]
     public partial class Observe  :BusinessEntityBase 
     {
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int ObserveId { get; set; }
-    [DataMember]
+     [DataMember]
     public string TableName { get; set; }
-    [DataMember]
+     [DataMember]
     public bool Changed { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     }
     

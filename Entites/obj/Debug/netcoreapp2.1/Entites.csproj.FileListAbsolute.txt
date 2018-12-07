@@ -40,3 +40,17 @@ F:\Projects\Homefood\API PRoject\API\Entites\obj\Debug\netcoreapp2.1\Entites.Ass
 F:\Projects\Homefood\API PRoject\API\Entites\obj\Debug\netcoreapp2.1\Entites.csproj.CopyComplete
 F:\Projects\Homefood\API PRoject\API\Entites\obj\Debug\netcoreapp2.1\Entites.dll
 F:\Projects\Homefood\API PRoject\API\Entites\obj\Debug\netcoreapp2.1\Entites.pdb
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Entites.deps.json
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Entites.runtimeconfig.json
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Entites.runtimeconfig.dev.json
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Entites.dll
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Entites.pdb
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Utilities.dll
+D:\Application\HF\API\Entites\bin\Debug\netcoreapp2.1\Utilities.pdb
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.csprojAssemblyReference.cache
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.csproj.CoreCompileInputs.cache
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.AssemblyInfoInputs.cache
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.AssemblyInfo.cs
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.csproj.CopyComplete
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.dll
+D:\Application\HF\API\Entites\obj\Debug\netcoreapp2.1\Entites.pdb

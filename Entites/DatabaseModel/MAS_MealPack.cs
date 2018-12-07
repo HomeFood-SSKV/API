@@ -30,31 +30,32 @@ namespace DotnetCore.Business.Entities
     this.TRN_MealPackProcessing = new HashSet<TRN_MealPackProcessing>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int MealPackId { get; set; }
-    [DataMember]
+     [DataMember]
     public string MealPackName { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public int TotalMealCount { get; set; }
-    [DataMember]
+     [DataMember]
     public int CurrentMealCount { get; set; }
-    [DataMember]
+     [DataMember]
     public int CurrentPrice { get; set; }
-    [DataMember]
+     [DataMember]
     public int TotalPrice { get; set; }
-    [DataMember]
+     [DataMember]
     public int GSTPrice { get; set; }
-    [DataMember]
+     [DataMember]
     public int GSTPercentage { get; set; }
-    [DataMember]
+     [DataMember]
     public int OrderTypeId { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<int> OrderTypeCode { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

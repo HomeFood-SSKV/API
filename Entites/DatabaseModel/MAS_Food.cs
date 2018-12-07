@@ -35,19 +35,20 @@ namespace DotnetCore.Business.Entities
     this.TRN_OrderDetails = new HashSet<TRN_OrderDetails>();
     }
     
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int FoodId { get; set; }
-    [DataMember]
+     [DataMember]
     public string FoodName { get; set; }
-    [DataMember]
+     [DataMember]
     public string Descriptions { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<int> CategoryId { get; set; }
-    [DataMember]
+     [DataMember]
     public Nullable<int> FoodTypeID { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]

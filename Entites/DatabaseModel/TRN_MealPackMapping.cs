@@ -23,15 +23,16 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(MAS_MealPack))]
     public partial class TRN_MealPackMapping  :BusinessEntityBase 
     {
-    [DataMember]
+     [DataMember]
     public System.Guid UniqueId { get; set; }
-    [DataMember]
+     [Key()]
+     [DataMember]
     public int MealPackMappingId { get; set; }
-    [DataMember]
+     [DataMember]
     public int MealPackId { get; set; }
-    [DataMember]
+     [DataMember]
     public int FoodId { get; set; }
-    [DataMember]
+     [DataMember]
     public bool IsDeleted { get; set; }
     
     [DataMember]
