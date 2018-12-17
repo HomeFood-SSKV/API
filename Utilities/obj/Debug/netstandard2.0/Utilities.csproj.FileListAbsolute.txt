@@ -32,3 +32,12 @@ D:\Application\HF\API\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfoI
 D:\Application\HF\API\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfo.cs
 D:\Application\HF\API\Utilities\obj\Debug\netstandard2.0\Utilities.dll
 D:\Application\HF\API\Utilities\obj\Debug\netstandard2.0\Utilities.pdb
+F:\Projects\Homefood\App Api\API\Utilities\bin\Debug\netstandard2.0\Utilities.deps.json
+F:\Projects\Homefood\App Api\API\Utilities\bin\Debug\netstandard2.0\Utilities.dll
+F:\Projects\Homefood\App Api\API\Utilities\bin\Debug\netstandard2.0\Utilities.pdb
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfoInputs.cache
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.AssemblyInfo.cs
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.dll
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.pdb
+F:\Projects\Homefood\App Api\API\Utilities\obj\Debug\netstandard2.0\Utilities.csprojAssemblyReference.cache

@@ -32,7 +32,7 @@ namespace DotnetCore.Web.Controllers
             get
             {
                 if (_businessSupervisor == null)
-                    return null;
+                    return new BusinessSupervisor();
                 return _businessSupervisor;
             }
             set

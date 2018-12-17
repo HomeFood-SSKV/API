@@ -24,12 +24,7 @@ namespace WebApi.Common.JwtParser
         // JwtClaims hardcoded for simplicity, store in a db with hashed passwords in production applications
         private List<JwtClaim> _JwtClaims = new List<JwtClaim>();
 
-        private readonly AppSettings _appSettings;
 
-        public JwtService(IOptions<AppSettings> appSettings)
-        {
-            _appSettings = appSettings.Value;
-        }
 
         public async Task<JwtClaim> Authenticate(string userName, string password)
         {
@@ -44,7 +39,7 @@ namespace WebApi.Common.JwtParser
 
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var key = Encoding.ASCII.GetBytes(AppSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]

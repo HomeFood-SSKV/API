@@ -88,7 +88,7 @@ namespace Persistence.DbCxt
     {
         protected override IQueryable<Observe> EntitySet(DbContext context)
         {
-            return (context as HomeFoodEntities).Observes;
+            return (context as HomeFoodEntities).Observe;
         }
 
         protected override Observe FindMatchedOne(Observe toBeMatched, DbContext context)
@@ -107,7 +107,8 @@ namespace Persistence.DbCxt
 
         protected override MAS_Area FindMatchedOne(MAS_Area toBeMatched, DbContext context)
         {
-            return EntitySet(context).DefaultIfEmpty(null).First(o => o.UniqueId == toBeMatched.UniqueId); return EntitySet(context).DefaultIfEmpty(null).First(o => o.AreaId == toBeMatched.AreaId);
+           // return EntitySet(context).DefaultIfEmpty(null).First(o => o.UniqueId == toBeMatched.UniqueId);
+            return EntitySet(context).DefaultIfEmpty(null).First(o => o.AreaId == toBeMatched.AreaId);
         }
 
     }

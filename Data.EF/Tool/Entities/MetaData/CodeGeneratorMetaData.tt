@@ -7,7 +7,7 @@
 UserSettings userSettings =
         new UserSettings
         {
-            SourceCsdlPath = @"F:\Projects\Homefood\API PRoject\API\Data.EF\EF.edmx",
+            SourceCsdlPath = @"F:\Projects\Homefood\App Api\API\Data.EF\EF.edmx",
             ReferenceCsdlPaths = new string[] {},
             FullyQualifySystemTypes = true,
             CreateContextAddToMethods = true,

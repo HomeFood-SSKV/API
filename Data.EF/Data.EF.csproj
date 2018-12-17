@@ -49,12 +49,354 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EF.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MAS_AddressType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Category.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_ChefType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_City.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_DeliveryLocation.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Discount.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_DiscountType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Food.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_FoodType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_MealPack.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_OrderStatus.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_OrderType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_PaymentType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Price.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Rights.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAS_Role.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Observe.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\Entities\Conceptual\iPaySystemDto1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_AddressTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_CategoryDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_ChefTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_CityDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_DeliveryLocationDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_DiscountDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_DiscountTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_FoodDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_FoodTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_MealPackDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_OrderStatusDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_OrderTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_PaymentTypeDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_PriceDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_RightsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\MAS_RoleDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\ObserveDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_ChefDetailsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_ChefOrderDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_ChefOtherDetailsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_DeliveryDetailsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_GroupRightsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_MapOrderToChefDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_MealPackMappingDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_MealPackProcessingDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_OrderAppliedDiscountDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_OrderDetailsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_OrderDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_SpecialDiscountDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_UserAddressDetailsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_UserDetailDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_UserPasswordDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Conceptual\TRN_UserRightsDto.cs">
+      <DependentUpon>iPaySystemDto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\CodeGeneratorWCF1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_AddressType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Category.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_ChefType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_City.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_DeliveryLocation.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Discount.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_DiscountType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Food.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_FoodType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_MealPack.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_OrderStatus.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_OrderType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_PaymentType.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Price.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Rights.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\MAS_Role.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\Observe.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_ChefDetails.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_ChefOrder.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_ChefOtherDetails.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_DeliveryDetails.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_GroupRights.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_MapOrderToChef.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_MealPackMapping.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_MealPackProcessing.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_Order.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_OrderAppliedDiscount.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_OrderDetails.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_SpecialDiscount.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_UserAddressDetails.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_UserDetail.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_UserPassword.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\Database\TRN_UserRights.cs">
+      <DependentUpon>CodeGeneratorWCF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Entities\MetaData\CodeGeneratorMetaData1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeGeneratorMetaData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\IBusiness\NeeyamoSvr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NeeyamoSvr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Implementation\iGloblalPayNeeyamoSvr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iGloblalPayNeeyamoSvr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Persistance\CodePrst.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodePrst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Persistance\RT.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RT.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_ChefDetails.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_ChefOrder.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_ChefOtherDetails.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_DeliveryDetails.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_GroupRights.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_MapOrderToChef.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_MealPackMapping.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_MealPackProcessing.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_Order.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_OrderAppliedDiscount.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_OrderDetails.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_SpecialDiscount.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_UserAddressDetails.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_UserDetail.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_UserPassword.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRN_UserRights.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EF.edmx">

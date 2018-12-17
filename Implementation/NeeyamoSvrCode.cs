@@ -237,7 +237,7 @@ namespace DotnetCore.Business
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                return (from r in iHomeFoodEntities.Observes
+                return (from r in iHomeFoodEntities.Observe
                         select new ObserveDto
                         {
                             ObserveId = r.ObserveId,
@@ -265,7 +265,7 @@ namespace DotnetCore.Business
             using (var dbContextScope = _dbContextScopeFactory.Create())
             {
                 var context = dbContextScope.DbContexts.Get<HomeFoodEntities>();
-                var result = context.Observes.SingleOrDefault(b => b.ObserveId == customObject.ObserveId);
+                var result = context.Observe.SingleOrDefault(b => b.ObserveId == customObject.ObserveId);
                 if (result != null)
                 {
                     result.Changed = false;
@@ -1170,6 +1170,8 @@ namespace DotnetCore.Business
                                   UniqueId = r.UniqueId,
                                   UserId = r.UserId,
                                   Password = r.Password,
+                                  LoginName=r.LoginName,
+                                  Id=r.Id,
                               }).ToListAsync();
             }
         }

@@ -22,7 +22,6 @@ namespace DotnetCore.Business.Entities
     [KnownType(typeof(MAS_City))]
     public partial class MAS_Area  :BusinessEntityBase 
     {
-     [Key()]
      [DataMember]
     public System.Guid UniqueId { get; set; }
      [Key()]

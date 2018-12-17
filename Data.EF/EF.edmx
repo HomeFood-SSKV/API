@@ -14,17 +14,6 @@
           <Property Name="AddressType" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="MAS_Area">
-          <Key>
-            <PropertyRef Name="UniqueId" />
-            <PropertyRef Name="AreaId" />
-          </Key>
-          <Property Name="UniqueId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AreaName" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="CityId" Type="int" />
-          <Property Name="IsDeleted" Type="bit" Nullable="false" />
-        </EntityType>
         <EntityType Name="MAS_Category">
           <Key>
             <PropertyRef Name="CategoryId" />
@@ -186,7 +175,7 @@
           <Property Name="RoleName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="Observes">
+        <EntityType Name="Observe">
           <Key>
             <PropertyRef Name="ObserveId" />
           </Key>
@@ -408,18 +397,6 @@
           <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
-        <Association Name="FK__MAS_Area__CityId__4316F928">
-          <End Role="MAS_City" Type="Self.MAS_City" Multiplicity="0..1" />
-          <End Role="MAS_Area" Type="Self.MAS_Area" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MAS_City">
-              <PropertyRef Name="CityId" />
-            </Principal>
-            <Dependent Role="MAS_Area">
-              <PropertyRef Name="CityId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__MAS_Disco__Disco__619B8048">
           <End Role="MAS_DiscountType" Type="Self.MAS_DiscountType" Multiplicity="0..1" />
           <End Role="MAS_Discount" Type="Self.MAS_Discount" Multiplicity="*" />
@@ -914,7 +891,6 @@
         </Association>
         <EntityContainer Name="HomeFoodModelStoreContainer">
           <EntitySet Name="MAS_AddressType" EntityType="Self.MAS_AddressType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MAS_Area" EntityType="Self.MAS_Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAS_Category" EntityType="Self.MAS_Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAS_ChefType" EntityType="Self.MAS_ChefType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAS_City" EntityType="Self.MAS_City" Schema="dbo" store:Type="Tables" />
@@ -930,7 +906,7 @@
           <EntitySet Name="MAS_Price" EntityType="Self.MAS_Price" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAS_Rights" EntityType="Self.MAS_Rights" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MAS_Role" EntityType="Self.MAS_Role" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Observes" EntityType="Self.Observes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Observe" EntityType="Self.Observe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRN_ChefDetails" EntityType="Self.TRN_ChefDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRN_ChefOrder" EntityType="Self.TRN_ChefOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRN_ChefOtherDetails" EntityType="Self.TRN_ChefOtherDetails" Schema="dbo" store:Type="Tables" />
@@ -947,10 +923,6 @@
           <EntitySet Name="TRN_UserDetail" EntityType="Self.TRN_UserDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRN_UserPassword" EntityType="Self.TRN_UserPassword" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRN_UserRights" EntityType="Self.TRN_UserRights" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__MAS_Area__CityId__4316F928" Association="Self.FK__MAS_Area__CityId__4316F928">
-            <End Role="MAS_City" EntitySet="MAS_City" />
-            <End Role="MAS_Area" EntitySet="MAS_Area" />
-          </AssociationSet>
           <AssociationSet Name="FK__MAS_Disco__Disco__619B8048" Association="Self.FK__MAS_Disco__Disco__619B8048">
             <End Role="MAS_DiscountType" EntitySet="MAS_DiscountType" />
             <End Role="MAS_Discount" EntitySet="MAS_Discount" />
@@ -1122,7 +1094,6 @@
       <Schema Namespace="HomeFoodModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="HomeFoodEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="MAS_AddressType" EntityType="HomeFoodModel.MAS_AddressType" />
-          <EntitySet Name="MAS_Area" EntityType="HomeFoodModel.MAS_Area" />
           <EntitySet Name="MAS_Category" EntityType="HomeFoodModel.MAS_Category" />
           <EntitySet Name="MAS_ChefType" EntityType="HomeFoodModel.MAS_ChefType" />
           <EntitySet Name="MAS_City" EntityType="HomeFoodModel.MAS_City" />
@@ -1158,10 +1129,6 @@
           <AssociationSet Name="FK__TRN_UserA__Addre__6D0D32F4" Association="HomeFoodModel.FK__TRN_UserA__Addre__6D0D32F4">
             <End Role="MAS_AddressType" EntitySet="MAS_AddressType" />
             <End Role="TRN_UserAddressDetails" EntitySet="TRN_UserAddressDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MAS_Area__CityId__4316F928" Association="HomeFoodModel.FK__MAS_Area__CityId__4316F928">
-            <End Role="MAS_City" EntitySet="MAS_City" />
-            <End Role="MAS_Area" EntitySet="MAS_Area" />
           </AssociationSet>
           <AssociationSet Name="FK__MAS_Food__Catego__5535A963" Association="HomeFoodModel.FK__MAS_Food__Catego__5535A963">
             <End Role="MAS_Category" EntitySet="MAS_Category" />
@@ -1334,18 +1301,6 @@
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="TRN_UserAddressDetails" Relationship="HomeFoodModel.FK__TRN_UserA__Addre__6D0D32F4" FromRole="MAS_AddressType" ToRole="TRN_UserAddressDetails" />
         </EntityType>
-        <EntityType Name="MAS_Area">
-          <Key>
-            <PropertyRef Name="UniqueId" />
-            <PropertyRef Name="AreaId" />
-          </Key>
-          <Property Name="UniqueId" Type="Guid" Nullable="false" />
-          <Property Name="AreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AreaName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CityId" Type="Int32" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="MAS_City" Relationship="HomeFoodModel.FK__MAS_Area__CityId__4316F928" FromRole="MAS_Area" ToRole="MAS_City" />
-        </EntityType>
         <EntityType Name="MAS_Category">
           <Key>
             <PropertyRef Name="CategoryId" />
@@ -1375,7 +1330,6 @@
           <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CityName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="MAS_Area" Relationship="HomeFoodModel.FK__MAS_Area__CityId__4316F928" FromRole="MAS_City" ToRole="MAS_Area" />
           <NavigationProperty Name="TRN_ChefDetails" Relationship="HomeFoodModel.FK__TRN_ChefD__CityI__778AC167" FromRole="MAS_City" ToRole="TRN_ChefDetails" />
           <NavigationProperty Name="TRN_UserAddressDetails" Relationship="HomeFoodModel.FK__TRN_UserA__CityI__6EF57B66" FromRole="MAS_City" ToRole="TRN_UserAddressDetails" />
         </EntityType>
@@ -1820,18 +1774,6 @@
             </Principal>
             <Dependent Role="TRN_UserAddressDetails">
               <PropertyRef Name="AddressTypeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MAS_Area__CityId__4316F928">
-          <End Type="HomeFoodModel.MAS_City" Role="MAS_City" Multiplicity="0..1" />
-          <End Type="HomeFoodModel.MAS_Area" Role="MAS_Area" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MAS_City">
-              <PropertyRef Name="CityId" />
-            </Principal>
-            <Dependent Role="MAS_Area">
-              <PropertyRef Name="CityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2331,17 +2273,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MAS_Area">
-            <EntityTypeMapping TypeName="HomeFoodModel.MAS_Area">
-              <MappingFragment StoreEntitySet="MAS_Area">
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="CityId" ColumnName="CityId" />
-                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
-                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
-                <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="MAS_Category">
             <EntityTypeMapping TypeName="HomeFoodModel.MAS_Category">
               <MappingFragment StoreEntitySet="MAS_Category">
@@ -2520,7 +2451,7 @@
           </EntitySetMapping>
           <EntitySetMapping Name="Observes">
             <EntityTypeMapping TypeName="HomeFoodModel.Observe">
-              <MappingFragment StoreEntitySet="Observes">
+              <MappingFragment StoreEntitySet="Observe">
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="Changed" ColumnName="Changed" />
                 <ScalarProperty Name="TableName" ColumnName="TableName" />

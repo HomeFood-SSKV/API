@@ -1,8 +1,10 @@
 ﻿namespace WebApi.Common
 {
-    public class AppSettings
+    public class WebAppSettings
     {
-        public string TestValue1 { get; set; }
+        public string RedisConnection { get; set; }
         public string Secret { get; set; }
     }
+ 
+
 }

@@ -8,6 +8,9 @@ using DotnetCore.Business.Interfaces;
 using DotnetCore.Business.Entities;
 using DotnetCore.Web.Controllers;
 using WebApi.Common.JwtParser;
+using Microsoft.Extensions.Configuration;
+using WebApi.Common;
+using WebApi.Common.Helper;
 
 namespace Chinook.API.Controllers
 {
@@ -15,14 +18,15 @@ namespace Chinook.API.Controllers
     public class IdentityController : BaseController
     {
         private readonly JwtService _jwtService;
-
+ 
         public IdentityController(JwtService jwtService)
         {
             this._jwtService = jwtService;
         }
        
         [HttpGet]
-        [Produces(typeof(List<MAS_AddressTypeDto>))]
+        [Route("authorise")]
+        [Produces(typeof(List<JwtClaim>))]
         public async Task<IActionResult> Authorise(string userName, string password,CancellationToken ct = default(CancellationToken))
         {
             try
@@ -51,7 +55,7 @@ namespace Chinook.API.Controllers
 
         [HttpPost]
         [Produces(typeof(MAS_AddressTypeDto))]
-        public async Task<IActionResult> Post([FromBody]MAS_AddressTypeDto input, CancellationToken ct = default(CancellationToken))
+        public async Task<IActionResult> Register([FromBody]MAS_AddressTypeDto input, CancellationToken ct = default(CancellationToken))
         {
             try
             {
@@ -64,55 +68,6 @@ namespace Chinook.API.Controllers
                 return StatusCode(500, ex);
             }
         }
-
-        [HttpPut("{id}")]
-        [Produces(typeof(MAS_AddressTypeDto))]
-        public async Task<IActionResult> Put(int id, [FromBody]MAS_AddressTypeDto input, CancellationToken ct = default(CancellationToken))
-        {
-            try
-            {
-                if (input == null)
-                    return BadRequest();
-                if (await businessSupervisor.GetMASAddressTypeById(id, ct) == null)
-                {
-                    return NotFound();
-                }
-
-                if (await businessSupervisor.UpdateMASAddressType(input, true, ct))
-                {
-                    return Ok(input);
-                }
-
-                return StatusCode(500);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex);
-            }
-        }
-
-        [HttpDelete("{id}")]
-        [Produces(typeof(void))]
-        public async Task<ActionResult> Delete(int id, CancellationToken ct = default(CancellationToken))
-        {
-            try
-            {
-                if (await businessSupervisor.GetMASAddressTypeById(id, ct) == null)
-                {
-                    return NotFound();
-                }
-
-                if (await businessSupervisor.DeleteAMSAddressType(id, true, ct))
-                {
-                    return Ok();
-                }
-
-                return StatusCode(500);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex);
-            }
-        }
+ 
     }
 }

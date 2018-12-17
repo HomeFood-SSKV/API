@@ -13,16 +13,25 @@ using WebApi.Common.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using WebApi.Common;
 
 namespace Chinook.API
 {
     public class Startup
     {
-        private IConfiguration Configuration { get; }
+        public static IConfiguration Configuration { get; set; }
 
-        public Startup(IConfiguration configuration)
+        public IConfigurationRoot configurationRoot { get; set; }
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+             .SetBasePath(env.ContentRootPath)
+             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+           // configuration = builder.Build();
+
+            Configuration =  builder.Build(); 
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -31,7 +40,13 @@ namespace Chinook.API
             var redisconnection = Configuration.GetConnectionString("RedisConnection");
             var secret = Configuration.GetConnectionString("Secret");
 
+            AppSettings.DefineAppSetting(Configuration);
+
             services.AddMvc();
+
+            // Add our Config object so it can be injected
+            services.Configure<AppSettings>(Configuration.GetSection("AppSetting"));
+
 
             //Add Jwt Token
             services.AddAuthentication(x =>

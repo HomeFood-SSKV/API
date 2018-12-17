@@ -2,7 +2,7 @@
 <#@ include file="EF.Utility.CS.ttinclude"#><#@
  output extension=".cs"#><#
 
-const string inputFile = @"F:\Projects\Homefood\API PRoject\API\Data.EF\EF.edmx";
+const string inputFile = @"F:\Projects\Homefood\App Api\API\Data.EF\EF.edmx";
 var textTransform = DynamicTextTransformation.Create(this);
 var code = new CodeGenerationTools(this);
 var ef = new MetadataTools(this);

@@ -27,3 +27,10 @@ D:\Application\HF\API\Data.EF\obj\Debug\Data.EF.csprojAssemblyReference.cache
 D:\Application\HF\API\Data.EF\obj\Debug\Data.EF.csproj.CoreCompileInputs.cache
 D:\Application\HF\API\Data.EF\obj\Debug\Data.EF.dll
 D:\Application\HF\API\Data.EF\obj\Debug\Data.EF.pdb
+F:\Projects\Homefood\App Api\API\Data.EF\bin\Debug\Data.EF.dll.config
+F:\Projects\Homefood\App Api\API\Data.EF\bin\Debug\Data.EF.dll
+F:\Projects\Homefood\App Api\API\Data.EF\bin\Debug\Data.EF.pdb
+F:\Projects\Homefood\App Api\API\Data.EF\obj\Debug\Data.EF.csprojAssemblyReference.cache
+F:\Projects\Homefood\App Api\API\Data.EF\obj\Debug\Data.EF.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\App Api\API\Data.EF\obj\Debug\Data.EF.dll
+F:\Projects\Homefood\App Api\API\Data.EF\obj\Debug\Data.EF.pdb

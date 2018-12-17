@@ -78,3 +78,23 @@ D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.Assemb
 D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CopyComplete
 D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.dll
 D:\Application\HF\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.deps.json
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\WebApi.Common.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Entites.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\IBusiness.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Implementation.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Persistance.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Utilities.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Entites.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Implementation.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\IBusiness.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Persistance.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\bin\Debug\netcoreapp2.1\Utilities.pdb
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csprojAssemblyReference.cache
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CoreCompileInputs.cache
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.AssemblyInfoInputs.cache
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.AssemblyInfo.cs
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.csproj.CopyComplete
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.dll
+F:\Projects\Homefood\App Api\API\WebApi.Commom\obj\Debug\netcoreapp2.1\WebApi.Common.pdb
